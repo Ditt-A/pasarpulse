@@ -67,6 +67,36 @@ summaries, and graph age. Its artifact is
 It describes model-inferred price dependence, not observed commodity shipments
 or causal propagation.
 
+### How the dynamic graph changes
+
+The same provinces can have different links and weights as the 90-day window
+moves. This small excerpt uses **Cabai Rawit Merah · retail** from the actual
+graph snapshots; edge labels are saved lead-lag correlations.
+
+```mermaid
+flowchart LR
+    subgraph january["1 January 2026"]
+        direction TB
+        diyJan(["DI Yogyakarta"]) -->|"0.776"| centralJan(["Jawa Tengah"])
+        diyJan -->|"0.571"| sulawesiJan(["Sulawesi Tengah"])
+    end
+    subgraph february["1 February 2026"]
+        direction TB
+        diyFeb(["DI Yogyakarta"]) -->|"0.842"| centralFeb(["Jawa Tengah"])
+        sulawesiFeb(["Sulawesi Tengah"])
+    end
+    january -->|"90-day window moves"| february
+    classDef province fill:#eef4f0,stroke:#2f664b,color:#24282d
+    class diyJan,centralJan,sulawesiJan,diyFeb,centralFeb,sulawesiFeb province
+    style january fill:#fafbfa,stroke:#e3e7e5,color:#24282d
+    style february fill:#fafbfa,stroke:#e3e7e5,color:#24282d
+```
+
+The DIY → Jawa Tengah weight changes; the DIY → Sulawesi Tengah edge is absent
+from the next snapshot. Only these three provinces are shown, so the isolated
+node does **not** imply a province has no other links. Arrows follow the stored
+source/target pairs, not causal influence or shipping routes.
+
 ### Which modalities enter the selected forecast?
 
 The richest feature set does not win at every horizon. The replay selects the
