@@ -1,0 +1,39 @@
+province_code,province_name,major_road_length_km,major_road_segment_count,ferry_length_km,ferry_segment_count,ferry_terminal_count,port_count,marketplace_count,snapshot_date,source,source_url,candidate_connectivity_only
+11,Aceh,3745.2623911128726,118373,3.2840627291763678,41,17,8,57,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+12,Sumatera Utara,6526.103856972423,175483,37.057808714539036,82,27,5,109,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+13,Sumatera Barat,2301.7810852330585,64716,1.6090947189147609,17,7,1,68,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+14,Riau,6254.716604980261,114805,76.93681288695251,144,34,12,100,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+15,Jambi,2924.819662897419,60282,8.867317228422937,38,46,0,62,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+16,Sumatera Selatan,3211.4736785779664,70466,90.22242379540299,260,33,0,33,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+17,Bengkulu,1702.960313583745,55221,1.298104273893912,16,4,0,27,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+18,Lampung,3591.379782375599,83159,2.1357475825543326,51,17,3,75,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+19,Kepulauan Bangka Belitung,1578.6012582093656,43282,4.146913038157924,34,6,0,9,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+21,Kepulauan Riau,1312.665165165526,33645,5.678002154479733,188,36,5,101,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+31,DKI Jakarta,1697.6527123297008,53418,2.6023391061545373,27,15,6,192,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+32,Jawa Barat,7273.600645715263,290166,2.974021460675152,33,17,3,319,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+33,Jawa Tengah,7380.814332797737,214384,6.866603698155438,105,9,11,429,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+34,DI Yogyakarta,1491.5247145174396,46077,1.299108983456729,84,1,0,236,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+35,Jawa Timur,9137.434959016691,252040,9.13975728244932,160,17,21,424,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+36,Banten,2686.462387581147,81478,6.215645917190634,52,8,4,104,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+51,Bali,1541.0606441299522,57152,4.373178091955853,42,11,0,175,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+52,Nusa Tenggara Barat,2600.393885114469,92130,3.2975528500157973,56,13,5,294,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+53,Nusa Tenggara Timur,5129.697994217882,246530,6.452244271006631,162,30,7,159,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+61,Kalimantan Barat,3396.8355902553267,95095,159.36351327267022,203,36,6,24,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+62,Kalimantan Tengah,3329.98409338617,85715,129.52947775376848,402,60,1,16,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+63,Kalimantan Selatan,2505.2709273191563,60812,90.15056711751147,279,46,1,92,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+64,Kalimantan Timur,4142.309230490112,129205,34.74940746439393,320,48,5,80,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+65,Kalimantan Utara,1501.5958987608187,45903,247.33725454658926,622,24,2,18,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+71,Sulawesi Utara,2121.144539955333,96145,3.7073773685979132,52,15,13,954,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+72,Sulawesi Tengah,3227.6801243211276,125492,3.040810166938757,20,10,3,18,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+73,Sulawesi Selatan,4356.32842247666,184310,47.69043592431238,359,22,4,622,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+74,Sulawesi Tenggara,2659.5213590006006,99006,2.102111030740283,50,28,5,53,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+75,Gorontalo,946.7809801651682,35285,0.8522468360939761,13,6,0,46,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+76,Sulawesi Barat,855.1583214817042,40646,0.0,0,1,0,11,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+81,Maluku,2132.180006441368,69328,6.0297153093704425,82,37,37,34,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+82,Maluku Utara,1435.3216741996785,50706,2.955460809147594,42,11,6,14,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+91,Papua Barat,1625.855246395043,57400,23.9998510274317,72,4,0,22,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+92,Papua Barat Daya,932.428378070941,33826,2.0386835405398824,35,11,1,12,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+94,Papua,1813.5166505748105,60185,2.646804372024713,25,8,2,7,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+95,Papua Selatan,1498.8741700158962,30021,325.087910874008,2318,16,0,4,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+96,Papua Tengah,961.038953245477,36572,8.880892736074266,30,3,4,2,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1
+97,Papua Pegunungan,1003.6147619812177,37351,2.3015603845117165,32,0,1,3,2026-01-01,OpenStreetMap via Geofabrik,https://download.geofabrik.de/asia/indonesia-260101.osm.pbf,1

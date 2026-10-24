@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-08-09T14:02:28.014512+00:00",
+  "stage": "osm_transport",
+  "status": {
+    "stage": "osm_transport",
+    "status": "completed",
+    "message": ""
+  },
+  "paths": {
+    "osm_summary_csv": "<PROJECT_ROOT>/data/processed/osm_province_transport_summary.csv",
+    "osm_summary_parquet": "<PROJECT_ROOT>/data/processed/osm_province_transport_summary.parquet",
+    "osm_points_csv": "<PROJECT_ROOT>/data/processed/osm_infrastructure_points.csv",
+    "osm_points_parquet": "<PROJECT_ROOT>/data/processed/osm_infrastructure_points.parquet",
+    "osm_edges_csv": "<PROJECT_ROOT>/data/processed/osm_transport_edges.csv",
+    "osm_edges_parquet": "<PROJECT_ROOT>/data/processed/osm_transport_edges.parquet",
+    "osm_metadata": "<PROJECT_ROOT>/data/processed/osm_transport_metadata.json",
+    "osm_download_manifest": "<PROJECT_ROOT>/data/processed/osm_download_manifest.json"
+  },
+  "result_type": "dict",
+  "errors": {}
+}

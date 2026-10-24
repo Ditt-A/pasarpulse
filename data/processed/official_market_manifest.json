@@ -1,0 +1,26 @@
+{
+  "source_layer_url": "https://kspservices.big.go.id/satupeta/rest/services/PUBLIK/SARANA_PRASARANA/MapServer/28",
+  "source_name": "Peta Sebaran Pasar Rakyat dan Pasar Desa",
+  "source_description": "Peta sebaran pasar rakyat merupakan data informasi geospasial tematik (IGT) berbentuk shapefile titik lokasi pasar di Indonesia skala 1:50.000. Peta ini merupakan hasil akuisisi data pasar oleh Kementerian Perdagangan pada tahun 2020 - 2021.",
+  "source_copyright": "Kementerian Perdagangan Republik Indonesia",
+  "source_service_item_id": "16ec2afe5bd34118ab1c00eb17b9b03d",
+  "service_iteminfo": {
+    "title": "SARANA_PRASARANA",
+    "description": "SARANA DAN PRASARANA AKSES MASYARAKAT\n04-07-2024",
+    "snippet": "SARANA DAN PRASARANA AKSES MASYARAKAT\n04-07-2024"
+  },
+  "source_effective_date": "2024-07-04",
+  "feature_count": 625,
+  "province_reference_count": 38,
+  "provinces_with_points": 37,
+  "provinces_without_points": [
+    "31"
+  ],
+  "point_in_polygon_count": 530,
+  "nearest_boundary_fallback_count": 95,
+  "maximum_nearest_join_distance_km": 24.56683355233353,
+  "operating_schedule_parsed_count": 610,
+  "raw_geojson": "data/raw/big_markets/big_official_markets.geojson",
+  "raw_sha256": "d139082cadbdd6dbceab48dbd04230c279b71c2c2f5950ac65776f4e92bdd499",
+  "acquired_at_utc": "2026-08-09T12:56:58.460945+00:00"
+}

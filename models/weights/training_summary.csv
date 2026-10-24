@@ -1,0 +1,3 @@
+model,horizon_days,rows,series,date_min,date_max,forecast_origin,model_file,model_bytes,sha256
+expert_lgb_logratio,7,178734,280,2024-02-01,2026-07-24,2026-07-31,expert_lgb_logratio_7d.txt,4341728,5262e0bd101a88628955b846bbd9452aa2284de65d30ca7d80f0439b95702fc5
+expert_lgb_logratio,14,177167,280,2024-02-01,2026-07-17,2026-07-31,expert_lgb_logratio_14d.txt,4526794,b84b4904fccd38dfa559afca75ab6ac392b5133143e72f8459e11b9f2939b0e8

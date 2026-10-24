@@ -1,0 +1,10 @@
+{
+  "source_url": "https://download.geofabrik.de/asia/indonesia-260101.osm.pbf",
+  "md5_url": "https://download.geofabrik.de/asia/indonesia-260101.osm.pbf.md5",
+  "expected_md5": "4dfb97cb3a59aac6bc97f274a7639c3a",
+  "actual_md5": "4dfb97cb3a59aac6bc97f274a7639c3a",
+  "sha256": "4c290085dc779e8a85248c70c341b52a3920e1657b60fb3b54a75785d1c11746",
+  "bytes": 1686629405,
+  "download_status": "reused",
+  "snapshot_date": "2026-01-01"
+}

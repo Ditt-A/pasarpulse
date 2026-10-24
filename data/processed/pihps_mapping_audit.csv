@@ -1,0 +1,343 @@
+source,source_commodity_id,source_commodity_name,commodity_code,market_level,source_province_name,province_code,canonical_province_name,unit,mapping_status
+PIHPS,com_11,Bawang Merah,BM,retail,Aceh,11,Aceh,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Sumatera Utara,12,Sumatera Utara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Sumatera Barat,13,Sumatera Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Riau,14,Riau,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Jambi,15,Jambi,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Sumatera Selatan,16,Sumatera Selatan,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Bengkulu,17,Bengkulu,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Lampung,18,Lampung,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Kepulauan Bangka Belitung,19,Kepulauan Bangka Belitung,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Kepulauan Riau,21,Kepulauan Riau,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,DKI Jakarta,31,DKI Jakarta,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Jawa Barat,32,Jawa Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Jawa Tengah,33,Jawa Tengah,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,DI Yogyakarta,34,DI Yogyakarta,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Jawa Timur,35,Jawa Timur,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Banten,36,Banten,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Bali,51,Bali,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Nusa Tenggara Barat,52,Nusa Tenggara Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Nusa Tenggara Timur,53,Nusa Tenggara Timur,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Kalimantan Barat,61,Kalimantan Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Kalimantan Tengah,62,Kalimantan Tengah,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Kalimantan Selatan,63,Kalimantan Selatan,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Kalimantan Timur,64,Kalimantan Timur,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Kalimantan Utara,65,Kalimantan Utara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Sulawesi Utara,71,Sulawesi Utara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Sulawesi Tengah,72,Sulawesi Tengah,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Sulawesi Selatan,73,Sulawesi Selatan,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Sulawesi Tenggara,74,Sulawesi Tenggara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Gorontalo,75,Gorontalo,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Sulawesi Barat,76,Sulawesi Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Maluku,81,Maluku,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Maluku Utara,82,Maluku Utara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Papua Barat,91,Papua Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Papua Barat Daya,92,Papua Barat Daya,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,retail,Papua,94,Papua,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,retail,Papua Selatan,95,Papua Selatan,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,retail,Papua Tengah,96,Papua Tengah,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,retail,Papua Pegunungan,97,Papua Pegunungan,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,wholesale,Aceh,11,Aceh,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Sumatera Utara,12,Sumatera Utara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Sumatera Barat,13,Sumatera Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Riau,14,Riau,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Jambi,15,Jambi,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Sumatera Selatan,16,Sumatera Selatan,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Bengkulu,17,Bengkulu,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Lampung,18,Lampung,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Kepulauan Bangka Belitung,19,Kepulauan Bangka Belitung,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Kepulauan Riau,21,Kepulauan Riau,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,DKI Jakarta,31,DKI Jakarta,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Jawa Barat,32,Jawa Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Jawa Tengah,33,Jawa Tengah,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,DI Yogyakarta,34,DI Yogyakarta,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Jawa Timur,35,Jawa Timur,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Banten,36,Banten,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Bali,51,Bali,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Nusa Tenggara Barat,52,Nusa Tenggara Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Nusa Tenggara Timur,53,Nusa Tenggara Timur,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Kalimantan Barat,61,Kalimantan Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Kalimantan Tengah,62,Kalimantan Tengah,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Kalimantan Selatan,63,Kalimantan Selatan,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Kalimantan Timur,64,Kalimantan Timur,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Kalimantan Utara,65,Kalimantan Utara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Sulawesi Utara,71,Sulawesi Utara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Sulawesi Tengah,72,Sulawesi Tengah,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Sulawesi Selatan,73,Sulawesi Selatan,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Sulawesi Tenggara,74,Sulawesi Tenggara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Gorontalo,75,Gorontalo,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Sulawesi Barat,76,Sulawesi Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Maluku,81,Maluku,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Maluku Utara,82,Maluku Utara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Papua Barat,91,Papua Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Papua Barat Daya,92,Papua Barat Daya,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,wholesale,Papua,94,Papua,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,wholesale,Papua Selatan,95,Papua Selatan,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,wholesale,Papua Tengah,96,Papua Tengah,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,wholesale,Papua Pegunungan,97,Papua Pegunungan,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Aceh,11,Aceh,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Sumatera Utara,12,Sumatera Utara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Sumatera Barat,13,Sumatera Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Riau,14,Riau,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Jambi,15,Jambi,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Sumatera Selatan,16,Sumatera Selatan,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Bengkulu,17,Bengkulu,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Lampung,18,Lampung,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Kepulauan Bangka Belitung,19,Kepulauan Bangka Belitung,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Kepulauan Riau,21,Kepulauan Riau,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,DKI Jakarta,31,DKI Jakarta,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Jawa Barat,32,Jawa Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Jawa Tengah,33,Jawa Tengah,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,DI Yogyakarta,34,DI Yogyakarta,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Jawa Timur,35,Jawa Timur,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Banten,36,Banten,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Bali,51,Bali,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Nusa Tenggara Barat,52,Nusa Tenggara Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Nusa Tenggara Timur,53,Nusa Tenggara Timur,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Kalimantan Barat,61,Kalimantan Barat,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Kalimantan Tengah,62,Kalimantan Tengah,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Kalimantan Selatan,63,Kalimantan Selatan,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Kalimantan Timur,64,Kalimantan Timur,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Kalimantan Utara,65,Kalimantan Utara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Sulawesi Utara,71,Sulawesi Utara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Sulawesi Tengah,72,Sulawesi Tengah,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Sulawesi Selatan,73,Sulawesi Selatan,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Sulawesi Tenggara,74,Sulawesi Tenggara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Gorontalo,75,Gorontalo,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Sulawesi Barat,76,Sulawesi Barat,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Maluku,81,Maluku,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Maluku Utara,82,Maluku Utara,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Papua Barat,91,Papua Barat,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Papua Barat Daya,92,Papua Barat Daya,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Papua,94,Papua,IDR/kg,observed
+PIHPS,com_11,Bawang Merah,BM,producer,Papua Selatan,95,Papua Selatan,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Papua Tengah,96,Papua Tengah,IDR/kg,not_returned_by_pihps
+PIHPS,com_11,Bawang Merah,BM,producer,Papua Pegunungan,97,Papua Pegunungan,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Aceh,11,Aceh,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Sumatera Utara,12,Sumatera Utara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Sumatera Barat,13,Sumatera Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Riau,14,Riau,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Jambi,15,Jambi,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Sumatera Selatan,16,Sumatera Selatan,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Bengkulu,17,Bengkulu,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Lampung,18,Lampung,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Kepulauan Bangka Belitung,19,Kepulauan Bangka Belitung,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Kepulauan Riau,21,Kepulauan Riau,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,DKI Jakarta,31,DKI Jakarta,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Jawa Barat,32,Jawa Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Jawa Tengah,33,Jawa Tengah,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,DI Yogyakarta,34,DI Yogyakarta,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Jawa Timur,35,Jawa Timur,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Banten,36,Banten,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Bali,51,Bali,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Nusa Tenggara Barat,52,Nusa Tenggara Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Nusa Tenggara Timur,53,Nusa Tenggara Timur,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Kalimantan Barat,61,Kalimantan Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Kalimantan Tengah,62,Kalimantan Tengah,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Kalimantan Selatan,63,Kalimantan Selatan,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Kalimantan Timur,64,Kalimantan Timur,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Kalimantan Utara,65,Kalimantan Utara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Sulawesi Utara,71,Sulawesi Utara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Sulawesi Tengah,72,Sulawesi Tengah,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Sulawesi Selatan,73,Sulawesi Selatan,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Sulawesi Tenggara,74,Sulawesi Tenggara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Gorontalo,75,Gorontalo,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Sulawesi Barat,76,Sulawesi Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Maluku,81,Maluku,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Maluku Utara,82,Maluku Utara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Papua Barat,91,Papua Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Papua Barat Daya,92,Papua Barat Daya,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Papua,94,Papua,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Papua Selatan,95,Papua Selatan,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Papua Tengah,96,Papua Tengah,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,retail,Papua Pegunungan,97,Papua Pegunungan,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Aceh,11,Aceh,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Sumatera Utara,12,Sumatera Utara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Sumatera Barat,13,Sumatera Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Riau,14,Riau,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Jambi,15,Jambi,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Sumatera Selatan,16,Sumatera Selatan,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Bengkulu,17,Bengkulu,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Lampung,18,Lampung,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Kepulauan Bangka Belitung,19,Kepulauan Bangka Belitung,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Kepulauan Riau,21,Kepulauan Riau,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,DKI Jakarta,31,DKI Jakarta,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Jawa Barat,32,Jawa Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Jawa Tengah,33,Jawa Tengah,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,DI Yogyakarta,34,DI Yogyakarta,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Jawa Timur,35,Jawa Timur,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Banten,36,Banten,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Bali,51,Bali,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Nusa Tenggara Barat,52,Nusa Tenggara Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Nusa Tenggara Timur,53,Nusa Tenggara Timur,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Kalimantan Barat,61,Kalimantan Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Kalimantan Tengah,62,Kalimantan Tengah,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Kalimantan Selatan,63,Kalimantan Selatan,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Kalimantan Timur,64,Kalimantan Timur,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Kalimantan Utara,65,Kalimantan Utara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Sulawesi Utara,71,Sulawesi Utara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Sulawesi Tengah,72,Sulawesi Tengah,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Sulawesi Selatan,73,Sulawesi Selatan,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Sulawesi Tenggara,74,Sulawesi Tenggara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Gorontalo,75,Gorontalo,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Sulawesi Barat,76,Sulawesi Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Maluku,81,Maluku,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Maluku Utara,82,Maluku Utara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Papua Barat,91,Papua Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Papua Barat Daya,92,Papua Barat Daya,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Papua,94,Papua,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Papua Selatan,95,Papua Selatan,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Papua Tengah,96,Papua Tengah,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,wholesale,Papua Pegunungan,97,Papua Pegunungan,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Aceh,11,Aceh,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Sumatera Utara,12,Sumatera Utara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Sumatera Barat,13,Sumatera Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Riau,14,Riau,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Jambi,15,Jambi,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Sumatera Selatan,16,Sumatera Selatan,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Bengkulu,17,Bengkulu,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Lampung,18,Lampung,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Kepulauan Bangka Belitung,19,Kepulauan Bangka Belitung,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Kepulauan Riau,21,Kepulauan Riau,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,DKI Jakarta,31,DKI Jakarta,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Jawa Barat,32,Jawa Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Jawa Tengah,33,Jawa Tengah,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,DI Yogyakarta,34,DI Yogyakarta,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Jawa Timur,35,Jawa Timur,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Banten,36,Banten,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Bali,51,Bali,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Nusa Tenggara Barat,52,Nusa Tenggara Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Nusa Tenggara Timur,53,Nusa Tenggara Timur,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Kalimantan Barat,61,Kalimantan Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Kalimantan Tengah,62,Kalimantan Tengah,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Kalimantan Selatan,63,Kalimantan Selatan,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Kalimantan Timur,64,Kalimantan Timur,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Kalimantan Utara,65,Kalimantan Utara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Sulawesi Utara,71,Sulawesi Utara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Sulawesi Tengah,72,Sulawesi Tengah,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Sulawesi Selatan,73,Sulawesi Selatan,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Sulawesi Tenggara,74,Sulawesi Tenggara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Gorontalo,75,Gorontalo,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Sulawesi Barat,76,Sulawesi Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Maluku,81,Maluku,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Maluku Utara,82,Maluku Utara,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Papua Barat,91,Papua Barat,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Papua Barat Daya,92,Papua Barat Daya,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Papua,94,Papua,IDR/kg,observed
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Papua Selatan,95,Papua Selatan,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Papua Tengah,96,Papua Tengah,IDR/kg,not_returned_by_pihps
+PIHPS,com_14,Cabai Merah Keriting,CMK,producer,Papua Pegunungan,97,Papua Pegunungan,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Aceh,11,Aceh,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Sumatera Utara,12,Sumatera Utara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Sumatera Barat,13,Sumatera Barat,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Riau,14,Riau,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Jambi,15,Jambi,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Sumatera Selatan,16,Sumatera Selatan,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Bengkulu,17,Bengkulu,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Lampung,18,Lampung,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Kepulauan Bangka Belitung,19,Kepulauan Bangka Belitung,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Kepulauan Riau,21,Kepulauan Riau,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,DKI Jakarta,31,DKI Jakarta,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Jawa Barat,32,Jawa Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Jawa Tengah,33,Jawa Tengah,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,DI Yogyakarta,34,DI Yogyakarta,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Jawa Timur,35,Jawa Timur,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Banten,36,Banten,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Bali,51,Bali,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Nusa Tenggara Barat,52,Nusa Tenggara Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Nusa Tenggara Timur,53,Nusa Tenggara Timur,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Kalimantan Barat,61,Kalimantan Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Kalimantan Tengah,62,Kalimantan Tengah,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Kalimantan Selatan,63,Kalimantan Selatan,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Kalimantan Timur,64,Kalimantan Timur,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Kalimantan Utara,65,Kalimantan Utara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Sulawesi Utara,71,Sulawesi Utara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Sulawesi Tengah,72,Sulawesi Tengah,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Sulawesi Selatan,73,Sulawesi Selatan,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Sulawesi Tenggara,74,Sulawesi Tenggara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Gorontalo,75,Gorontalo,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Sulawesi Barat,76,Sulawesi Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Maluku,81,Maluku,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Maluku Utara,82,Maluku Utara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Papua Barat,91,Papua Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Papua Barat Daya,92,Papua Barat Daya,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Papua,94,Papua,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Papua Selatan,95,Papua Selatan,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Papua Tengah,96,Papua Tengah,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,retail,Papua Pegunungan,97,Papua Pegunungan,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Aceh,11,Aceh,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Sumatera Utara,12,Sumatera Utara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Sumatera Barat,13,Sumatera Barat,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Riau,14,Riau,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Jambi,15,Jambi,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Sumatera Selatan,16,Sumatera Selatan,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Bengkulu,17,Bengkulu,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Lampung,18,Lampung,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Kepulauan Bangka Belitung,19,Kepulauan Bangka Belitung,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Kepulauan Riau,21,Kepulauan Riau,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,DKI Jakarta,31,DKI Jakarta,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Jawa Barat,32,Jawa Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Jawa Tengah,33,Jawa Tengah,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,DI Yogyakarta,34,DI Yogyakarta,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Jawa Timur,35,Jawa Timur,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Banten,36,Banten,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Bali,51,Bali,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Nusa Tenggara Barat,52,Nusa Tenggara Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Nusa Tenggara Timur,53,Nusa Tenggara Timur,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Kalimantan Barat,61,Kalimantan Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Kalimantan Tengah,62,Kalimantan Tengah,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Kalimantan Selatan,63,Kalimantan Selatan,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Kalimantan Timur,64,Kalimantan Timur,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Kalimantan Utara,65,Kalimantan Utara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Sulawesi Utara,71,Sulawesi Utara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Sulawesi Tengah,72,Sulawesi Tengah,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Sulawesi Selatan,73,Sulawesi Selatan,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Sulawesi Tenggara,74,Sulawesi Tenggara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Gorontalo,75,Gorontalo,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Sulawesi Barat,76,Sulawesi Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Maluku,81,Maluku,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Maluku Utara,82,Maluku Utara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Papua Barat,91,Papua Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Papua Barat Daya,92,Papua Barat Daya,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Papua,94,Papua,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Papua Selatan,95,Papua Selatan,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Papua Tengah,96,Papua Tengah,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,wholesale,Papua Pegunungan,97,Papua Pegunungan,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Aceh,11,Aceh,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Sumatera Utara,12,Sumatera Utara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Sumatera Barat,13,Sumatera Barat,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Riau,14,Riau,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Jambi,15,Jambi,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Sumatera Selatan,16,Sumatera Selatan,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Bengkulu,17,Bengkulu,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Lampung,18,Lampung,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Kepulauan Bangka Belitung,19,Kepulauan Bangka Belitung,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Kepulauan Riau,21,Kepulauan Riau,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,DKI Jakarta,31,DKI Jakarta,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Jawa Barat,32,Jawa Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Jawa Tengah,33,Jawa Tengah,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,DI Yogyakarta,34,DI Yogyakarta,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Jawa Timur,35,Jawa Timur,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Banten,36,Banten,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Bali,51,Bali,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Nusa Tenggara Barat,52,Nusa Tenggara Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Nusa Tenggara Timur,53,Nusa Tenggara Timur,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Kalimantan Barat,61,Kalimantan Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Kalimantan Tengah,62,Kalimantan Tengah,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Kalimantan Selatan,63,Kalimantan Selatan,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Kalimantan Timur,64,Kalimantan Timur,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Kalimantan Utara,65,Kalimantan Utara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Sulawesi Utara,71,Sulawesi Utara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Sulawesi Tengah,72,Sulawesi Tengah,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Sulawesi Selatan,73,Sulawesi Selatan,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Sulawesi Tenggara,74,Sulawesi Tenggara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Gorontalo,75,Gorontalo,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Sulawesi Barat,76,Sulawesi Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Maluku,81,Maluku,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Maluku Utara,82,Maluku Utara,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Papua Barat,91,Papua Barat,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Papua Barat Daya,92,Papua Barat Daya,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Papua,94,Papua,IDR/kg,observed
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Papua Selatan,95,Papua Selatan,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Papua Tengah,96,Papua Tengah,IDR/kg,not_returned_by_pihps
+PIHPS,com_16,Cabai Rawit Merah,CRM,producer,Papua Pegunungan,97,Papua Pegunungan,IDR/kg,not_returned_by_pihps

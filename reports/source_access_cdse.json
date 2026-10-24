@@ -1,0 +1,8 @@
+{
+  "checked_at_utc": "2026-08-09T11:28:11.333204+00:00",
+  "checks": {},
+  "errors": {
+    "cdse": "ClientError: An error occurred (InvalidAccessKeyId) when calling the ListObjectsV2 operation: Unknown"
+  },
+  "ok": false
+}

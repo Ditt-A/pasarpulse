@@ -1,0 +1,132 @@
+=== Leakage-safe post-processing diagnostics ===
+                              candidate                                     model  horizon_days  folds  rows         mae  mean_error
+    chronological_commodity_market_grid CHRONOLOGICAL_COMMODITY_MARKET_GRID_BLEND             7      7  1947 3454.112960   47.465788
+chronological_commodity_market_selector   CHRONOLOGICAL_COMMODITY_MARKET_SELECTOR             7      7  1947 3469.100827   28.632414
+                                    raw                       CAT_GPU_V2_logratio             7      7  1947 3581.001572 -178.807941
+               prior_global_median_bias                       CAT_GPU_V2_logratio             7      7  1947 3594.329980 -225.750098
+         chronological_regularized_grid      CHRONOLOGICAL_REGULARIZED_GRID_BLEND             7      7  1947 3600.009795  110.145214
+                                    raw                          CAT_GPU_V2_delta             7      7  1947 3664.564412  215.150441
+   prior_commodity_market_bias_shrink20                       CAT_GPU_V2_logratio             7      7  1947 3672.066457  123.490983
+               prior_global_median_bias                     CAT_GPU_V2_last_price             7      7  1947 3679.583975    8.757062
+                                    raw                     CAT_GPU_V2_last_price             7      7  1947 3679.583975    8.757062
+               prior_global_median_bias                          CAT_GPU_V2_delta             7      7  1947 3681.657679  166.175786
+                                    raw              CAT_GPU_V2_adaptive_ensemble             7      7  1947 3685.514266 -135.476144
+          chronological_global_selector      CHRONOLOGICAL_GLOBAL_EXPERT_SELECTOR             7      7  1947 3703.885285   -1.327017
+               prior_global_median_bias              CAT_GPU_V2_adaptive_ensemble             7      7  1947 3716.669047 -117.800063
+   prior_commodity_market_bias_shrink20                          CAT_GPU_V2_delta             7      7  1947 3721.924684  416.127295
+               prior_global_median_bias                          CAT_GPU_V2_level             7      7  1947 3747.913934   17.688304
+                                    raw                          CAT_GPU_V2_level             7      7  1947 3762.187407  224.700685
+   prior_commodity_market_bias_shrink20              CAT_GPU_V2_adaptive_ensemble             7      7  1947 3790.866966  313.317224
+   prior_commodity_market_bias_shrink20                          CAT_GPU_V2_level             7      7  1947 3817.489514  352.028996
+   prior_commodity_market_bias_shrink20                     CAT_GPU_V2_last_price             7      7  1947 3833.577490  569.461970
+                                    raw                       CAT_GPU_V2_momentum             7      7  1947 4902.863380  -52.349769
+               prior_global_median_bias                       CAT_GPU_V2_momentum             7      7  1947 4903.197227  -48.754494
+   prior_commodity_market_bias_shrink20                       CAT_GPU_V2_momentum             7      7  1947 4975.441901  712.641357
+                                    raw                       CAT_GPU_V2_logratio            14      7  1944 4984.065334 -441.273753
+               prior_global_median_bias                       CAT_GPU_V2_logratio            14      7  1944 5005.616824 -500.801952
+         chronological_regularized_grid      CHRONOLOGICAL_REGULARIZED_GRID_BLEND            14      7  1944 5098.688013 -184.811479
+                                    raw              CAT_GPU_V2_adaptive_ensemble            14      7  1944 5109.892030 -317.537954
+          chronological_global_selector      CHRONOLOGICAL_GLOBAL_EXPERT_SELECTOR            14      7  1944 5117.026270 -565.290143
+   prior_commodity_market_bias_shrink20                       CAT_GPU_V2_logratio            14      7  1944 5125.807947  194.333873
+               prior_global_median_bias              CAT_GPU_V2_adaptive_ensemble            14      7  1944 5140.739513 -388.586990
+    chronological_commodity_market_grid CHRONOLOGICAL_COMMODITY_MARKET_GRID_BLEND            14      7  1944 5179.576592  156.938773
+chronological_commodity_market_selector   CHRONOLOGICAL_COMMODITY_MARKET_SELECTOR            14      7  1944 5183.054623   19.683689
+               prior_global_median_bias                          CAT_GPU_V2_level            14      7  1944 5201.113017   90.735315
+                                    raw                          CAT_GPU_V2_level            14      7  1944 5216.329608  331.408954
+               prior_global_median_bias                          CAT_GPU_V2_delta            14      7  1944 5264.334855   94.284628
+                                    raw                          CAT_GPU_V2_delta            14      7  1944 5280.370978  367.673726
+   prior_commodity_market_bias_shrink20              CAT_GPU_V2_adaptive_ensemble            14      7  1944 5288.537913  305.908999
+   prior_commodity_market_bias_shrink20                          CAT_GPU_V2_level            14      7  1944 5338.008055  557.503778
+   prior_commodity_market_bias_shrink20                          CAT_GPU_V2_delta            14      7  1944 5419.415061  603.015694
+                                    raw                     CAT_GPU_V2_last_price            14      7  1944 5756.532922 -122.685185
+               prior_global_median_bias                     CAT_GPU_V2_last_price            14      7  1944 5765.097737  -72.453704
+   prior_commodity_market_bias_shrink20                     CAT_GPU_V2_last_price            14      7  1944 6060.500518 1084.381635
+                                    raw                       CAT_GPU_V2_momentum            14      7  1944 7399.909979 -390.444959
+               prior_global_median_bias                       CAT_GPU_V2_momentum            14      7  1944 7784.310700 1151.543210
+   prior_commodity_market_bias_shrink20                       CAT_GPU_V2_momentum            14      7  1944 7798.226895 1506.501490
+=== Per-fold raw GPU V2 MAE ===
+                       model  horizon_days  fold_id         mae   mean_error
+            CAT_GPU_V2_delta             7        1 3168.660857 -1301.721882
+CAT_GPU_V2_adaptive_ensemble             7        1 3206.939384 -1750.879373
+         CAT_GPU_V2_logratio             7        1 3233.748640 -1881.805085
+         CAT_GPU_V2_momentum             7        1 3284.139785 -2137.365591
+            CAT_GPU_V2_level             7        1 3344.240822 -1279.026960
+       CAT_GPU_V2_last_price             7        1 3688.530466 -2839.426523
+       CAT_GPU_V2_last_price             7        2 2606.607143  -449.821429
+         CAT_GPU_V2_logratio             7        2 3049.584134  -496.829109
+            CAT_GPU_V2_level             7        2 3108.166175  -207.580921
+            CAT_GPU_V2_delta             7        2 3108.842790  -394.895783
+CAT_GPU_V2_adaptive_ensemble             7        2 3511.369529  -467.113743
+         CAT_GPU_V2_momentum             7        2 4851.339286  -541.696429
+       CAT_GPU_V2_last_price             7        3 4030.357143  1061.785714
+         CAT_GPU_V2_logratio             7        3 4045.056250  1210.166990
+CAT_GPU_V2_adaptive_ensemble             7        3 4103.290621  1236.816183
+            CAT_GPU_V2_delta             7        3 4316.234171  1433.691295
+            CAT_GPU_V2_level             7        3 4461.969308  1249.849739
+         CAT_GPU_V2_momentum             7        3 6972.857143   853.571429
+       CAT_GPU_V2_last_price             7        4 2705.904059  -194.464945
+CAT_GPU_V2_adaptive_ensemble             7        4 2973.834726  -764.314139
+         CAT_GPU_V2_logratio             7        4 3161.356250  -938.747961
+            CAT_GPU_V2_delta             7        4 3244.006161  -772.830355
+            CAT_GPU_V2_level             7        4 3362.333025  -901.654498
+         CAT_GPU_V2_momentum             7        4 4503.782288 -2341.789668
+       CAT_GPU_V2_last_price             7        5 2681.949458 -2115.523466
+CAT_GPU_V2_adaptive_ensemble             7        5 2681.949459 -2115.523458
+         CAT_GPU_V2_logratio             7        5 3260.310195   207.633491
+            CAT_GPU_V2_delta             7        5 3458.685035   365.220345
+            CAT_GPU_V2_level             7        5 3716.547724   641.386821
+         CAT_GPU_V2_momentum             7        5 4505.866426   390.162455
+         CAT_GPU_V2_logratio             7        6 4617.766756   266.793613
+            CAT_GPU_V2_delta             7        6 4646.855865  1194.509736
+            CAT_GPU_V2_level             7        6 4686.366873  1156.693552
+CAT_GPU_V2_adaptive_ensemble             7        6 5660.468530  1740.863624
+       CAT_GPU_V2_last_price             7        6 6219.642857  2175.357143
+         CAT_GPU_V2_momentum             7        6 6523.928571  1653.571429
+CAT_GPU_V2_adaptive_ensemble             7        7 3625.410524  1124.621160
+            CAT_GPU_V2_level             7        7 3640.853797   876.126829
+         CAT_GPU_V2_momentum             7        7 3655.267857  1680.803571
+         CAT_GPU_V2_logratio             7        7 3681.024009   354.764141
+            CAT_GPU_V2_delta             7        7 3691.171131   946.513699
+       CAT_GPU_V2_last_price             7        7 3782.142857  2383.928571
+         CAT_GPU_V2_logratio            14        1 4268.074673 -2172.861960
+            CAT_GPU_V2_delta            14        1 4446.579657 -1666.036684
+CAT_GPU_V2_adaptive_ensemble            14        1 4470.827969 -2379.185926
+            CAT_GPU_V2_level            14        1 4827.190526 -1559.527318
+       CAT_GPU_V2_last_price            14        1 5433.512545 -4671.146953
+         CAT_GPU_V2_momentum            14        1 6895.340502 -6172.401434
+         CAT_GPU_V2_logratio            14        2 4817.068199 -1696.035619
+       CAT_GPU_V2_last_price            14        2 4891.756272 -3182.795699
+CAT_GPU_V2_adaptive_ensemble            14        2 4900.877975 -1705.942448
+            CAT_GPU_V2_level            14        2 4963.760453 -1292.073765
+            CAT_GPU_V2_delta            14        2 5259.472308 -1516.693640
+         CAT_GPU_V2_momentum            14        2 7371.684588 -2014.695341
+       CAT_GPU_V2_last_price            14        3 4588.214286  2239.642857
+CAT_GPU_V2_adaptive_ensemble            14        3 4905.412368  2537.874017
+         CAT_GPU_V2_logratio            14        3 4952.273675  2513.534232
+            CAT_GPU_V2_level            14        3 5337.650844  2627.731573
+            CAT_GPU_V2_delta            14        3 5447.257586  2917.809889
+         CAT_GPU_V2_momentum            14        3 7234.910714  3250.625000
+       CAT_GPU_V2_last_price            14        4 4636.715867 -1703.874539
+            CAT_GPU_V2_level            14        4 5256.009380 -2061.180287
+CAT_GPU_V2_adaptive_ensemble            14        4 5394.088330 -2892.094108
+            CAT_GPU_V2_delta            14        4 5541.950733 -2321.645455
+         CAT_GPU_V2_logratio            14        4 5612.258442 -2986.773664
+         CAT_GPU_V2_momentum            14        4 7162.638376 -5148.800738
+         CAT_GPU_V2_logratio            14        5 5201.167255    45.328985
+CAT_GPU_V2_adaptive_ensemble            14        5 5312.072927  -375.206343
+            CAT_GPU_V2_level            14        5 5484.815293  1030.301139
+            CAT_GPU_V2_delta            14        5 5609.841338  1487.791754
+       CAT_GPU_V2_last_price            14        5 5946.428571 -1320.714286
+         CAT_GPU_V2_momentum            14        5 8151.250000  1779.285714
+         CAT_GPU_V2_logratio            14        6 5315.970851  1477.135306
+            CAT_GPU_V2_level            14        6 5607.744056  2433.449950
+            CAT_GPU_V2_delta            14        6 5623.534918  2626.399494
+CAT_GPU_V2_adaptive_ensemble            14        6 6004.500280  2355.990655
+       CAT_GPU_V2_last_price            14        6 8262.142857  4188.928571
+         CAT_GPU_V2_momentum            14        6 8605.089286  3319.732143
+         CAT_GPU_V2_logratio            14        7 4734.221134  -360.282451
+CAT_GPU_V2_adaptive_ensemble            14        7 4781.710000   149.055290
+            CAT_GPU_V2_level            14        7 5032.843774  1064.801528
+            CAT_GPU_V2_delta            14        7 5034.932942   956.163944
+         CAT_GPU_V2_momentum            14        7 6350.181818  2118.545455
+       CAT_GPU_V2_last_price            14        7 6510.181818  3579.272727

@@ -1,0 +1,22 @@
+{
+  "protocol": "rolling_origin_price_only",
+  "source_date_range": [
+    "2024-02-01",
+    "2026-07-31"
+  ],
+  "eligible_series_available": 279,
+  "series_scored": 279,
+  "prediction_rows": 307139,
+  "models": [
+    "last_price",
+    "seasonal_lag"
+  ],
+  "horizons_days": [
+    7,
+    14
+  ],
+  "min_train_days": 365,
+  "bounded_ffill_days": 3,
+  "shock_threshold": 0.1,
+  "leakage_guard": "forecast uses only dates <= forecast_origin; labels are scored after the origin"
+}

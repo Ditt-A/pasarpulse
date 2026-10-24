@@ -1,0 +1,30 @@
+{
+  "source": "<PROJECT_ROOT>/experiments/pasarpulse_notebook_finalist_xai.py",
+  "case_specs": [
+    [
+      "case_7d_late",
+      7,
+      "2026-07-17"
+    ],
+    [
+      "case_7d_mid",
+      7,
+      "2026-06-22"
+    ],
+    [
+      "case_14d_late",
+      14,
+      "2026-07-17"
+    ]
+  ],
+  "selection_rule": "largest absolute forecast movement; target excluded",
+  "xai_method": "LightGBM native pred_contrib additive log-ratio contributions",
+  "case_contribution_file": "xai_case_all_contributions.csv",
+  "claims_excluded": [
+    "causal effects",
+    "rupiah-space contributions",
+    "confidence or probability",
+    "commodity-flow evidence"
+  ],
+  "max_abs_additivity_error": 5.273559366969494e-16
+}

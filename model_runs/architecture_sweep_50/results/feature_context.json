@@ -1,0 +1,38 @@
+{
+  "missing": [
+    "current_is_imputed",
+    "observation_rate_7",
+    "observation_rate_28",
+    "observation_rate_84",
+    "volatility_regime",
+    "gap_nat_z",
+    "gap_island_z"
+  ],
+  "production": [
+    "prod_production_quintal",
+    "prod_production_kg",
+    "prod_harvested_area_ha",
+    "prod_productivity_kg_per_ha",
+    "prod_production_available",
+    "prod_harvested_area_available",
+    "prod_production_quintal_rel_nat",
+    "prod_production_kg_rel_nat",
+    "prod_harvested_area_ha_rel_nat",
+    "prod_productivity_kg_per_ha_rel_nat",
+    "prod_production_available_rel_nat",
+    "prod_harvested_area_available_rel_nat"
+  ],
+  "geo": [
+    "geo_longitude",
+    "geo_latitude",
+    "geo_neighbor_mean",
+    "geo_neighbor_std",
+    "geo_neighbor_min",
+    "geo_neighbor_max",
+    "geo_mean_neighbor_distance_km",
+    "geo_neighbor_gap",
+    "geo_neighbor_ratio",
+    "geo_neighbor_delta_7",
+    "geo_neighbor_delta_14"
+  ]
+}

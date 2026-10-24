@@ -1,0 +1,9 @@
+item,value
+Model-ready rows,"254,448"
+Model-ready columns,95
+Primary target,price_idr_per_kg
+Forecast targets,"price_t_plus_7; price_t_plus_14"
+Commodities,"Bawang Merah; Cabai Merah Keriting; Cabai Rawit Merah"
+Market levels,"producer; wholesale; retail"
+Validation,7 rolling forecast origins
+A100 search runtime,48 minutes 49 seconds

@@ -1,0 +1,222 @@
+{
+  "status": "passed",
+  "project_root": "<PROJECT_ROOT>",
+  "checks_passed": 25,
+  "checks_failed": 0,
+  "errors": [],
+  "checks": [
+    {
+      "name": "required.fold_metrics.csv",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/results/multimodal_ablation/fold_metrics.csv",
+      "expected": "file exists"
+    },
+    {
+      "name": "required.pooled_metrics.csv",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/results/multimodal_ablation/pooled_metrics.csv",
+      "expected": "file exists"
+    },
+    {
+      "name": "required.oof_predictions.parquet",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/results/multimodal_ablation/oof_predictions.parquet",
+      "expected": "file exists"
+    },
+    {
+      "name": "required.availability_leakage_audit.json",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/results/multimodal_ablation/availability_leakage_audit.json",
+      "expected": "file exists"
+    },
+    {
+      "name": "required.feature_contract.json",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/results/multimodal_ablation/feature_contract.json",
+      "expected": "file exists"
+    },
+    {
+      "name": "required.run_manifest.json",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/results/multimodal_ablation/run_manifest.json",
+      "expected": "file exists"
+    },
+    {
+      "name": "folds.horizons",
+      "status": "passed",
+      "observed": [
+        "7",
+        "14"
+      ],
+      "expected": [
+        7,
+        14
+      ]
+    },
+    {
+      "name": "folds.no_duplicate_model_fold",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "folds.seven_per_model_horizon",
+      "status": "passed",
+      "observed": {
+        "7|CATBOOST_LOGRATIO__ALL_MODALITIES_DYNAMIC_GRAPH": 7,
+        "7|CATBOOST_SCALED_DELTA__ALL_MODALITIES_DYNAMIC_GRAPH": 7,
+        "7|LGBM_LOGRATIO__ALL_MODALITIES_DYNAMIC_GRAPH": 7,
+        "7|LGBM_LOGRATIO__ALL_MODALITIES_STATIC_GRAPH": 7,
+        "7|LGBM_LOGRATIO__PRICE": 7,
+        "7|LGBM_LOGRATIO__PRICE_CALENDAR": 7,
+        "7|LGBM_LOGRATIO__PRICE_CALENDAR_WEATHER": 7,
+        "7|LGBM_LOGRATIO__PRICE_CALENDAR_WEATHER_PRODUCTION": 7,
+        "7|LGBM_LOGRATIO__PRICE_CALENDAR_WEATHER_PRODUCTION_SATELLITE": 7,
+        "7|PERSISTENCE": 7,
+        "14|CATBOOST_LOGRATIO__ALL_MODALITIES_DYNAMIC_GRAPH": 7,
+        "14|CATBOOST_SCALED_DELTA__ALL_MODALITIES_DYNAMIC_GRAPH": 7,
+        "14|LGBM_LOGRATIO__ALL_MODALITIES_DYNAMIC_GRAPH": 7,
+        "14|LGBM_LOGRATIO__ALL_MODALITIES_STATIC_GRAPH": 7,
+        "14|LGBM_LOGRATIO__PRICE": 7,
+        "14|LGBM_LOGRATIO__PRICE_CALENDAR": 7,
+        "14|LGBM_LOGRATIO__PRICE_CALENDAR_WEATHER": 7,
+        "14|LGBM_LOGRATIO__PRICE_CALENDAR_WEATHER_PRODUCTION": 7,
+        "14|LGBM_LOGRATIO__PRICE_CALENDAR_WEATHER_PRODUCTION_SATELLITE": 7,
+        "14|PERSISTENCE": 7
+      },
+      "expected": 7
+    },
+    {
+      "name": "folds.expected_fold_ids",
+      "status": "passed",
+      "observed": {
+        "7": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "14": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "expected": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    {
+      "name": "folds.rows_scored_positive",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "folds.metrics_finite",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "folds.metrics_nonnegative",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "oof.horizons",
+      "status": "passed",
+      "observed": [
+        "7",
+        "14"
+      ],
+      "expected": [
+        7,
+        14
+      ]
+    },
+    {
+      "name": "oof.predictions_finite",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "oof.targets_finite",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "oof.target_date_alignment",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "oof.origin_precedes_target",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "oof.no_duplicate_forecasts",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "oof.rows_match_fold_metrics",
+      "status": "passed",
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "pooled.seven_folds",
+      "status": "passed",
+      "observed": {
+        "7": "[7]",
+        "14": "[7]"
+      },
+      "expected": "{7}"
+    },
+    {
+      "name": "pooled.metrics_finite",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "availability.audit_passed",
+      "status": "passed",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "availability.no_violations",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "feature_contract.no_realized_labels",
+      "status": "passed",
+      "observed": [],
+      "expected": []
+    }
+  ]
+}

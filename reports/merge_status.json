@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-08-09T16:29:16.121432+00:00",
+  "stage": "merge",
+  "status": {
+    "stage": "merge",
+    "status": "completed",
+    "message": ""
+  },
+  "paths": {
+    "ready_all_csv": "<PROJECT_ROOT>/data/ready/model_dataset_all.csv",
+    "ready_all_parquet": "<PROJECT_ROOT>/data/ready/model_dataset_all.parquet",
+    "ready_eligible_csv": "<PROJECT_ROOT>/data/ready/model_dataset_eligible.csv",
+    "ready_eligible_parquet": "<PROJECT_ROOT>/data/ready/model_dataset_eligible.parquet",
+    "graph_nodes_csv": "<PROJECT_ROOT>/data/ready/graph_nodes.csv",
+    "graph_nodes_parquet": "<PROJECT_ROOT>/data/ready/graph_nodes.parquet",
+    "graph_edges_csv": "<PROJECT_ROOT>/data/ready/graph_edges_static_multilevel.csv",
+    "graph_edges_parquet": "<PROJECT_ROOT>/data/ready/graph_edges_static_multilevel.parquet"
+  },
+  "result_type": "DataFrame",
+  "errors": {}
+}

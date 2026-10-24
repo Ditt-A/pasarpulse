@@ -1,0 +1,4 @@
+artifact,rows,columns,date_min,date_max,province_count,commodity_count,series_count,duplicate_rows,memory_mb
+price_only_baseline_metrics,4,15,,,,,,0,0.0008087158203125
+ready_all,257184,95,2024-02-01,2026-07-31,34.0,3.0,282.0,0,507.8199462890625
+ready_eligible,254448,95,2024-02-01,2026-07-31,34.0,3.0,279.0,0,504.66782569885254

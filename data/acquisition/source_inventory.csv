@@ -1,0 +1,7 @@
+dataset,required,official_url,period,local_target,status
+BIG province boundaries,True,https://geoservices.big.go.id/rbi/rest/services/BATASWILAYAH/BATAS_WILAYAH/MapServer/12/query,current 38-province layer,data/reference/indonesia_provinces.geojson,downloaded_and_validated
+Satellite zones,False,derived from BIG province boundaries,current,data/reference/satellite_zones.geojson,derived_after_BIG
+Official calendar events,True,source URLs recorded per row,2023-2026,data/manual/calendar_events.csv,included
+Official price thresholds,True,source URLs recorded per row,regulation versions in table,data/manual/official_thresholds.csv,included
+ERA5-Land,False,Copernicus Climate Data Store API,2024-02 to 2026-07,data/raw/era5_land/,optional_credentialed_disabled
+Sentinel-2 L2A,False,Copernicus Data Space STAC/S3,2024-02 to 2026-07,data/raw/sentinel2_asset_manifest.*,optional_credentialed_disabled

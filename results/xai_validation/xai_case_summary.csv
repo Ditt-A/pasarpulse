@@ -1,0 +1,4 @@
+case_id,selection_rule,model,horizon_days,fold_id,forecast_origin,test_row_position,series_id,province_code,province_name,commodity_code,commodity_name,market_level,current_price,predicted_price,forecast_movement_pct,actual_price_evaluation_only
+case_7d_late,largest absolute forecast movement within held-out fold,LGBM_LOGRATIO,7,1,2026-07-17,200,71|CRM|wholesale,71,Sulawesi Utara,CRM,Cabai Rawit Merah,wholesale,40750.0,36985.58370852907,-0.09237831390112716,32500.0
+case_7d_mid,largest absolute forecast movement within held-out fold,LGBM_LOGRATIO,7,2,2026-06-22,200,71|CRM|wholesale,71,Sulawesi Utara,CRM,Cabai Rawit Merah,wholesale,106250.0,95282.12048524526,-0.10322710131533863,73750.0
+case_14d_late,largest absolute forecast movement within held-out fold,LGBM_LOGRATIO,14,3,2026-07-17,231,75|CRM|producer,75,Gorontalo,CRM,Cabai Rawit Merah,producer,72500.0,54548.57818975141,-0.24760581807239435,37500.0

@@ -1,0 +1,16 @@
+{
+  "recorded_at_utc": "2026-08-09T16:25:00.619867+00:00",
+  "stage": "era5_aggregate",
+  "status": {
+    "stage": "era5_aggregate",
+    "status": "completed",
+    "message": ""
+  },
+  "paths": {
+    "weather_csv": "<PROJECT_ROOT>/data/processed/weather_daily.csv",
+    "weather_parquet": "<PROJECT_ROOT>/data/processed/weather_daily.parquet",
+    "weather_metadata": "<PROJECT_ROOT>/data/processed/weather_metadata.json"
+  },
+  "result_type": "DataFrame",
+  "errors": {}
+}

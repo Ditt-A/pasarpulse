@@ -1,0 +1,49 @@
+{
+  "protocol": "paper_B1_ARIMA_rolling_origin",
+  "model": "B1_ARIMA(1, 1, 1)",
+  "arima_order": [
+    1,
+    1,
+    1
+  ],
+  "source_date_range": [
+    "2024-02-01",
+    "2026-07-31"
+  ],
+  "declared_origins": [
+    "2026-02-02",
+    "2026-03-02",
+    "2026-03-30",
+    "2026-04-27",
+    "2026-05-25",
+    "2026-06-22",
+    "2026-07-17"
+  ],
+  "eligible_series_available": 279,
+  "series_seen": 279,
+  "series_scored": 279,
+  "fit_attempts": 1953,
+  "successful_fits": 1944,
+  "prediction_rows": 3880,
+  "horizons_days": [
+    7,
+    14
+  ],
+  "min_train_observations": 365,
+  "shock_threshold": 0.1,
+  "confidence_alpha": 0.05,
+  "leakage_guard": "each fit uses only price observations on or before its forecast origin",
+  "runtime_seconds": 316.7710566930473,
+  "leakage_audit": {
+    "target": "price_idr_per_kg",
+    "features": [
+      "historical_price_observations_only"
+    ],
+    "future_label_used_for_fit": false,
+    "future_label_used_for_order_selection": false,
+    "long_gap_imputation": false,
+    "evaluation_protocol": "rolling_origin",
+    "eligibility_source": "price_coverage_audit.csv",
+    "model": "B1_ARIMA(1,1,1)"
+  }
+}

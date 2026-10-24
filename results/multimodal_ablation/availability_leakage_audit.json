@@ -1,0 +1,40 @@
+{
+  "weather": {
+    "available_rows": 261702,
+    "violations": 0,
+    "latest_effective_date": "2026-07-31 00:00:00"
+  },
+  "production": {
+    "available_rows": 218178,
+    "violations": 0,
+    "latest_effective_date": "2026-06-12 00:00:00"
+  },
+  "satellite": {
+    "available_rows": 237979,
+    "violations": 0,
+    "latest_effective_date": "2026-07-29 00:00:00"
+  },
+  "transport": {
+    "available_rows": 59148,
+    "violations": 0,
+    "latest_effective_date": "2026-01-01 00:00:00"
+  },
+  "official_markets": {
+    "available_rows": 211482,
+    "violations": 0,
+    "latest_effective_date": "2024-07-04 00:00:00"
+  },
+  "static_graph": {
+    "available_rows": 59148,
+    "violations": 0,
+    "latest_effective_date": "2026-01-01 00:00:00"
+  },
+  "dynamic_graph": {
+    "available_rows": 229246,
+    "violations": 0,
+    "latest_effective_date": "2026-07-01 00:00:00"
+  },
+  "forbidden_feature_columns": [],
+  "full_period_audit_features": [],
+  "passed": true
+}

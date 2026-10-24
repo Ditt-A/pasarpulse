@@ -1,0 +1,189 @@
+{
+  "source": "ERA5-Land hourly data",
+  "date_range": [
+    "2024-01-01",
+    "2026-07-31"
+  ],
+  "rows": 35834,
+  "province_count": 38,
+  "accumulation_convention": "next_day_00utc_previous_24h",
+  "weather_day_timezone": "UTC",
+  "spatial_aggregation": "latitude_cosine_area_weighted_province_mean",
+  "source_files": [
+    {
+      "path": "data/raw/era5_land/era5_land_2024_01.nc",
+      "bytes": 150943375,
+      "sha256": "1809a68c71d9ed4e28dc081170802361003cd702e1b1b5564c89cfe15d1c203d"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2024_02.nc",
+      "bytes": 137983123,
+      "sha256": "942bb0d3254604eb6e1339a05396df3951e56a3eee239e2b365eb13520708d0b"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2024_03.nc",
+      "bytes": 149251501,
+      "sha256": "3e85a66f617ccee4e3c758491ab651e6688e47622b4d9c38ca5c8ac24fb1efb2"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2024_04.nc",
+      "bytes": 144130452,
+      "sha256": "1af5b74141c1b988cc59a438afdbf77fc8d8dad7d2ae9c32f78238570a86b418"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2024_05.nc",
+      "bytes": 148322493,
+      "sha256": "af1713a2d9b10684849625dcd2e0b170d277742e24ede91f844f146cc01d9091"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2024_06.nc",
+      "bytes": 140015640,
+      "sha256": "42eee8db972f42307c2b301d7a6f96bdbb63a5be0cc8d6d0bdfcda1f83c20323"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2024_07.nc",
+      "bytes": 138210299,
+      "sha256": "b78444d1e40f914861410fe802d457733ee19b6469f0cedbd518437bca590d1b"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2024_08.nc",
+      "bytes": 142184038,
+      "sha256": "222604cf6d3fef722187779b1c97dd63850d4c6c343642cee643dc8bf3f981df"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2024_09.nc",
+      "bytes": 135714198,
+      "sha256": "a160967a9054d24d3139192882c2b2b5be6ec5822db81bcfcfde6dce276fb308"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2024_10.nc",
+      "bytes": 143666735,
+      "sha256": "53802030956d2cff1a1c61f517e870a84d4812e5728d645f415f5e450e3ab4f9"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2024_11.nc",
+      "bytes": 144968746,
+      "sha256": "b801e1bb3eaf3a93eb8c0f18d68ddd4dd485f44c466edb8be6eb6a7f17b5b25d"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2024_12.nc",
+      "bytes": 150724784,
+      "sha256": "2b4a3ff12ee757a5e5ba33774fb2b47e1b0216fe79c7ec5e4da654c9665bb8a5"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2025_01.nc",
+      "bytes": 152601072,
+      "sha256": "e3c00743eedda6f64601d954b34d7c6f7afd5e297601e6380c04a14fa527b7d6"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2025_02.nc",
+      "bytes": 133250856,
+      "sha256": "22ce88f5a85c74398c6bcd05f593023ab76ec5b4fb18357b970615eacbe92e97"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2025_03.nc",
+      "bytes": 150048854,
+      "sha256": "0262223b7b8bed03f7ce7eb78e68e4f64e9e3c7baa11d60024110f2f4b985993"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2025_04.nc",
+      "bytes": 144702992,
+      "sha256": "cdc1c53244c1c1fd2754d53bc294b559e249741f1ee3a9aa722e39df82b005d9"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2025_05.nc",
+      "bytes": 147864420,
+      "sha256": "0630815f5572cc22e6e2fcf9e9453fc66782d629dca1e09c9fa6091e13af31c4"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2025_06.nc",
+      "bytes": 137079661,
+      "sha256": "c02faa256a68356b4e6215e7b733cdb309b8852396959f520011373067204b4f"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2025_07.nc",
+      "bytes": 139460553,
+      "sha256": "3d8d790ca8d9aa0e86322b6ff8eb4591a94ac74f69668a42cff6f70d16667858"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2025_08.nc",
+      "bytes": 142676182,
+      "sha256": "d701626e39c8dc4d91d6dd154c05a2359a5467d12798a1119e7c04d218c1d674"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2025_09.nc",
+      "bytes": 140838740,
+      "sha256": "b4740ef0cf91fb74b432e0f16ce47d03e3213f7823dc51be6d895a1369d1f75c"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2025_10.nc",
+      "bytes": 146103201,
+      "sha256": "9c692dbff03346453a283e75012581a6bc2f493ddc585144696aad24ed4cbd6d"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2025_11.nc",
+      "bytes": 144099462,
+      "sha256": "65d0cbb32a65f98dab3e695b1393c8642ac5f19880e0bcf138f3fde86d84508d"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2025_12.nc",
+      "bytes": 150821488,
+      "sha256": "54af46e76e1c1ec9656a273fea3bad4acc404e5a7226acb99c974944c0aa9b7e"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2026_01.nc",
+      "bytes": 144437780,
+      "sha256": "7ee359bd4335605e18f714b9211e3be3ef20f6d105075806f67b3dd7fb1340c5"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2026_02.nc",
+      "bytes": 132661791,
+      "sha256": "fbf2ae4cc9f0c4afa7efe472ad86d7fbcce572759eac76f47f76ac2e624ddfb3"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2026_03.nc",
+      "bytes": 147509220,
+      "sha256": "54666807afad421e76b2ecb5447d44f7af0a02dfbf2fc8259ca90a06b88ad293"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2026_04.nc",
+      "bytes": 141141155,
+      "sha256": "56f4faeb894dda8392579a11bf3ab0f86fc2989775d20233174cf4510bd54078"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2026_05.nc",
+      "bytes": 146259642,
+      "sha256": "4c4ca0dce4627345f853c85a57c34c32601efb41a5fdd2e9aaee8273d968eafc"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2026_06.nc",
+      "bytes": 133291969,
+      "sha256": "9deb73f4f1e9560524de9499e31f15a9b29d95ebbbd0c5afdc9e2ea45284815b"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_2026_07.nc",
+      "bytes": 136213869,
+      "sha256": "4668f9d7b083ec9749c753b00e4fcf64ee19813ecd8527fe2a47a6370d75d884"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_boundary_2024_09_01.nc",
+      "bytes": 298242,
+      "sha256": "f5447dd438fd08cc2896ce20a5478efa13f2b77706f20556f932cbc9674d0102"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_boundary_2025_05_01.nc",
+      "bytes": 292289,
+      "sha256": "2afb147a9f53c8d69578634d7c2e08c0755c77489ee63139c6fe30ea5f3b17a9"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_boundary_2026_01_01.nc",
+      "bytes": 297477,
+      "sha256": "f424ee6638e4048e465d7c29febcf1c30553bc50109e2a0902772f741f3da9c8"
+    },
+    {
+      "path": "data/raw/era5_land/era5_land_boundary_2026_08_01.nc",
+      "bytes": 294318,
+      "sha256": "6886a87439e948c188029ea04c2022bff63a674571913d3cdefd286aaf093c65"
+    }
+  ]
+}

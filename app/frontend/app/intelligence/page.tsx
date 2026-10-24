@@ -1,0 +1,25 @@
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { ArrowDown, ArrowUp, GitCompare, Search } from "lucide-react";
+import { api } from "@/lib/api";
+import { idr, pct, shortDate } from "@/components/common/format";
+import { Panel } from "@/components/common/Panel";
+import { FilterBar } from "@/components/filters/FilterBar";
+import { useDashboardStore } from "@/stores/dashboard";
+
+export default function IntelligencePage() {
+  const state = useDashboardStore(); const [second, setSecond] = useState("32");
+  const metadata = useQuery({ queryKey: ["metadata"], queryFn: api.metadata });
+  useEffect(() => { if (metadata.data?.latest_origin && !state.origin) state.set({ origin: metadata.data.latest_origin }); }, [metadata.data?.latest_origin, state]);
+  const params = { origin: state.origin || undefined, commodity: state.commodity, market_level: state.marketLevel, horizon: state.horizon };
+  const forecasts = useQuery({ queryKey: ["intelligence", params], queryFn: () => api.forecasts(params), enabled: Boolean(metadata.data) });
+  const first = forecasts.data?.find((item) => item.province_code === state.selectedProvince) || forecasts.data?.[0];
+  const comparison = forecasts.data?.find((item) => item.province_code === second);
+  const ranking = useMemo(() => [...(forecasts.data || [])].sort((a, b) => b.projected_change_pct - a.projected_change_pct).slice(0, 12), [forecasts.data]);
+  if (!metadata.data) return <Panel title="Intelligence"><div className="p-8 text-sm text-slate-500">Loading intelligence workspace…</div></Panel>;
+  return <div className="space-y-4"><div><h1 className="text-2xl font-semibold text-white">Intelligence workspace</h1><p className="mt-2 max-w-3xl text-sm text-slate-400">Compare province-level forward movement, inspect cross-region ranking, and keep the forecast-as-of boundary visible while investigating.</p></div><FilterBar metadata={metadata.data} /><div className="grid gap-4 lg:grid-cols-2"><ComparisonCard label="Selected province" forecast={first} /><div className="space-y-3"><label className="block text-[10px] font-semibold uppercase tracking-[.13em] text-slate-500">Compare against<select value={second} onChange={(event) => setSecond(event.target.value)} className="mt-1 w-full rounded-lg border border-line bg-ink px-3 py-2 text-xs text-white">{forecasts.data?.map((item) => <option key={item.province_code} value={item.province_code}>{item.province_name}</option>)}</select></label><ComparisonCard label="Comparison province" forecast={comparison} /></div></div><Panel title="Cross-region ranking" eyebrow={`As of ${shortDate(state.origin)}`} action={<div className="flex items-center gap-2 text-[10px] text-slate-500"><Search size={13} /> Sorted by projected movement</div>}><div className="grid gap-2 p-4 md:grid-cols-2 xl:grid-cols-3">{ranking.map((item, index) => <div key={item.forecast_id} className="flex items-center justify-between rounded-xl border border-line/70 bg-ink/30 p-3"><div className="flex items-center gap-3"><div className="font-mono text-xs text-cyanpulse">{String(index + 1).padStart(2, "0")}</div><div><div className="text-xs font-semibold text-white">{item.province_name}</div><div className="text-[10px] capitalize text-slate-500">{item.market_level} · {item.commodity_name}</div></div></div><div className="text-right"><div className={`text-sm font-semibold ${item.projected_change_pct >= 10 ? "text-red-300" : "text-amberpulse"}`}>{pct(item.projected_change_pct)}</div><div className="text-[10px] text-slate-500">{item.warning_level}</div></div></div>)}</div></Panel><div className="rounded-xl border border-line/70 bg-panel/60 p-4 text-xs leading-relaxed text-slate-500"><GitCompare size={15} className="mr-2 inline text-cyanpulse" />Comparisons use the same forecast origin, commodity, market level, and horizon. Realized target prices remain evaluation-only and are not used to rank this view.</div></div>;
+}
+function ComparisonCard({ label, forecast }: { label: string; forecast?: import("@/lib/types").Forecast }) { if (!forecast) return <Panel title={label}><div className="p-6 text-sm text-slate-500">No replay row for this province.</div></Panel>; return <Panel title={label} eyebrow={forecast.province_name}><div className="grid grid-cols-3 gap-2 p-4"><Value label="Current" value={idr(forecast.current_price)} /><Value label="Forecast" value={idr(forecast.predicted_price)} /><Value label="Move" value={pct(forecast.projected_change_pct)} accent={forecast.projected_change_pct >= 0 ? "text-amberpulse" : "text-cyanpulse"} /></div><div className="border-t border-line/70 px-4 py-3 text-[11px] text-slate-500">{forecast.model} · origin {shortDate(forecast.forecast_origin)}</div></Panel>; }
+function Value({ label, value, accent = "text-white" }: { label: string; value: string; accent?: string }) { return <div><div className="text-[10px] uppercase tracking-[.1em] text-slate-500">{label}</div><div className={`mt-1 text-sm font-semibold ${accent}`}>{value}</div></div>; }

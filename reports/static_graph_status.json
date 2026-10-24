@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-08-09T14:02:49.315522+00:00",
+  "stage": "static_graph",
+  "status": {
+    "stage": "static_graph",
+    "status": "completed",
+    "message": ""
+  },
+  "paths": {
+    "static_graph_csv": "<PROJECT_ROOT>/data/processed/province_graph_static.csv",
+    "static_graph_parquet": "<PROJECT_ROOT>/data/processed/province_graph_static.parquet"
+  },
+  "result_type": "DataFrame",
+  "errors": {}
+}

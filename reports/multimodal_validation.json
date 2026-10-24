@@ -1,0 +1,913 @@
+{
+  "validated_at_utc": "2026-08-09T16:29:31.763344+00:00",
+  "project_root": "<PROJECT_ROOT>",
+  "status": "passed",
+  "checks_passed": 97,
+  "checks_warning": 0,
+  "checks_failed": 0,
+  "errors": [],
+  "warnings": [
+    "Satellite zones use a documented province fallback and are regional vegetation proxies, not crop parcels."
+  ],
+  "checks": [
+    {
+      "name": "required_file.provinces",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/reference/indonesia_provinces.geojson",
+      "expected": null
+    },
+    {
+      "name": "required_file.satellite_zones",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/reference/satellite_zones.geojson",
+      "expected": null
+    },
+    {
+      "name": "required_file.price",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/price_daily.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.production",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/production_annual.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.calendar",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/calendar_features.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.weather",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/weather_daily.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.weather_metadata",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/weather_metadata.json",
+      "expected": null
+    },
+    {
+      "name": "required_file.sentinel_manifest",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/raw/sentinel2_asset_manifest.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.satellite",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/satellite_features.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.osm_summary",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/osm_province_transport_summary.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.osm_edges",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/osm_transport_edges.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.osm_manifest",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/osm_download_manifest.json",
+      "expected": null
+    },
+    {
+      "name": "required_file.official_markets",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/official_markets.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.official_market_summary",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/official_market_province_summary.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.official_market_manifest",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/official_market_manifest.json",
+      "expected": null
+    },
+    {
+      "name": "required_file.static_graph",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/province_graph_static.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.dynamic_graph",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/processed/province_graph_dynamic.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.ready_all",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/ready/model_dataset_all.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.ready_eligible",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/ready/model_dataset_eligible.parquet",
+      "expected": null
+    },
+    {
+      "name": "required_file.ready_metadata",
+      "status": "passed",
+      "observed": "<PROJECT_ROOT>/data/ready/model_dataset_metadata.json",
+      "expected": null
+    },
+    {
+      "name": "geography.province_count",
+      "status": "passed",
+      "observed": 38,
+      "expected": 38
+    },
+    {
+      "name": "geography.canonical_codes",
+      "status": "passed",
+      "observed": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "21",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "51",
+        "52",
+        "53",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "81",
+        "82",
+        "91",
+        "92",
+        "94",
+        "95",
+        "96",
+        "97"
+      ],
+      "expected": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "21",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "51",
+        "52",
+        "53",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "81",
+        "82",
+        "91",
+        "92",
+        "94",
+        "95",
+        "96",
+        "97"
+      ]
+    },
+    {
+      "name": "geography.valid_geometry",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "satellite_zones.count",
+      "status": "passed",
+      "observed": 38,
+      "expected": 38
+    },
+    {
+      "name": "satellite_zones.codes",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "satellite_zones.method_documented",
+      "status": "passed",
+      "observed": [
+        "province_fallback"
+      ],
+      "expected": null
+    },
+    {
+      "name": "price.province_codes",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "price.commodities",
+      "status": "passed",
+      "observed": [
+        "BM",
+        "CMK",
+        "CRM"
+      ],
+      "expected": null
+    },
+    {
+      "name": "price.market_levels",
+      "status": "passed",
+      "observed": [
+        "producer",
+        "retail",
+        "wholesale"
+      ],
+      "expected": null
+    },
+    {
+      "name": "price.positive_values",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "price.unique_keys",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "price.end_coverage",
+      "status": "passed",
+      "observed": "2026-07-31 00:00:00",
+      "expected": "2026-07-31 00:00:00"
+    },
+    {
+      "name": "production.rows",
+      "status": "passed",
+      "observed": 342,
+      "expected": 342
+    },
+    {
+      "name": "production.provinces",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "production.release_dates",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "production.unique_keys",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "calendar.unique_dates",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "calendar.start",
+      "status": "passed",
+      "observed": "2024-01-01 00:00:00",
+      "expected": "2024-01-01 00:00:00"
+    },
+    {
+      "name": "calendar.end",
+      "status": "passed",
+      "observed": "2026-07-31 00:00:00",
+      "expected": "2026-07-31 00:00:00"
+    },
+    {
+      "name": "weather.rows",
+      "status": "passed",
+      "observed": 35834,
+      "expected": 35834
+    },
+    {
+      "name": "weather.provinces",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "weather.unique_keys",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "weather.date_min",
+      "status": "passed",
+      "observed": "2024-01-01 00:00:00",
+      "expected": "2024-01-01 00:00:00"
+    },
+    {
+      "name": "weather.date_max",
+      "status": "passed",
+      "observed": "2026-07-31 00:00:00",
+      "expected": "2026-07-31 00:00:00"
+    },
+    {
+      "name": "weather.range.temperature_c_mean",
+      "status": "passed",
+      "observed": [
+        17.857565402638503,
+        29.488728255116957
+      ],
+      "expected": [
+        -10.0,
+        50.0
+      ]
+    },
+    {
+      "name": "weather.range.rainfall_mm_sum",
+      "status": "passed",
+      "observed": [
+        0.0,
+        120.44970172069269
+      ],
+      "expected": [
+        0.0,
+        1000.0
+      ]
+    },
+    {
+      "name": "weather.range.soil_moisture_layer1_mean",
+      "status": "passed",
+      "observed": [
+        0.09940715678666742,
+        0.48061438055109645
+      ],
+      "expected": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "weather.range.solar_radiation_mj_m2_sum",
+      "status": "passed",
+      "observed": [
+        1.8412364308312241,
+        27.590552045072005
+      ],
+      "expected": [
+        0.0,
+        60.0
+      ]
+    },
+    {
+      "name": "weather.accumulation_convention",
+      "status": "passed",
+      "observed": "next_day_00utc_previous_24h",
+      "expected": null
+    },
+    {
+      "name": "weather.source_file_count",
+      "status": "passed",
+      "observed": 35,
+      "expected": 35
+    },
+    {
+      "name": "weather.source_hashes",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "sentinel_manifest.zones",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "sentinel_manifest.unique_periods",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "sentinel_manifest.required_assets",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "sentinel_manifest.publication_timestamp",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "sentinel_manifest.fixed_scene_selection",
+      "status": "passed",
+      "observed": [
+        "province_representative_point_fixed_grid_least_cloudy_per_period"
+      ],
+      "expected": null
+    },
+    {
+      "name": "sentinel_manifest.grid_stability",
+      "status": "passed",
+      "observed": {
+        "maximum_grids_per_zone": 1,
+        "zones_not_one": 0
+      },
+      "expected": "exactly one locked MGRS grid per fixed analysis point"
+    },
+    {
+      "name": "sentinel_manifest.locked_grid_matches_scene",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "satellite.unique_scene_rows",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "satellite.success_fraction",
+      "status": "passed",
+      "observed": 1.0,
+      "expected": ">=0.8"
+    },
+    {
+      "name": "satellite.usable_fraction",
+      "status": "passed",
+      "observed": 1.0,
+      "expected": ">=0.8"
+    },
+    {
+      "name": "satellite.range.ndvi_mean",
+      "status": "passed",
+      "observed": [
+        0.16025696694850922,
+        0.889874279499054
+      ],
+      "expected": [
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "satellite.range.ndwi_mean",
+      "status": "passed",
+      "observed": [
+        -0.7734608054161072,
+        -0.13481807708740234
+      ],
+      "expected": [
+        -1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "satellite.range.evi_mean",
+      "status": "passed",
+      "observed": [
+        0.14098010957241058,
+        0.706125795841217
+      ],
+      "expected": [
+        -2.0,
+        2.0
+      ]
+    },
+    {
+      "name": "satellite.range.valid_pixel_fraction",
+      "status": "passed",
+      "observed": [
+        0.1503855278766311,
+        0.9946891104259964
+      ],
+      "expected": [
+        0.0,
+        1.0
+      ]
+    },
+    {
+      "name": "osm.province_rows",
+      "status": "passed",
+      "observed": 38,
+      "expected": 38
+    },
+    {
+      "name": "osm.provinces",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "osm.snapshot_date",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "osm.candidate_label",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "osm.edges_nonempty",
+      "status": "passed",
+      "observed": 70,
+      "expected": ">0"
+    },
+    {
+      "name": "osm.checksum",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "official_markets.features",
+      "status": "passed",
+      "observed": 625,
+      "expected": 625
+    },
+    {
+      "name": "official_markets.reference_provinces",
+      "status": "passed",
+      "observed": 38,
+      "expected": 38
+    },
+    {
+      "name": "official_markets.provinces_with_points",
+      "status": "passed",
+      "observed": 37,
+      "expected": 37
+    },
+    {
+      "name": "official_markets.dki_gap_recorded",
+      "status": "passed",
+      "observed": [
+        "31"
+      ],
+      "expected": [
+        "31"
+      ]
+    },
+    {
+      "name": "official_markets.raw_hash",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "dynamic_graph.unique_edges",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "dynamic_graph.snapshot_count",
+      "status": "passed",
+      "observed": 27,
+      "expected": 27
+    },
+    {
+      "name": "dynamic_graph.commodities",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "dynamic_graph.market_levels",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "dynamic_graph.window_is_historical",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "dynamic_graph.interpretation",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "dynamic_graph.latest_snapshot",
+      "status": "passed",
+      "observed": "2026-07-01 00:00:00",
+      "expected": "<=2026-07-31 00:00:00"
+    },
+    {
+      "name": "static_graph.nonempty",
+      "status": "passed",
+      "observed": 73,
+      "expected": null
+    },
+    {
+      "name": "static_graph.candidate_only",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "ready.provinces_match_price_targets",
+      "status": "passed",
+      "observed": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "21",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "51",
+        "52",
+        "53",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "81",
+        "82",
+        "91",
+        "94"
+      ],
+      "expected": [
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "21",
+        "31",
+        "32",
+        "33",
+        "34",
+        "35",
+        "36",
+        "51",
+        "52",
+        "53",
+        "61",
+        "62",
+        "63",
+        "64",
+        "65",
+        "71",
+        "72",
+        "73",
+        "74",
+        "75",
+        "76",
+        "81",
+        "82",
+        "91",
+        "94"
+      ]
+    },
+    {
+      "name": "ready.no_price_target_provinces_recorded",
+      "status": "passed",
+      "observed": [
+        "92",
+        "95",
+        "96",
+        "97"
+      ],
+      "expected": [
+        "92",
+        "95",
+        "96",
+        "97"
+      ]
+    },
+    {
+      "name": "ready.evidence_quality_unavailable",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "ready.evidence_status",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "ready.no_future_context.market_context_effective_date",
+      "status": "passed",
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "ready.no_future_context.production_effective_date",
+      "status": "passed",
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "ready.no_future_context.satellite_effective_date",
+      "status": "passed",
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "ready.no_future_context.transport_snapshot_date",
+      "status": "passed",
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "ready.no_future_context.weather_effective_date",
+      "status": "passed",
+      "observed": 0,
+      "expected": 0
+    },
+    {
+      "name": "ready.modality_masks",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "ready.modality_count_consistency",
+      "status": "passed",
+      "observed": null,
+      "expected": null
+    },
+    {
+      "name": "ready.no_realized_labels_in_feature_contract",
+      "status": "passed",
+      "observed": [],
+      "expected": []
+    }
+  ],
+  "artifact_hashes": {
+    "price": {
+      "path": "<PROJECT_ROOT>/data/processed/price_daily.parquet",
+      "bytes": 228206,
+      "sha256": "361e374f803108a6815b3402c3cd922df492c671fa7b6e813d8549309f67cd4b"
+    },
+    "production": {
+      "path": "<PROJECT_ROOT>/data/processed/production_annual.parquet",
+      "bytes": 32869,
+      "sha256": "e13af0fd4765d710d42e41ce5bd7c909f52abf9140e31a61e97b9ed35c34ff85"
+    },
+    "calendar": {
+      "path": "<PROJECT_ROOT>/data/processed/calendar_features.parquet",
+      "bytes": 65788,
+      "sha256": "510d7b9674295383862d575286d5ea935f526dc761555041cb3f590c9166a97d"
+    },
+    "weather": {
+      "path": "<PROJECT_ROOT>/data/processed/weather_daily.parquet",
+      "bytes": 2171567,
+      "sha256": "8ff2234927bb1a437dbd795da5dc3a5d15498427148f31938fce88b92aeaba08"
+    },
+    "weather_metadata": {
+      "path": "<PROJECT_ROOT>/data/processed/weather_metadata.json",
+      "bytes": 6628,
+      "sha256": "495cf6d035bff4fba47099426026e447d82b798010d1648852f94ced31994a21"
+    },
+    "sentinel_manifest": {
+      "path": "<PROJECT_ROOT>/data/raw/sentinel2_asset_manifest.parquet",
+      "bytes": 173600,
+      "sha256": "cb6e8514b4e2c10e505bac1e2e887e1b0c478779fdf3139a79941f27f1697df7"
+    },
+    "satellite": {
+      "path": "<PROJECT_ROOT>/data/processed/satellite_features.parquet",
+      "bytes": 261062,
+      "sha256": "ec8e7ee6c2329816c7a96958ff590cc73c889e7b83228ab36280967fa6d06a24"
+    },
+    "osm_summary": {
+      "path": "<PROJECT_ROOT>/data/processed/osm_province_transport_summary.parquet",
+      "bytes": 11028,
+      "sha256": "2ef8a2022788f75f432603672fc3af3bab2eea0f5ffdb99fa12387a5e01dfc9b"
+    },
+    "osm_edges": {
+      "path": "<PROJECT_ROOT>/data/processed/osm_transport_edges.parquet",
+      "bytes": 8040,
+      "sha256": "809a759d17ce27edda0c0e8bfa1eb3d126b5f995d8a93514e702065bb722cb4f"
+    },
+    "osm_manifest": {
+      "path": "<PROJECT_ROOT>/data/processed/osm_download_manifest.json",
+      "bytes": 434,
+      "sha256": "361da79418f92971fa7e086d2ae2e0ff13950cb12d6bde881d3f7a3a8f16e096"
+    },
+    "official_markets": {
+      "path": "<PROJECT_ROOT>/data/processed/official_markets.parquet",
+      "bytes": 71040,
+      "sha256": "62b7dad2cc52245a42b7cec2d23d272dba270fa1aa148c04aac6ed3f2ccb9851"
+    },
+    "official_market_summary": {
+      "path": "<PROJECT_ROOT>/data/processed/official_market_province_summary.parquet",
+      "bytes": 11776,
+      "sha256": "37a0691fb9984d0078469a6cf095cce14b65226418b03ff6b39b66f6a452b493"
+    },
+    "official_market_manifest": {
+      "path": "<PROJECT_ROOT>/data/processed/official_market_manifest.json",
+      "bytes": 1340,
+      "sha256": "b1cb0f36c14b956d3560dfe1ba38b7689fc461719f097a6ccda4947de8798b9a"
+    },
+    "static_graph": {
+      "path": "<PROJECT_ROOT>/data/processed/province_graph_static.parquet",
+      "bytes": 16001,
+      "sha256": "21823ec368158ddc15aa01925ce0caeed038f56dbe4191ebedee3b1210be27b0"
+    },
+    "dynamic_graph": {
+      "path": "<PROJECT_ROOT>/data/processed/province_graph_dynamic.parquet",
+      "bytes": 1302919,
+      "sha256": "2a028217608d5b7fd99c5c65b080cd98dca0e1d1290fcfa9be69a11c6baf243b"
+    },
+    "ready_all": {
+      "path": "<PROJECT_ROOT>/data/ready/model_dataset_all.parquet",
+      "bytes": 7201654,
+      "sha256": "1890e8e016bb29f29157a7c8fcd3db87884039e5f7c85cb976369fdc17768d78"
+    },
+    "ready_eligible": {
+      "path": "<PROJECT_ROOT>/data/ready/model_dataset_eligible.parquet",
+      "bytes": 7290741,
+      "sha256": "dbe4fdcd3512f25b95e4ca5ba33abb5f13976d6281db0793ae791de9c25a8ce4"
+    },
+    "ready_metadata": {
+      "path": "<PROJECT_ROOT>/data/ready/model_dataset_metadata.json",
+      "bytes": 4362,
+      "sha256": "64f366803ad00c35194d75363f110607fcf674aff24aeac73849a12de22ec420"
+    }
+  }
+}

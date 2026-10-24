@@ -1,0 +1,100 @@
+{
+  "protocol": {
+    "broad_screen_fold_ids": [
+      2
+    ],
+    "development_fold_ids": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "holdout_fold_ids": [
+      5,
+      6,
+      7
+    ],
+    "horizons": [
+      7,
+      14
+    ],
+    "origins": [
+      "2026-02-02",
+      "2026-03-02",
+      "2026-03-30",
+      "2026-04-27",
+      "2026-05-25",
+      "2026-06-22",
+      "2026-07-17"
+    ]
+  },
+  "catalog_size": 120,
+  "successful_screen_variants": 120,
+  "promoted_to_development": [
+    "cat__scaled_delta__full_context_geo_missing__deep_full",
+    "cat__logratio__graph_production__deep_full",
+    "cat__scaled_delta__dynamic_graph__deep_full",
+    "cat__logratio__dynamic_graph__deep_full",
+    "cat__scaled_delta__graph_production__deep_full",
+    "cat__delta__graph_production__balanced",
+    "cat__delta__dynamic_graph__deep_full",
+    "cat__delta__full_context_geo_missing__balanced"
+  ],
+  "best_development_variant": "cat__scaled_delta__full_context_geo_missing__deep_full",
+  "group_refinements": [
+    "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity",
+    "cat__scaled_delta__full_context_geo_missing__deep_full__per_market",
+    "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market"
+  ],
+  "best_holdout_by_horizon": [
+    {
+      "variant": "cat__scaled_delta__full_context_geo_missing__deep_full__per_market",
+      "horizon_days": 7,
+      "scope": "holdout_origins_5_7",
+      "folds": 3,
+      "rows": 1674,
+      "mae": 3804.617438624495,
+      "mean_mae_ratio": 0.9656436817410817,
+      "worst_fold_mae": 4543.881526638968,
+      "runtime_seconds": 569.841637134552
+    },
+    {
+      "variant": "cat__logratio__dynamic_graph__deep_full",
+      "horizon_days": 14,
+      "scope": "holdout_origins_5_7",
+      "folds": 3,
+      "rows": 1670,
+      "mae": 5137.832547157908,
+      "mean_mae_ratio": 0.7562230178201147,
+      "worst_fold_mae": 5382.126537468436,
+      "runtime_seconds": 245.05728769302368
+    }
+  ],
+  "best_ensemble_holdout_by_horizon": [
+    {
+      "model": "FIXED_DEV_NNMAE_BLEND",
+      "horizon_days": 7,
+      "scope": "holdout_folds_5_7",
+      "rows": 837,
+      "weights": "{\"cat__scaled_delta__full_context_geo_missing__deep_full\": 5.219708046122634e-10, \"cat__logratio__graph_production__deep_full\": 4.219952216335029e-10, \"cat__scaled_delta__dynamic_graph__deep_full\": 3.900887480033219e-10, \"cat__logratio__dynamic_graph__deep_full\": 5.219900284214599e-10, \"cat__scaled_delta__graph_production__deep_full\": 7.429871506854983e-10, \"cat__delta__graph_production__balanced\": 8.7108228761633e-10, \"cat__delta__dynamic_graph__deep_full\": 6.128883402251642e-10, \"cat__delta__full_context_geo_missing__balanced\": 1.099392309626812e-09, \"cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity\": 2.886015498416607e-12, \"cat__scaled_delta__full_context_geo_missing__deep_full__per_market\": 0.13409849383297914, \"cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market\": 0.2764456738537416, \"INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble\": 0.11887880540157733, \"INCUMBENT_expert_lgb_logratio\": 0.47057702172642113}",
+      "shrink_alpha": NaN,
+      "mae": 3642.3549008153873,
+      "rmse": 5967.12905132439,
+      "smape": 7.865897546219967,
+      "mean_error": 559.4421587122644
+    },
+    {
+      "model": "EQUAL_TOP3",
+      "horizon_days": 14,
+      "scope": "holdout_folds_5_7",
+      "rows": 835,
+      "weights": "{\"cat__scaled_delta__full_context_geo_missing__deep_full\": 2.32415781161574e-17, \"cat__logratio__graph_production__deep_full\": 7.845762295162096e-17, \"cat__scaled_delta__dynamic_graph__deep_full\": 1.2191889231314503e-12, \"cat__logratio__dynamic_graph__deep_full\": 6.503189701729453e-17, \"cat__scaled_delta__graph_production__deep_full\": 5.366522760846123e-13, \"cat__delta__graph_production__balanced\": 1.3081249260083975e-17, \"cat__delta__dynamic_graph__deep_full\": 8.101982253214145e-17, \"cat__delta__full_context_geo_missing__balanced\": 8.850088568682052e-18, \"cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity\": 1.0586997525482958e-16, \"cat__scaled_delta__full_context_geo_missing__deep_full__per_market\": 0.22480817444990067, \"cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market\": 0.5197236847038853, \"INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble\": 0.04050282267015702, \"INCUMBENT_expert_lgb_logratio\": 0.21496531817430092}",
+      "shrink_alpha": NaN,
+      "mae": 5004.567094357242,
+      "rmse": 7565.675471688248,
+      "smape": 10.798014852366043,
+      "mean_error": 1029.036784942124
+    }
+  ],
+  "runtime_seconds": 11153.290556669235
+}

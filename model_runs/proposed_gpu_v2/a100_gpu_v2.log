@@ -1,0 +1,426 @@
+GPU V2 h=7 fold=1/7 origin=2026-02-02
+Warning: less than 75% GPU memory available for training. Free: 13379.1875 Total: 81251.1875
+0:	learn: 7072.0615220	total: 94.7ms	remaining: 37.8s
+100:	learn: 5343.3772186	total: 11s	remaining: 32.6s
+200:	learn: 4831.3609809	total: 22.5s	remaining: 22.3s
+300:	learn: 4505.6027736	total: 33.4s	remaining: 11s
+399:	learn: 4263.6867535	total: 44.4s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 13377.1875 Total: 81251.1875
+0:	learn: 0.1535863	total: 114ms	remaining: 45.4s
+100:	learn: 0.1143256	total: 12.2s	remaining: 36.2s
+200:	learn: 0.1052040	total: 18.9s	remaining: 18.7s
+300:	learn: 0.0991719	total: 30s	remaining: 9.87s
+399:	learn: 0.0941920	total: 41.1s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 22295.1875 Total: 81251.1875
+0:	learn: 17816.6283776	total: 72.5ms	remaining: 28.9s
+100:	learn: 5578.7690540	total: 10.4s	remaining: 30.8s
+200:	learn: 4960.2396550	total: 21.2s	remaining: 21s
+300:	learn: 4587.7468786	total: 32.5s	remaining: 10.7s
+399:	learn: 4325.3213095	total: 44.3s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+            CAT_GPU_V2_delta             7          279            279             1     3168.660857      5169.674123       6.884026           -1301.721882
+CAT_GPU_V2_adaptive_ensemble             7          279            279             1     3206.939384      5536.453487       6.893400           -1750.879373
+         CAT_GPU_V2_logratio             7          279            279             1     3233.748640      5633.654148       6.720379           -1881.805085
+         CAT_GPU_V2_momentum             7          279            279             1     3284.139785      5780.339740       7.390417           -2137.365591
+            CAT_GPU_V2_level             7          279            279             1     3344.240822      5429.815485       7.728415           -1279.026960
+       CAT_GPU_V2_last_price             7          279            279             1     3688.530466      6776.921622       7.774434           -2839.426523
+GPU V2 h=7 fold=2/7 origin=2026-03-02
+Warning: less than 75% GPU memory available for training. Free: 13737.1875 Total: 81251.1875
+0:	learn: 7107.6563005	total: 151ms	remaining: 1m
+100:	learn: 5385.1751362	total: 11.5s	remaining: 33.9s
+200:	learn: 4877.8833789	total: 22.5s	remaining: 22.3s
+300:	learn: 4554.9735381	total: 35.1s	remaining: 11.6s
+399:	learn: 4312.0458571	total: 46.7s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 13737.1875 Total: 81251.1875
+0:	learn: 0.1545016	total: 122ms	remaining: 48.8s
+100:	learn: 0.1143380	total: 11.5s	remaining: 34s
+200:	learn: 0.1050648	total: 15.9s	remaining: 15.7s
+300:	learn: 0.0988170	total: 28s	remaining: 9.2s
+399:	learn: 0.0944478	total: 40.2s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 22525.1875 Total: 81251.1875
+0:	learn: 17887.6661055	total: 106ms	remaining: 42.3s
+100:	learn: 5587.6086004	total: 12.4s	remaining: 36.7s
+200:	learn: 4985.2568942	total: 24s	remaining: 23.7s
+300:	learn: 4632.9930032	total: 35s	remaining: 11.5s
+399:	learn: 4371.8676280	total: 41.1s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+            CAT_GPU_V2_delta             7          559            280             2     3138.698319      5045.495808       6.717566            -847.497718
+         CAT_GPU_V2_logratio             7          559            280             2     3141.501660      5273.315660       6.511844           -1188.078299
+       CAT_GPU_V2_last_price             7          559            280             2     3146.601073      5876.372066       6.497302           -1642.486583
+            CAT_GPU_V2_level             7          559            280             2     3225.992341      5136.420871       7.196463            -742.345581
+CAT_GPU_V2_adaptive_ensemble             7          559            280             2     3359.426756      5540.236739       6.891716           -1107.848288
+         CAT_GPU_V2_momentum             7          559            280             2     4069.141324      6774.345383       8.524833           -1338.103757
+GPU V2 h=7 fold=3/7 origin=2026-03-30
+Warning: less than 75% GPU memory available for training. Free: 13737.1875 Total: 81251.1875
+0:	learn: 7192.3421138	total: 119ms	remaining: 47.4s
+100:	learn: 5495.7046164	total: 11.6s	remaining: 34.3s
+200:	learn: 4990.7475742	total: 22.7s	remaining: 22.5s
+300:	learn: 4664.8009838	total: 33.6s	remaining: 11.1s
+399:	learn: 4422.3820133	total: 44.7s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 13737.1875 Total: 81251.1875
+0:	learn: 0.1538730	total: 19.8ms	remaining: 7.91s
+100:	learn: 0.1155199	total: 7.14s	remaining: 21.1s
+200:	learn: 0.1066053	total: 18s	remaining: 17.8s
+300:	learn: 0.1002118	total: 28.9s	remaining: 9.52s
+399:	learn: 0.0954520	total: 39.6s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 22525.1875 Total: 81251.1875
+0:	learn: 18332.6456282	total: 163ms	remaining: 1m 4s
+100:	learn: 5711.3979318	total: 12s	remaining: 35.4s
+200:	learn: 5088.7302412	total: 22.4s	remaining: 22.1s
+300:	learn: 4739.2229656	total: 28.5s	remaining: 9.37s
+399:	learn: 4482.2600655	total: 39.4s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+       CAT_GPU_V2_last_price             7          839            280             3     3441.537545      6719.104680       6.739035            -739.988081
+         CAT_GPU_V2_logratio             7          839            280             3     3443.045504      5712.709313       6.962498            -387.710384
+            CAT_GPU_V2_delta             7          839            280             3     3531.678103      5665.787848       7.349063             -86.195067
+CAT_GPU_V2_adaptive_ensemble             7          839            280             3     3607.676913      6008.394081       7.207700            -325.361933
+            CAT_GPU_V2_level             7          839            280             3     3638.475715      5914.150338       7.690911             -77.488978
+         CAT_GPU_V2_momentum             7          839            280             3     5038.200238      8689.802893       9.896143            -606.674613
+GPU V2 h=7 fold=4/7 origin=2026-04-27
+Warning: less than 75% GPU memory available for training. Free: 28145.1875 Total: 81251.1875
+0:	learn: 7280.7155527	total: 108ms	remaining: 43.1s
+100:	learn: 5555.7296458	total: 11s	remaining: 32.4s
+200:	learn: 5051.8211332	total: 22s	remaining: 21.8s
+300:	learn: 4730.0240784	total: 33.6s	remaining: 11s
+399:	learn: 4476.9325981	total: 43.1s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 31739.1875 Total: 81251.1875
+0:	learn: 0.1530153	total: 111ms	remaining: 44.1s
+100:	learn: 0.1155327	total: 11.4s	remaining: 33.8s
+200:	learn: 0.1067149	total: 23s	remaining: 22.8s
+300:	learn: 0.1004109	total: 34.4s	remaining: 11.3s
+399:	learn: 0.0959560	total: 45.2s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 31739.1875 Total: 81251.1875
+0:	learn: 18572.5935111	total: 19.3ms	remaining: 7.68s
+100:	learn: 5811.8660387	total: 6.45s	remaining: 19.1s
+200:	learn: 5176.1085656	total: 18s	remaining: 17.8s
+300:	learn: 4814.5184951	total: 29.7s	remaining: 9.78s
+399:	learn: 4553.6723855	total: 41.3s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+       CAT_GPU_V2_last_price             7         1110            280             4     3261.936937      6533.308455       6.429228            -606.801802
+         CAT_GPU_V2_logratio             7         1110            280             4     3374.272723      5668.837869       6.876551            -522.242982
+CAT_GPU_V2_adaptive_ensemble             7         1110            280             4     3452.928055      5895.502301       6.957779            -432.529544
+            CAT_GPU_V2_delta             7         1110            280             4     3461.444683      5662.744844       7.243203            -253.833052
+            CAT_GPU_V2_level             7         1110            280             4     3571.057094      5881.592585       7.574655            -278.704164
+         CAT_GPU_V2_momentum             7         1110            280             4     4907.725225      8525.625489      10.317434           -1030.292793
+GPU V2 h=7 fold=5/7 origin=2026-05-25
+Warning: less than 75% GPU memory available for training. Free: 34039.1875 Total: 81251.1875
+0:	learn: 7237.8372595	total: 109ms	remaining: 43.3s
+100:	learn: 5524.8737775	total: 12.1s	remaining: 35.7s
+200:	learn: 5022.7147982	total: 19.4s	remaining: 19.2s
+300:	learn: 4712.0094253	total: 29s	remaining: 9.54s
+399:	learn: 4472.8306868	total: 39.4s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 35511.1875 Total: 81251.1875
+0:	learn: 0.1518186	total: 108ms	remaining: 43.1s
+100:	learn: 0.1147691	total: 12.6s	remaining: 37.3s
+200:	learn: 0.1060583	total: 24.4s	remaining: 24.2s
+300:	learn: 0.0999765	total: 36.2s	remaining: 11.9s
+399:	learn: 0.0954206	total: 43s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 36451.1875 Total: 81251.1875
+0:	learn: 18363.7398393	total: 108ms	remaining: 43.1s
+100:	learn: 5727.8409000	total: 11.6s	remaining: 34.3s
+200:	learn: 5140.6045798	total: 24.5s	remaining: 24.3s
+300:	learn: 4786.4865276	total: 36.1s	remaining: 11.9s
+399:	learn: 4520.9377654	total: 47.6s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+       CAT_GPU_V2_last_price             7         1387            280             5     3146.106705      6336.928567       6.066072            -908.111031
+CAT_GPU_V2_adaptive_ensemble             7         1387            280             5     3298.954680      5814.863707       6.489066            -768.642964
+         CAT_GPU_V2_logratio             7         1387            280             5     3351.513083      5514.348247       6.710417            -376.478178
+            CAT_GPU_V2_delta             7         1387            280             5     3460.893549      5538.385879       7.101739            -130.200903
+            CAT_GPU_V2_level             7         1387            280             5     3600.113262      5780.702376       7.475767             -94.951314
+         CAT_GPU_V2_momentum             7         1387            280             5     4827.469358      8207.481870      10.056394            -746.611391
+GPU V2 h=7 fold=6/7 origin=2026-06-22
+Warning: less than 75% GPU memory available for training. Free: 13737.1875 Total: 81251.1875
+0:	learn: 7272.7154983	total: 123ms	remaining: 48.9s
+100:	learn: 5589.8454227	total: 12s	remaining: 35.4s
+200:	learn: 5095.0557239	total: 24.6s	remaining: 24.3s
+300:	learn: 4757.4025584	total: 36.3s	remaining: 11.9s
+399:	learn: 4512.8472570	total: 47.9s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 13737.1875 Total: 81251.1875
+0:	learn: 0.1512663	total: 101ms	remaining: 40.2s
+100:	learn: 0.1148198	total: 11.1s	remaining: 32.9s
+200:	learn: 0.1063472	total: 15.5s	remaining: 15.4s
+300:	learn: 0.1005262	total: 25.6s	remaining: 8.42s
+399:	learn: 0.0960789	total: 37.1s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 22525.1875 Total: 81251.1875
+0:	learn: 18368.6979755	total: 112ms	remaining: 44.9s
+100:	learn: 5821.9388606	total: 11.4s	remaining: 33.8s
+200:	learn: 5210.6019304	total: 22.6s	remaining: 22.4s
+300:	learn: 4850.1187735	total: 33.4s	remaining: 11s
+399:	learn: 4591.8940288	total: 39.9s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+         CAT_GPU_V2_logratio             7         1667            280             6     3564.201162      5681.610295       7.226673            -268.430126
+            CAT_GPU_V2_delta             7         1667            280             6     3660.095378      5716.621358       7.558759              92.305983
+       CAT_GPU_V2_last_price             7         1667            280             6     3662.357528      7036.051968       7.237227            -390.191962
+CAT_GPU_V2_adaptive_ensemble             7         1667            280             6     3695.609676      6390.746700       7.399150            -347.130160
+            CAT_GPU_V2_level             7         1667            280             6     3782.567378      5900.629408       7.887571             115.282977
+         CAT_GPU_V2_momentum             7         1667            280             6     5112.417516      8606.054869      10.637532            -343.461308
+GPU V2 h=7 fold=7/7 origin=2026-07-17
+Warning: less than 75% GPU memory available for training. Free: 28145.1875 Total: 81251.1875
+0:	learn: 7240.4104742	total: 116ms	remaining: 46.3s
+100:	learn: 5556.3840967	total: 11s	remaining: 32.6s
+200:	learn: 5055.5131915	total: 22.1s	remaining: 21.9s
+300:	learn: 4747.2381916	total: 33.6s	remaining: 11.1s
+399:	learn: 4506.6044923	total: 48.2s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 13737.1875 Total: 81251.1875
+0:	learn: 0.1504955	total: 102ms	remaining: 40.8s
+100:	learn: 0.1143306	total: 11.7s	remaining: 34.7s
+200:	learn: 0.1058102	total: 22.7s	remaining: 22.5s
+300:	learn: 0.1000638	total: 34s	remaining: 11.2s
+399:	learn: 0.0957339	total: 44.6s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 13737.1875 Total: 81251.1875
+0:	learn: 18213.6594357	total: 103ms	remaining: 41s
+100:	learn: 5795.0459756	total: 10.4s	remaining: 30.8s
+200:	learn: 5196.8065286	total: 14.8s	remaining: 14.6s
+300:	learn: 4833.9448566	total: 26.3s	remaining: 8.64s
+399:	learn: 4569.3476917	total: 40.4s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+         CAT_GPU_V2_logratio             7         1947            280             7     3581.001572      5708.427246       7.493108            -178.807941
+            CAT_GPU_V2_delta             7         1947            280             7     3664.564412      5747.377493       7.791455             215.150441
+       CAT_GPU_V2_last_price             7         1947            280             7     3679.583975      6995.909638       7.545142               8.757062
+CAT_GPU_V2_adaptive_ensemble             7         1947            280             7     3685.514266      6334.460423       7.629123            -135.476144
+            CAT_GPU_V2_level             7         1947            280             7     3762.187407      5893.572958       8.057317             224.700685
+         CAT_GPU_V2_momentum             7         1947            280             7     4902.863380      8362.440889      10.419031             -52.349769
+GPU V2 h=14 fold=1/7 origin=2026-02-02
+Warning: less than 75% GPU memory available for training. Free: 22525.1875 Total: 81251.1875
+0:	learn: 10113.5270873	total: 113ms	remaining: 45s
+100:	learn: 7073.4509916	total: 11.3s	remaining: 33.6s
+200:	learn: 6220.1673173	total: 23.2s	remaining: 23s
+300:	learn: 5638.7409878	total: 32.4s	remaining: 10.7s
+399:	learn: 5227.0799952	total: 38.7s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 28145.1875 Total: 81251.1875
+0:	learn: 0.2223306	total: 106ms	remaining: 42.2s
+100:	learn: 0.1545481	total: 11.3s	remaining: 33.5s
+200:	learn: 0.1370844	total: 23.4s	remaining: 23.2s
+300:	learn: 0.1262411	total: 35.9s	remaining: 11.8s
+399:	learn: 0.1173962	total: 50.6s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 13737.1875 Total: 81251.1875
+0:	learn: 17982.1046269	total: 79.3ms	remaining: 31.7s
+100:	learn: 7167.9619853	total: 11.1s	remaining: 32.8s
+200:	learn: 6208.6794741	total: 22.4s	remaining: 22.2s
+300:	learn: 5652.1578138	total: 33.1s	remaining: 10.9s
+399:	learn: 5242.6472836	total: 44.2s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+         CAT_GPU_V2_logratio             7         1947            280             7     3581.001572      5708.427246       7.493108            -178.807941
+            CAT_GPU_V2_delta             7         1947            280             7     3664.564412      5747.377493       7.791455             215.150441
+       CAT_GPU_V2_last_price             7         1947            280             7     3679.583975      6995.909638       7.545142               8.757062
+CAT_GPU_V2_adaptive_ensemble             7         1947            280             7     3685.514266      6334.460423       7.629123            -135.476144
+            CAT_GPU_V2_level             7         1947            280             7     3762.187407      5893.572958       8.057317             224.700685
+         CAT_GPU_V2_momentum             7         1947            280             7     4902.863380      8362.440889      10.419031             -52.349769
+         CAT_GPU_V2_logratio            14          279            279             1     4268.074673      7318.786542       8.860175           -2172.861960
+            CAT_GPU_V2_delta            14          279            279             1     4446.579657      7443.014480       9.548117           -1666.036684
+CAT_GPU_V2_adaptive_ensemble            14          279            279             1     4470.827969      7647.185229       9.396982           -2379.185926
+            CAT_GPU_V2_level            14          279            279             1     4827.190526      7865.164093      10.627046           -1559.527318
+       CAT_GPU_V2_last_price            14          279            279             1     5433.512545      9637.119749      11.446012           -4671.146953
+         CAT_GPU_V2_momentum            14          279            279             1     6895.340502      9782.953227      21.612323           -6172.401434
+GPU V2 h=14 fold=2/7 origin=2026-03-02
+Warning: less than 75% GPU memory available for training. Free: 13737.1875 Total: 81251.1875
+0:	learn: 10158.6054664	total: 103ms	remaining: 41.1s
+100:	learn: 7086.7369524	total: 11.9s	remaining: 35.3s
+200:	learn: 6249.2300993	total: 17.3s	remaining: 17.1s
+300:	learn: 5723.2170083	total: 28s	remaining: 9.2s
+399:	learn: 5319.7062362	total: 39.1s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 22525.1875 Total: 81251.1875
+0:	learn: 0.2237733	total: 124ms	remaining: 49.3s
+100:	learn: 0.1548186	total: 15.6s	remaining: 46.1s
+200:	learn: 0.1383879	total: 27.2s	remaining: 26.9s
+300:	learn: 0.1273959	total: 39s	remaining: 12.8s
+399:	learn: 0.1189467	total: 45.9s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 28145.1875 Total: 81251.1875
+0:	learn: 18059.3057872	total: 127ms	remaining: 50.8s
+100:	learn: 7212.3129533	total: 16.4s	remaining: 48.5s
+200:	learn: 6293.5945640	total: 28.5s	remaining: 28.3s
+300:	learn: 5712.5209830	total: 42.7s	remaining: 14.1s
+399:	learn: 5324.4948454	total: 56.3s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+         CAT_GPU_V2_logratio             7         1947            280             7     3581.001572      5708.427246       7.493108            -178.807941
+            CAT_GPU_V2_delta             7         1947            280             7     3664.564412      5747.377493       7.791455             215.150441
+       CAT_GPU_V2_last_price             7         1947            280             7     3679.583975      6995.909638       7.545142               8.757062
+CAT_GPU_V2_adaptive_ensemble             7         1947            280             7     3685.514266      6334.460423       7.629123            -135.476144
+            CAT_GPU_V2_level             7         1947            280             7     3762.187407      5893.572958       8.057317             224.700685
+         CAT_GPU_V2_momentum             7         1947            280             7     4902.863380      8362.440889      10.419031             -52.349769
+         CAT_GPU_V2_logratio            14          558            279             2     4542.571436      7614.682878       9.030285           -1934.448789
+CAT_GPU_V2_adaptive_ensemble            14          558            279             2     4685.852972      7846.516587       9.362916           -2042.564187
+            CAT_GPU_V2_delta            14          558            279             2     4853.025983      7962.497065       9.778104           -1591.365162
+            CAT_GPU_V2_level            14          558            279             2     4895.475490      7816.686374      10.202771           -1425.800541
+       CAT_GPU_V2_last_price            14          558            279             2     5162.634409      9352.644912      10.124916           -3926.971326
+         CAT_GPU_V2_momentum            14          558            279             2     7133.512545     10602.027453      17.853820           -4093.548387
+GPU V2 h=14 fold=3/7 origin=2026-03-30
+Warning: less than 75% GPU memory available for training. Free: 28145.1875 Total: 81251.1875
+0:	learn: 10235.1823425	total: 21.2ms	remaining: 8.44s
+100:	learn: 7221.5877073	total: 8.46s	remaining: 25s
+200:	learn: 6365.4702658	total: 19.9s	remaining: 19.7s
+300:	learn: 5833.8905675	total: 32.3s	remaining: 10.6s
+399:	learn: 5436.1135581	total: 44s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 31739.1875 Total: 81251.1875
+0:	learn: 0.2233000	total: 157ms	remaining: 1m 2s
+100:	learn: 0.1552187	total: 11.4s	remaining: 33.7s
+200:	learn: 0.1389589	total: 19.3s	remaining: 19.1s
+300:	learn: 0.1281802	total: 30.1s	remaining: 9.9s
+399:	learn: 0.1200931	total: 41.5s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 34039.1875 Total: 81251.1875
+0:	learn: 18495.1240500	total: 117ms	remaining: 46.6s
+100:	learn: 7329.1806911	total: 12.5s	remaining: 37.1s
+200:	learn: 6404.2843353	total: 28.9s	remaining: 28.7s
+300:	learn: 5832.1595956	total: 45s	remaining: 14.8s
+399:	learn: 5437.1531265	total: 50.9s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+         CAT_GPU_V2_logratio             7         1947            280             7     3581.001572      5708.427246       7.493108            -178.807941
+            CAT_GPU_V2_delta             7         1947            280             7     3664.564412      5747.377493       7.791455             215.150441
+       CAT_GPU_V2_last_price             7         1947            280             7     3679.583975      6995.909638       7.545142               8.757062
+CAT_GPU_V2_adaptive_ensemble             7         1947            280             7     3685.514266      6334.460423       7.629123            -135.476144
+            CAT_GPU_V2_level             7         1947            280             7     3762.187407      5893.572958       8.057317             224.700685
+         CAT_GPU_V2_momentum             7         1947            280             7     4902.863380      8362.440889      10.419031             -52.349769
+         CAT_GPU_V2_logratio            14          838            280             3     4679.464786      7612.690490       9.160457            -448.249212
+CAT_GPU_V2_adaptive_ensemble            14          838            280             3     4759.214107      7775.278432       9.345140            -512.107508
+       CAT_GPU_V2_last_price            14          838            280             3     4970.704057      9314.159705       9.485096           -1866.527446
+            CAT_GPU_V2_level            14          838            280             3     5043.219045      8000.440997      10.280064             -71.398403
+            CAT_GPU_V2_delta            14          838            280             3     5051.575922      7984.175452      10.121651             -84.719560
+         CAT_GPU_V2_momentum            14          838            280             3     7167.392601     11477.185818      16.290191           -1639.647971
+GPU V2 h=14 fold=4/7 origin=2026-04-27
+Warning: less than 75% GPU memory available for training. Free: 35511.1875 Total: 81251.1875
+0:	learn: 10360.9629492	total: 112ms	remaining: 44.9s
+100:	learn: 7298.7583765	total: 11.9s	remaining: 35.3s
+200:	learn: 6441.4731620	total: 23.4s	remaining: 23.2s
+300:	learn: 5896.1212504	total: 35.8s	remaining: 11.8s
+399:	learn: 5486.5532275	total: 52.1s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 13737.1875 Total: 81251.1875
+0:	learn: 0.2219925	total: 86.3ms	remaining: 34.4s
+100:	learn: 0.1559460	total: 12s	remaining: 35.5s
+200:	learn: 0.1398458	total: 24s	remaining: 23.8s
+300:	learn: 0.1288520	total: 35.8s	remaining: 11.8s
+399:	learn: 0.1208047	total: 53.5s	remaining: 0us
+Warning: less than 75% GPU memory available for training. Free: 13737.1875 Total: 81251.1875
+0:	learn: 18731.5624844	total: 117ms	remaining: 46.6s
+100:	learn: 7417.4238831	total: 12.1s	remaining: 35.8s
+200:	learn: 6458.4228146	total: 16.8s	remaining: 16.6s
+300:	learn: 5918.7998647	total: 28.5s	remaining: 9.37s
+399:	learn: 5515.8707785	total: 41.2s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+         CAT_GPU_V2_logratio             7         1947            280             7     3581.001572      5708.427246       7.493108            -178.807941
+            CAT_GPU_V2_delta             7         1947            280             7     3664.564412      5747.377493       7.791455             215.150441
+       CAT_GPU_V2_last_price             7         1947            280             7     3679.583975      6995.909638       7.545142               8.757062
+CAT_GPU_V2_adaptive_ensemble             7         1947            280             7     3685.514266      6334.460423       7.629123            -135.476144
+            CAT_GPU_V2_level             7         1947            280             7     3762.187407      5893.572958       8.057317             224.700685
+         CAT_GPU_V2_momentum             7         1947            280             7     4902.863380      8362.440889      10.419031             -52.349769
+       CAT_GPU_V2_last_price            14         1109            280             4     4889.089270      9121.613222       9.474387           -1826.780884
+         CAT_GPU_V2_logratio            14         1109            280             4     4907.406247      8063.230410       9.728628           -1068.573943
+CAT_GPU_V2_adaptive_ensemble            14         1109            280             4     4914.354697      8101.629801       9.750611           -1093.691249
+            CAT_GPU_V2_level            14         1109            280             4     5095.217404      8238.902809      10.385848            -557.630044
+            CAT_GPU_V2_delta            14         1109            280             4     5171.406015      8325.595353      10.407172            -631.344373
+         CAT_GPU_V2_momentum            14         1109            280             4     7166.230839     11369.584840      16.583011           -2497.159603
+GPU V2 h=14 fold=5/7 origin=2026-05-25
+Warning: less than 75% GPU memory available for training. Free: 22525.1875 Total: 81251.1875
+0:	learn: 10350.0579805	total: 116ms	remaining: 46.4s
+100:	learn: 7307.5659866	total: 12.3s	remaining: 36.5s
+200:	learn: 6456.6508585	total: 25.5s	remaining: 25.3s
+300:	learn: 5944.6729411	total: 40.3s	remaining: 13.3s
+399:	learn: 5546.2768666	total: 43.6s	remaining: 0us
+0:	learn: 0.2205788	total: 22.3ms	remaining: 8.88s
+100:	learn: 0.1558161	total: 3s	remaining: 8.89s
+200:	learn: 0.1401707	total: 5.63s	remaining: 5.57s
+300:	learn: 0.1296817	total: 8.44s	remaining: 2.77s
+399:	learn: 0.1213700	total: 11s	remaining: 0us
+0:	learn: 18513.1479843	total: 21.4ms	remaining: 8.53s
+100:	learn: 7383.3244457	total: 2.55s	remaining: 7.54s
+200:	learn: 6466.5254889	total: 5.2s	remaining: 5.15s
+300:	learn: 5913.8838365	total: 8.33s	remaining: 2.74s
+399:	learn: 5509.0082464	total: 15.6s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+         CAT_GPU_V2_logratio             7         1947            280             7     3581.001572      5708.427246       7.493108            -178.807941
+            CAT_GPU_V2_delta             7         1947            280             7     3664.564412      5747.377493       7.791455             215.150441
+       CAT_GPU_V2_last_price             7         1947            280             7     3679.583975      6995.909638       7.545142               8.757062
+CAT_GPU_V2_adaptive_ensemble             7         1947            280             7     3685.514266      6334.460423       7.629123            -135.476144
+            CAT_GPU_V2_level             7         1947            280             7     3762.187407      5893.572958       8.057317             224.700685
+         CAT_GPU_V2_momentum             7         1947            280             7     4902.863380      8362.440889      10.419031             -52.349769
+         CAT_GPU_V2_logratio            14         1389            280             5     4966.623729      8068.752725       9.672826            -844.029076
+CAT_GPU_V2_adaptive_ensemble            14         1389            280             5     4994.528278      8167.279203       9.688996            -948.856278
+       CAT_GPU_V2_last_price            14         1389            280             5     5102.231821      9289.955637       9.631257           -1724.766019
+            CAT_GPU_V2_level            14         1389            280             5     5173.754056      8214.247985      10.343082            -237.528726
+            CAT_GPU_V2_delta            14         1389            280             5     5259.787506      8279.367598      10.409623            -204.160705
+         CAT_GPU_V2_momentum            14         1389            280             5     7364.794816     11499.331334      16.228092           -1635.097192
+GPU V2 h=14 fold=6/7 origin=2026-06-22
+0:	learn: 10372.3633877	total: 54.1ms	remaining: 21.6s
+100:	learn: 7369.4031008	total: 2.87s	remaining: 8.5s
+200:	learn: 6506.0336309	total: 6.24s	remaining: 6.18s
+300:	learn: 5952.8356785	total: 9.5s	remaining: 3.12s
+399:	learn: 5566.7435600	total: 12.1s	remaining: 0us
+0:	learn: 0.2194684	total: 21.5ms	remaining: 8.57s
+100:	learn: 0.1559962	total: 2.36s	remaining: 6.98s
+200:	learn: 0.1396204	total: 4.9s	remaining: 4.85s
+300:	learn: 0.1290533	total: 7.62s	remaining: 2.5s
+399:	learn: 0.1209406	total: 10.2s	remaining: 0us
+0:	learn: 18515.8932410	total: 21.5ms	remaining: 8.59s
+100:	learn: 7478.7467969	total: 2.68s	remaining: 7.92s
+200:	learn: 6550.7710637	total: 5.24s	remaining: 5.19s
+300:	learn: 5989.4471509	total: 7.79s	remaining: 2.56s
+399:	learn: 5594.3205034	total: 10.3s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+         CAT_GPU_V2_logratio             7         1947            280             7     3581.001572      5708.427246       7.493108            -178.807941
+            CAT_GPU_V2_delta             7         1947            280             7     3664.564412      5747.377493       7.791455             215.150441
+       CAT_GPU_V2_last_price             7         1947            280             7     3679.583975      6995.909638       7.545142               8.757062
+CAT_GPU_V2_adaptive_ensemble             7         1947            280             7     3685.514266      6334.460423       7.629123            -135.476144
+            CAT_GPU_V2_level             7         1947            280             7     3762.187407      5893.572958       8.057317             224.700685
+         CAT_GPU_V2_momentum             7         1947            280             7     4902.863380      8362.440889      10.419031             -52.349769
+         CAT_GPU_V2_logratio            14         1669            280             6     5025.231994      7976.369229      10.004161            -454.618634
+CAT_GPU_V2_adaptive_ensemble            14         1669            280             6     5163.966361      8219.584243      10.242253            -394.418207
+            CAT_GPU_V2_level            14         1669            280             6     5246.562444      8130.297901      10.675795             210.568356
+            CAT_GPU_V2_delta            14         1669            280             6     5320.811637      8186.999643      10.720139             270.708592
+       CAT_GPU_V2_last_price            14         1669            280             6     5632.354703      9729.611581      10.883873            -732.654284
+         CAT_GPU_V2_momentum            14         1669            280             6     7572.872978     11686.999542      16.423559            -803.849611
+GPU V2 h=14 fold=7/7 origin=2026-07-17
+0:	learn: 10356.4118209	total: 21.4ms	remaining: 8.52s
+100:	learn: 7346.5056802	total: 2.57s	remaining: 7.61s
+200:	learn: 6503.6772207	total: 5.62s	remaining: 5.56s
+300:	learn: 5961.6382356	total: 8.38s	remaining: 2.76s
+399:	learn: 5584.7503444	total: 11.1s	remaining: 0us
+0:	learn: 0.2186317	total: 22ms	remaining: 8.78s
+100:	learn: 0.1549748	total: 2.63s	remaining: 7.79s
+200:	learn: 0.1391605	total: 5.05s	remaining: 5s
+300:	learn: 0.1286423	total: 7.5s	remaining: 2.47s
+399:	learn: 0.1210182	total: 9.91s	remaining: 0us
+0:	learn: 18363.8636556	total: 21.6ms	remaining: 8.6s
+100:	learn: 7490.0935192	total: 2.3s	remaining: 6.8s
+200:	learn: 6550.9031289	total: 4.83s	remaining: 4.79s
+300:	learn: 5980.8117662	total: 7.58s	remaining: 2.49s
+399:	learn: 5591.1739596	total: 10.1s	remaining: 0us
+=== GPU V2 partial pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+         CAT_GPU_V2_logratio             7         1947            280             7     3581.001572      5708.427246       7.493108            -178.807941
+            CAT_GPU_V2_delta             7         1947            280             7     3664.564412      5747.377493       7.791455             215.150441
+       CAT_GPU_V2_last_price             7         1947            280             7     3679.583975      6995.909638       7.545142               8.757062
+CAT_GPU_V2_adaptive_ensemble             7         1947            280             7     3685.514266      6334.460423       7.629123            -135.476144
+            CAT_GPU_V2_level             7         1947            280             7     3762.187407      5893.572958       8.057317             224.700685
+         CAT_GPU_V2_momentum             7         1947            280             7     4902.863380      8362.440889      10.419031             -52.349769
+         CAT_GPU_V2_logratio            14         1944            280             7     4984.065334      7867.089280      10.309397            -441.273753
+CAT_GPU_V2_adaptive_ensemble            14         1944            280             7     5109.892030      8075.904377      10.543108            -317.537954
+            CAT_GPU_V2_level            14         1944            280             7     5216.329608      8016.489033      11.027322             331.408954
+            CAT_GPU_V2_delta            14         1944            280             7     5280.370978      8072.605150      11.051774             367.673726
+       CAT_GPU_V2_last_price            14         1944            280             7     5756.532922      9757.567233      11.638731            -122.685185
+         CAT_GPU_V2_momentum            14         1944            280             7     7399.909979     11452.817345      16.399781            -390.444959
+=== GPU V2 final pooled metrics ===
+                       model  horizon_days  rows_scored  series_scored  folds_scored  mae_idr_per_kg  rmse_idr_per_kg  smape_percent  mean_error_idr_per_kg
+         CAT_GPU_V2_logratio             7         1947            280             7     3581.001572      5708.427246       7.493108            -178.807941
+            CAT_GPU_V2_delta             7         1947            280             7     3664.564412      5747.377493       7.791455             215.150441
+       CAT_GPU_V2_last_price             7         1947            280             7     3679.583975      6995.909638       7.545142               8.757062
+CAT_GPU_V2_adaptive_ensemble             7         1947            280             7     3685.514266      6334.460423       7.629123            -135.476144
+            CAT_GPU_V2_level             7         1947            280             7     3762.187407      5893.572958       8.057317             224.700685
+         CAT_GPU_V2_momentum             7         1947            280             7     4902.863380      8362.440889      10.419031             -52.349769
+         CAT_GPU_V2_logratio            14         1944            280             7     4984.065334      7867.089280      10.309397            -441.273753
+CAT_GPU_V2_adaptive_ensemble            14         1944            280             7     5109.892030      8075.904377      10.543108            -317.537954
+            CAT_GPU_V2_level            14         1944            280             7     5216.329608      8016.489033      11.027322             331.408954
+            CAT_GPU_V2_delta            14         1944            280             7     5280.370978      8072.605150      11.051774             367.673726
+       CAT_GPU_V2_last_price            14         1944            280             7     5756.532922      9757.567233      11.638731            -122.685185
+         CAT_GPU_V2_momentum            14         1944            280             7     7399.909979     11452.817345      16.399781            -390.444959

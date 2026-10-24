@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "<PROJECT_ROOT>/TEMP_meta_stack_oof.py", line 369, in <module>
+    main()
+  File "<PROJECT_ROOT>/TEMP_meta_stack_oof.py", line 359, in main
+    panel = make_panel()
+  File "<PROJECT_ROOT>/TEMP_meta_stack_oof.py", line 56, in make_panel
+    grid = post[
+  File "/opt/conda/lib/python3.10/site-packages/pandas/core/frame.py", line 3813, in __getitem__
+    indexer = self.columns._get_indexer_strict(key, "columns")[1]
+  File "/opt/conda/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 6070, in _get_indexer_strict
+    self._raise_if_missing(keyarr, indexer, axis_name)
+  File "/opt/conda/lib/python3.10/site-packages/pandas/core/indexes/base.py", line 6133, in _raise_if_missing
+    raise KeyError(f"{not_found} not in index")
+KeyError: "['province_name', 'commodity_name'] not in index"

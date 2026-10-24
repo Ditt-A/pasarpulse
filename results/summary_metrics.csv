@@ -1,0 +1,11 @@
+model,scope,horizon_days,mae,wape,smape
+ARIMA baseline,all 7 rolling origins,7,3731.690194,,
+ARIMA baseline,all 7 rolling origins,14,5812.433556,,
+LightGBM log-ratio,all 7 rolling origins,7,3275.458838,,
+LightGBM log-ratio,all 7 rolling origins,14,4882.056411,,
+CatBoost commodity x market specialist,all 7 rolling origins,7,3371.66,7.27,7.01
+CatBoost commodity x market specialist,all 7 rolling origins,14,4858.38,10.44,10.05
+Best late-origin individual model,holdout folds 5-7,7,3804.62,8.07,8.17
+Best late-origin individual model,holdout folds 5-7,14,5137.83,,
+Best late-origin ensemble,holdout folds 5-7,7,3642.35,,7.87
+Best late-origin ensemble,holdout folds 5-7,14,5004.57,,10.80

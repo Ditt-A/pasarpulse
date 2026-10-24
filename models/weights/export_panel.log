@@ -1,0 +1,6 @@
+horizon=7 rows=178734 series=280 model=<PROJECT_ROOT>/best_model_weights/expert_lgb_logratio_7d.txt bytes=4341728 serialization_max_abs_diff=0.0
+horizon=14 rows=177167 series=280 model=<PROJECT_ROOT>/best_model_weights/expert_lgb_logratio_14d.txt bytes=4526794 serialization_max_abs_diff=0.0
+{
+  "output": "<PROJECT_ROOT>/best_model_weights",
+  "runtime_seconds": 844.8768813610077
+}

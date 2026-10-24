@@ -1,0 +1,26 @@
+{
+  "generated_at_utc": "2026-08-09T16:29:23.552487+00:00",
+  "checks": {
+    "ready_dataset_nonempty": true,
+    "unique_panel_key": true,
+    "has_38_provinces": false,
+    "has_three_target_commodities": true,
+    "eligible_series_count": 279,
+    "duplicate_panel_key_rows": 0
+  },
+  "artifacts": [
+    {
+      "artifact": "ready_all",
+      "rows": 265926,
+      "columns": 152,
+      "date_min": "2024-01-01 00:00:00",
+      "date_max": "2026-07-31 00:00:00",
+      "province_count": 34,
+      "commodity_count": 3,
+      "series_count": 282,
+      "duplicate_rows": 0,
+      "memory_mb": 885.4373140335083
+    }
+  ],
+  "source_files": []
+}

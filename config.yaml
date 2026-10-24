@@ -1,0 +1,112 @@
+project:
+  start_date: "2024-01-01"
+  end_date: "2026-07-31"
+  timezone: Asia/Jakarta
+  fail_fast: true
+  save_csv: true
+  save_parquet: true
+  random_seed: 42
+
+paths:
+  data_root: data
+  reports_root: reports
+  logs_root: logs
+  province_boundaries: data/reference/indonesia_provinces.geojson
+  satellite_zones: data/reference/satellite_zones.geojson
+  calendar_events: data/manual/calendar_events.csv
+  official_thresholds: data/manual/official_thresholds.csv
+
+references:
+  big_endpoint: https://geoservices.big.go.id/rbi/rest/services/BATASWILAYAH/BATAS_WILAYAH/MapServer/12/query
+  expected_province_count: 38
+  overwrite: false
+
+stages:
+  references: true
+  prices: true
+  price_baselines: true
+  bps: true
+  era5_download: false
+  era5_aggregate: false
+  sentinel_search: false
+  sentinel_extract: false
+  calendar: true
+  official_markets: true
+  osm_transport: false
+  static_graph: true
+  dynamic_graph: true
+  merge: true
+  quality: true
+  visualization: true
+
+prices:
+  source: pihps
+  min_months: 24
+  min_coverage: 0.80
+  scheduled_days: business
+  bounded_ffill_days: 3
+  shock_threshold: 0.10
+  pihps:
+    endpoint: https://www.bi.go.id/hargapangan/WebSite/TabelHarga/GetGridDataKomoditas
+    page_url: https://www.bi.go.id/hargapangan/TabelHarga/PedagangBesarKomoditas
+    timeout_seconds: 90
+    overwrite_snapshots: false
+    commodities:
+      BM: {source_id: com_11, source_name: Bawang Merah}
+      CMK: {source_id: com_14, source_name: Cabai Merah Keriting}
+      CRM: {source_id: com_16, source_name: Cabai Rawit Merah}
+    market_types: {retail: 1, wholesale: 3, producer: 4}
+
+bps:
+  years: [2023, 2024, 2025]
+  headless: true
+  timeout_seconds: 120
+
+era5:
+  area: [6.5, 94.0, -11.5, 141.5]
+  variables:
+    - 2m_temperature
+    - total_precipitation
+    - volumetric_soil_water_layer_1
+    - surface_solar_radiation_downwards
+  province_code_col: province_code
+  province_name_col: province_name
+
+sentinel2:
+  stac_url: https://earth-search.aws.element84.com/v1/
+  collection: sentinel-2-c1-l2a
+  period_days: 16
+  max_cloud_cover: 30.0
+  search_workers: 4
+  extract_workers: 8
+  max_carry_days: 24
+  max_sample_pixels: 262144
+  valid_scl_classes: [4, 5]
+
+calendar:
+  national_region_code: NATIONAL
+
+official_markets:
+  layer_url: https://kspservices.big.go.id/satupeta/rest/services/PUBLIK/SARANA_PRASARANA/MapServer/28
+  minimum_expected_features: 600
+  nearest_join_max_km: 30.0
+  timeout_seconds: 120
+
+graph:
+  osm_snapshot_url: https://download.geofabrik.de/asia/indonesia-260101.osm.pbf
+  osm_snapshot_date: "2026-01-01"
+  osm_overwrite: false
+  osm_download_workers: 8
+  static_knn: 3
+  dynamic_window_days: 90
+  dynamic_snapshot_freq: MS
+  dynamic_max_lag_days: 7
+  dynamic_min_overlap: 30
+  dynamic_top_k: 5
+
+merge:
+  eligible_only_default: true
+  production_max_age_years: 3
+  weather_publication_lag_days: 5
+  weather_max_carry_days: 10
+  satellite_publication_lag_days: 1

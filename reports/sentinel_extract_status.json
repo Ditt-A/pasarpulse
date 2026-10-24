@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-08-09T14:02:54.933830+00:00",
+  "stage": "sentinel_extract",
+  "status": {
+    "stage": "sentinel_extract",
+    "status": "completed",
+    "message": ""
+  },
+  "paths": {
+    "satellite_csv": "<PROJECT_ROOT>/data/processed/satellite_features.csv",
+    "satellite_parquet": "<PROJECT_ROOT>/data/processed/satellite_features.parquet"
+  },
+  "result_type": "DataFrame",
+  "errors": {}
+}

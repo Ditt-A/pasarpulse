@@ -1,0 +1,96 @@
+column,dtype,non_null_rows,missing_fraction,unique_values,description
+date,datetime64[ns],257184,0.0,912,Observation date in the province-commodity-market-level daily panel.
+province_code,object,257184,0.0,34,Canonical two-digit BPS province code.
+province_name,object,257184,0.0,34,Canonical province name.
+commodity_code,object,257184,0.0,3,"BM, CRM, or CMK commodity identifier."
+commodity_name,object,257184,0.0,3,Generated pipeline field; inspect source module and metadata for details.
+market_level,object,257184,0.0,3,"producer, wholesale, retail, or optional retail_modern."
+price_idr_per_kg,float64,181177,0.29553549209904195,2014,Observed raw price in Indonesian rupiah per kilogram.
+price_unit,object,181177,0.29553549209904195,1,Unit recorded by the source; PIHPS is normalized to IDR/kg.
+source,object,181177,0.29553549209904195,1,Generated pipeline field; inspect source module and metadata for details.
+source_location_name,object,181177,0.29553549209904195,1,Generated pipeline field; inspect source module and metadata for details.
+extraction_timestamp,object,181177,0.29553549209904195,270,Generated pipeline field; inspect source module and metadata for details.
+source_version,object,181177,0.29553549209904195,270,Checksum-derived version of the retained raw source snapshot.
+revision_flag,object,181177,0.29553549209904195,1,Source-snapshot marker; revisions remain auditable in the raw snapshot manifest.
+quality_flag,object,181177,0.29553549209904195,1,Generated pipeline field; inspect source module and metadata for details.
+price_observed,int8,257184,0.0,2,Generated pipeline field; inspect source module and metadata for details.
+price_ffill,float64,254129,0.011878654970760233,2014,Bounded forward-filled price feature; raw price is never overwritten.
+price_observation_age_days,float64,254129,0.011878654970760233,4,Age of the last observed price used by bounded carry-forward.
+price_t_plus_7,float64,179785,0.3009479594376011,2014,Generated pipeline field; inspect source module and metadata for details.
+price_t_plus_14,float64,178404,0.306317655841732,2014,Generated pipeline field; inspect source module and metadata for details.
+future_max_price_7d,float64,254152,0.01178922483513749,1943,Generated pipeline field; inspect source module and metadata for details.
+future_return_max_7d,float64,180851,0.2968030670648252,32341,Generated pipeline field; inspect source module and metadata for details.
+shock_7d,object,180851,0.2968030670648252,2,Candidate label: price rises at least the configured threshold within seven days.
+series_id,object,257184,0.0,282,Generated pipeline field; inspect source module and metadata for details.
+node_id,object,257184,0.0,282,Generated pipeline field; inspect source module and metadata for details.
+day_of_week,int8,257184,0.0,7,Generated pipeline field; inspect source module and metadata for details.
+day_name,object,257184,0.0,7,Generated pipeline field; inspect source module and metadata for details.
+week_of_year,int16,257184,0.0,52,Generated pipeline field; inspect source module and metadata for details.
+month,int8,257184,0.0,12,Generated pipeline field; inspect source module and metadata for details.
+quarter,int8,257184,0.0,4,Generated pipeline field; inspect source module and metadata for details.
+year,int16,257184,0.0,3,Generated pipeline field; inspect source module and metadata for details.
+is_weekend,int8,257184,0.0,2,Generated pipeline field; inspect source module and metadata for details.
+seasonal_sin,float64,257184,0.0,366,Generated pipeline field; inspect source module and metadata for details.
+seasonal_cos,float64,257184,0.0,366,Generated pipeline field; inspect source module and metadata for details.
+is_christmas,int8,257184,0.0,2,Generated pipeline field; inspect source module and metadata for details.
+is_collective_leave,int8,257184,0.0,2,Generated pipeline field; inspect source module and metadata for details.
+is_eid_al_adha,int8,257184,0.0,2,Generated pipeline field; inspect source module and metadata for details.
+is_eid_al_fitr,int8,257184,0.0,2,Generated pipeline field; inspect source module and metadata for details.
+is_national_holiday,int8,257184,0.0,2,Generated pipeline field; inspect source module and metadata for details.
+is_new_year,int8,257184,0.0,2,Generated pipeline field; inspect source module and metadata for details.
+is_ramadan_start,int8,257184,0.0,2,Generated pipeline field; inspect source module and metadata for details.
+days_since_christmas,float64,257184,0.0,366,Generated pipeline field; inspect source module and metadata for details.
+days_to_christmas,float64,257184,0.0,365,Generated pipeline field; inspect source module and metadata for details.
+days_since_collective_leave,float64,257184,0.0,191,Generated pipeline field; inspect source module and metadata for details.
+days_to_collective_leave,float64,257184,0.0,210,Generated pipeline field; inspect source module and metadata for details.
+days_since_eid_al_adha,float64,257184,0.0,355,Generated pipeline field; inspect source module and metadata for details.
+days_to_eid_al_adha,float64,238854,0.0712719298245614,355,Generated pipeline field; inspect source module and metadata for details.
+days_since_eid_al_fitr,float64,257184,0.0,354,Generated pipeline field; inspect source module and metadata for details.
+days_to_eid_al_fitr,float64,220242,0.14364035087719298,354,Generated pipeline field; inspect source module and metadata for details.
+days_since_national_holiday,float64,257184,0.0,111,Generated pipeline field; inspect source module and metadata for details.
+days_to_national_holiday,float64,257184,0.0,111,Generated pipeline field; inspect source module and metadata for details.
+days_since_new_year,float64,257184,0.0,366,Generated pipeline field; inspect source module and metadata for details.
+days_to_new_year,float64,197682,0.23135964912280702,365,Generated pipeline field; inspect source module and metadata for details.
+days_since_ramadan_start,float64,257184,0.0,355,Generated pipeline field; inspect source module and metadata for details.
+days_to_ramadan_start,float64,211500,0.17763157894736842,355,Generated pipeline field; inspect source module and metadata for details.
+calendar_status,object,257184,0.0,1,Generated pipeline field; inspect source module and metadata for details.
+production_kg,float64,0,1.0,0,"Annual BPS production, used only as structural context."
+harvested_area_ha,float64,0,1.0,0,Annual harvested area from BPS.
+productivity_kg_per_ha,float64,0,1.0,0,Production divided by harvested area.
+production_year,float64,0,1.0,0,Generated pipeline field; inspect source module and metadata for details.
+production_age_years,float64,0,1.0,0,Generated pipeline field; inspect source module and metadata for details.
+ndvi_mean,float64,0,1.0,0,Generated pipeline field; inspect source module and metadata for details.
+ndvi_std,float64,0,1.0,0,Generated pipeline field; inspect source module and metadata for details.
+ndvi_p10,float64,0,1.0,0,Generated pipeline field; inspect source module and metadata for details.
+ndvi_p90,float64,0,1.0,0,Generated pipeline field; inspect source module and metadata for details.
+ndwi_mean,float64,0,1.0,0,Generated pipeline field; inspect source module and metadata for details.
+valid_pixel_fraction,float64,0,1.0,0,Generated pipeline field; inspect source module and metadata for details.
+ndvi_anomaly,float64,0,1.0,0,Regional vegetation anomaly relative to zone-month baseline.
+ndvi_zscore,float64,0,1.0,0,Generated pipeline field; inspect source module and metadata for details.
+cloud_cover,float64,0,1.0,0,Generated pipeline field; inspect source module and metadata for details.
+satellite_observation_date,float64,0,1.0,0,Generated pipeline field; inspect source module and metadata for details.
+satellite_observation_age_days,float64,0,1.0,0,Days since the last valid Sentinel-2 observation.
+satellite_status,object,257184,0.0,1,Generated pipeline field; inspect source module and metadata for details.
+commodity_name_threshold,object,91200,0.6453900709219859,3,Generated pipeline field; inspect source module and metadata for details.
+effective_start,datetime64[ns],91200,0.6453900709219859,2,Generated pipeline field; inspect source module and metadata for details.
+effective_end,datetime64[ns],23800,0.9074592509642901,1,Generated pipeline field; inspect source module and metadata for details.
+threshold_type,object,91200,0.6453900709219859,1,Generated pipeline field; inspect source module and metadata for details.
+threshold_value_idr_per_kg,float64,91200,0.6453900709219859,3,Generated pipeline field; inspect source module and metadata for details.
+threshold_lower_idr_per_kg,float64,91200,0.6453900709219859,3,Generated pipeline field; inspect source module and metadata for details.
+regulation_version,object,91200,0.6453900709219859,2,Generated pipeline field; inspect source module and metadata for details.
+source_url,object,91200,0.6453900709219859,2,Generated pipeline field; inspect source module and metadata for details.
+notes,object,91200,0.6453900709219859,1,Generated pipeline field; inspect source module and metadata for details.
+threshold_exceeded,object,64425,0.7494984135871594,2,Generated pipeline field; inspect source module and metadata for details.
+price_series_coverage,float64,257184,0.0,31,Generated pipeline field; inspect source module and metadata for details.
+months_available,int64,257184,0.0,3,Generated pipeline field; inspect source module and metadata for details.
+is_eligible_series,bool,257184,0.0,2,Generated pipeline field; inspect source module and metadata for details.
+eligibility_reason,object,257184,0.0,2,Generated pipeline field; inspect source module and metadata for details.
+mask_price,int8,257184,0.0,2,1 when raw price is observed; 0 otherwise.
+mask_weather,int64,257184,0.0,1,1 when at least one weather feature is present.
+mask_production,int8,257184,0.0,1,1 when annual production context is present and not stale.
+mask_satellite,int8,257184,0.0,1,1 when satellite features are present and within the carry window.
+mask_calendar,int8,257184,0.0,1,1 when calendar features are available.
+evidence_quality_score,float64,257184,0.0,2,Weighted modality-availability score used for abstention diagnostics.
+evidence_status,object,257184,0.0,2,Generated pipeline field; inspect source module and metadata for details.
+abstention_required,bool,257184,0.0,1,True when evidence is insufficient for publishable decision support.
+data_version_date,object,257184,0.0,1,Generated pipeline field; inspect source module and metadata for details.

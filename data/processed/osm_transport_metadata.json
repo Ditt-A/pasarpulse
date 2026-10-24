@@ -1,0 +1,18 @@
+{
+  "created_at": "2026-08-09T14:02:26.002591+00:00",
+  "snapshot_date": "2026-01-01",
+  "source_url": "https://download.geofabrik.de/asia/indonesia-260101.osm.pbf",
+  "source_sha256": "4c290085dc779e8a85248c70c341b52a3920e1657b60fb3b54a75785d1c11746",
+  "source_bytes": 1686629405,
+  "province_rows": 38,
+  "poi_rows": 5921,
+  "edge_rows": 70,
+  "ferry_route_relations": 349,
+  "ferry_member_ways": 507,
+  "province_lookup_cache": {
+    "hits": 145790,
+    "misses": 4791225,
+    "current_size": 2000000
+  },
+  "interpretation": "Candidate structural connectivity; not confirmed commodity shipments."
+}

@@ -1,0 +1,15 @@
+{
+  "checked_at_utc": "2026-08-09T11:31:43.917178+00:00",
+  "checks": {
+    "cds": {
+      "source": "Copernicus Climate Data Store",
+      "checked_at_utc": "2026-08-09T11:31:43.917145+00:00",
+      "dataset": "reanalysis-era5-land",
+      "sample_retrieved": true,
+      "sample_bytes": 25116,
+      "credentials_present": true
+    }
+  },
+  "errors": {},
+  "ok": true
+}

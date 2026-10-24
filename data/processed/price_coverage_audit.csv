@@ -1,0 +1,283 @@
+province_code,province_name,commodity_code,commodity_name,market_level,start_date,end_date,months_available,scheduled_days,observed_days,coverage,duplicate_rows,unresolved_quality_rows,eligible,reason
+11,Aceh,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+11,Aceh,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+11,Aceh,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+11,Aceh,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+11,Aceh,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+11,Aceh,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+12,Sumatera Utara,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+12,Sumatera Utara,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+12,Sumatera Utara,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+12,Sumatera Utara,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+12,Sumatera Utara,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+13,Sumatera Barat,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+14,Riau,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+14,Riau,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+14,Riau,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+15,Jambi,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+15,Jambi,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+15,Jambi,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+16,Sumatera Selatan,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+16,Sumatera Selatan,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+16,Sumatera Selatan,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+21,Kepulauan Riau,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+21,Kepulauan Riau,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+31,DKI Jakarta,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+31,DKI Jakarta,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+31,DKI Jakarta,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+32,Jawa Barat,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+32,Jawa Barat,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+32,Jawa Barat,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+32,Jawa Barat,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+32,Jawa Barat,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+32,Jawa Barat,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+32,Jawa Barat,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+32,Jawa Barat,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+32,Jawa Barat,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+33,Jawa Tengah,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+33,Jawa Tengah,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+33,Jawa Tengah,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+33,Jawa Tengah,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+33,Jawa Tengah,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+33,Jawa Tengah,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+33,Jawa Tengah,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+33,Jawa Tengah,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+33,Jawa Tengah,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+34,DI Yogyakarta,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+34,DI Yogyakarta,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+34,DI Yogyakarta,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+34,DI Yogyakarta,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+34,DI Yogyakarta,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+34,DI Yogyakarta,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+35,Jawa Timur,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+35,Jawa Timur,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+35,Jawa Timur,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+35,Jawa Timur,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+35,Jawa Timur,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+35,Jawa Timur,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+35,Jawa Timur,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+35,Jawa Timur,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+35,Jawa Timur,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+36,Banten,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+36,Banten,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+36,Banten,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+51,Bali,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+51,Bali,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+51,Bali,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+52,Nusa Tenggara Barat,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+52,Nusa Tenggara Barat,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+52,Nusa Tenggara Barat,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+53,Nusa Tenggara Timur,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+53,Nusa Tenggara Timur,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+53,Nusa Tenggara Timur,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+53,Nusa Tenggara Timur,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+53,Nusa Tenggara Timur,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+53,Nusa Tenggara Timur,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+62,Kalimantan Tengah,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+62,Kalimantan Tengah,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+62,Kalimantan Tengah,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+63,Kalimantan Selatan,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+63,Kalimantan Selatan,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+63,Kalimantan Selatan,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+63,Kalimantan Selatan,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+63,Kalimantan Selatan,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+63,Kalimantan Selatan,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+65,Kalimantan Utara,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+65,Kalimantan Utara,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+65,Kalimantan Utara,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+71,Sulawesi Utara,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+71,Sulawesi Utara,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+71,Sulawesi Utara,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+71,Sulawesi Utara,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+71,Sulawesi Utara,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+71,Sulawesi Utara,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+72,Sulawesi Tengah,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+72,Sulawesi Tengah,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+73,Sulawesi Selatan,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+73,Sulawesi Selatan,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+73,Sulawesi Selatan,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+73,Sulawesi Selatan,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+73,Sulawesi Selatan,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+73,Sulawesi Selatan,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+74,Sulawesi Tenggara,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+74,Sulawesi Tenggara,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+74,Sulawesi Tenggara,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+74,Sulawesi Tenggara,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+74,Sulawesi Tenggara,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+74,Sulawesi Tenggara,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+75,Gorontalo,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+75,Gorontalo,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+75,Gorontalo,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+76,Sulawesi Barat,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+76,Sulawesi Barat,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+76,Sulawesi Barat,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+81,Maluku,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+81,Maluku,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+81,Maluku,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+91,Papua Barat,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+91,Papua Barat,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+91,Papua Barat,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+91,Papua Barat,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+91,Papua Barat,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+91,Papua Barat,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+94,Papua,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+94,Papua,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+94,Papua,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,652,1.0,0,0,True,eligible
+12,Sumatera Utara,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+18,Lampung,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+18,Lampung,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+18,Lampung,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+18,Lampung,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+18,Lampung,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+18,Lampung,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+18,Lampung,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+18,Lampung,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+19,Kepulauan Bangka Belitung,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+19,Kepulauan Bangka Belitung,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+19,Kepulauan Bangka Belitung,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+34,DI Yogyakarta,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+34,DI Yogyakarta,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+34,DI Yogyakarta,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+52,Nusa Tenggara Barat,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+52,Nusa Tenggara Barat,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+52,Nusa Tenggara Barat,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+61,Kalimantan Barat,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+61,Kalimantan Barat,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+61,Kalimantan Barat,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+63,Kalimantan Selatan,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+63,Kalimantan Selatan,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+63,Kalimantan Selatan,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+71,Sulawesi Utara,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+71,Sulawesi Utara,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+71,Sulawesi Utara,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+76,Sulawesi Barat,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+76,Sulawesi Barat,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+76,Sulawesi Barat,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+91,Papua Barat,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+91,Papua Barat,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,651,0.9984662576687117,0,0,True,eligible
+12,Sumatera Utara,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+16,Sumatera Selatan,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+16,Sumatera Selatan,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+16,Sumatera Selatan,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+16,Sumatera Selatan,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+16,Sumatera Selatan,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+17,Bengkulu,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+17,Bengkulu,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+17,Bengkulu,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+19,Kepulauan Bangka Belitung,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+19,Kepulauan Bangka Belitung,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+19,Kepulauan Bangka Belitung,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+36,Banten,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+36,Banten,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+36,Banten,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+51,Bali,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+51,Bali,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+51,Bali,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+64,Kalimantan Timur,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+64,Kalimantan Timur,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+64,Kalimantan Timur,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+72,Sulawesi Tengah,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+74,Sulawesi Tenggara,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+74,Sulawesi Tenggara,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+74,Sulawesi Tenggara,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+75,Gorontalo,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+75,Gorontalo,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+75,Gorontalo,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,650,0.9969325153374233,0,0,True,eligible
+14,Riau,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+14,Riau,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+14,Riau,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+31,DKI Jakarta,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+31,DKI Jakarta,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+31,DKI Jakarta,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+51,Bali,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+51,Bali,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+65,Kalimantan Utara,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+65,Kalimantan Utara,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+65,Kalimantan Utara,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+73,Sulawesi Selatan,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+73,Sulawesi Selatan,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+73,Sulawesi Selatan,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+76,Sulawesi Barat,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+76,Sulawesi Barat,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+76,Sulawesi Barat,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+94,Papua,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+94,Papua,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+94,Papua,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,649,0.995398773006135,0,0,True,eligible
+11,Aceh,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+12,Sumatera Utara,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+13,Sumatera Barat,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+13,Sumatera Barat,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+15,Jambi,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+15,Jambi,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+19,Kepulauan Bangka Belitung,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+19,Kepulauan Bangka Belitung,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+19,Kepulauan Bangka Belitung,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+52,Nusa Tenggara Barat,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+52,Nusa Tenggara Barat,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+52,Nusa Tenggara Barat,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+64,Kalimantan Timur,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+64,Kalimantan Timur,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+64,Kalimantan Timur,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+72,Sulawesi Tengah,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+72,Sulawesi Tengah,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+72,Sulawesi Tengah,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+72,Sulawesi Tengah,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+72,Sulawesi Tengah,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+72,Sulawesi Tengah,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+75,Gorontalo,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+75,Gorontalo,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+75,Gorontalo,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,648,0.9938650306748467,0,0,True,eligible
+64,Kalimantan Timur,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-24,30,647,643,0.9938176197836167,0,0,True,eligible
+64,Kalimantan Timur,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-24,30,647,643,0.9938176197836167,0,0,True,eligible
+62,Kalimantan Tengah,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,647,0.9923312883435583,0,0,True,eligible
+62,Kalimantan Tengah,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,647,0.9923312883435583,0,0,True,eligible
+62,Kalimantan Tengah,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,647,0.9923312883435583,0,0,True,eligible
+62,Kalimantan Tengah,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,647,0.9923312883435583,0,0,True,eligible
+62,Kalimantan Tengah,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,647,0.9923312883435583,0,0,True,eligible
+21,Kepulauan Riau,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,645,0.9892638036809815,0,0,True,eligible
+21,Kepulauan Riau,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,645,0.9892638036809815,0,0,True,eligible
+17,Bengkulu,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,644,0.9877300613496932,0,0,True,eligible
+17,Bengkulu,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,644,0.9877300613496932,0,0,True,eligible
+17,Bengkulu,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,644,0.9877300613496932,0,0,True,eligible
+13,Sumatera Barat,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,643,0.9861963190184049,0,0,True,eligible
+13,Sumatera Barat,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,643,0.9861963190184049,0,0,True,eligible
+81,Maluku,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,643,0.9861963190184049,0,0,True,eligible
+81,Maluku,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,643,0.9861963190184049,0,0,True,eligible
+81,Maluku,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,643,0.9861963190184049,0,0,True,eligible
+61,Kalimantan Barat,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,642,0.9846625766871165,0,0,True,eligible
+61,Kalimantan Barat,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,642,0.9846625766871165,0,0,True,eligible
+82,Maluku Utara,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,642,0.9846625766871165,0,0,True,eligible
+82,Maluku Utara,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,642,0.9846625766871165,0,0,True,eligible
+82,Maluku Utara,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,642,0.9846625766871165,0,0,True,eligible
+61,Kalimantan Barat,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,641,0.9831288343558282,0,0,True,eligible
+94,Papua,BM,Bawang Merah,wholesale,2024-02-01,2026-07-31,30,652,641,0.9831288343558282,0,0,True,eligible
+94,Papua,CMK,Cabai Merah Keriting,wholesale,2024-02-01,2026-07-31,30,652,641,0.9831288343558282,0,0,True,eligible
+94,Papua,CRM,Cabai Rawit Merah,wholesale,2024-02-01,2026-07-31,30,652,641,0.9831288343558282,0,0,True,eligible
+82,Maluku Utara,BM,Bawang Merah,retail,2024-02-01,2026-07-31,30,652,639,0.9800613496932515,0,0,True,eligible
+82,Maluku Utara,CMK,Cabai Merah Keriting,retail,2024-02-01,2026-07-31,30,652,638,0.9785276073619632,0,0,True,eligible
+82,Maluku Utara,CRM,Cabai Rawit Merah,retail,2024-02-01,2026-07-31,30,652,638,0.9785276073619632,0,0,True,eligible
+65,Kalimantan Utara,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,637,0.9769938650306749,0,0,True,eligible
+65,Kalimantan Utara,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,637,0.9769938650306749,0,0,True,eligible
+65,Kalimantan Utara,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,637,0.9769938650306749,0,0,True,eligible
+13,Sumatera Barat,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,631,0.9677914110429447,0,0,True,eligible
+12,Sumatera Utara,BM,Bawang Merah,producer,2024-02-01,2026-07-24,30,647,626,0.9675425038639877,0,0,True,eligible
+14,Riau,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,630,0.9662576687116564,0,0,True,eligible
+17,Bengkulu,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,628,0.9631901840490797,0,0,True,eligible
+16,Sumatera Selatan,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,627,0.9616564417177914,0,0,True,eligible
+61,Kalimantan Barat,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,626,0.9601226993865031,0,0,True,eligible
+15,Jambi,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,624,0.9570552147239264,0,0,True,eligible
+61,Kalimantan Barat,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,622,0.9539877300613497,0,0,True,eligible
+36,Banten,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,608,0.9325153374233128,0,0,True,eligible
+36,Banten,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,608,0.9325153374233128,0,0,True,eligible
+36,Banten,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,608,0.9325153374233128,0,0,True,eligible
+17,Bengkulu,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,607,0.9309815950920245,0,0,True,eligible
+82,Maluku Utara,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,605,0.9279141104294478,0,0,True,eligible
+81,Maluku,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-24,30,647,598,0.9242658423493045,0,0,True,eligible
+81,Maluku,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-24,30,647,598,0.9242658423493045,0,0,True,eligible
+82,Maluku Utara,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,585,0.897239263803681,0,0,True,eligible
+21,Kepulauan Riau,CMK,Cabai Merah Keriting,producer,2024-02-01,2026-07-31,30,652,570,0.8742331288343558,0,0,True,eligible
+21,Kepulauan Riau,CRM,Cabai Rawit Merah,producer,2024-02-01,2026-07-31,30,652,570,0.8742331288343558,0,0,True,eligible
+21,Kepulauan Riau,BM,Bawang Merah,producer,2024-02-01,2026-07-31,30,652,565,0.8665644171779141,0,0,True,eligible
+21,Kepulauan Riau,CRM,Cabai Rawit Merah,retail,2026-01-08,2026-07-31,7,147,147,1.0,0,0,False,insufficient_months
+21,Kepulauan Riau,CRM,Cabai Rawit Merah,wholesale,2026-01-08,2026-07-31,7,147,147,1.0,0,0,False,insufficient_months
+82,Maluku Utara,CMK,Cabai Merah Keriting,producer,2024-11-20,2026-07-31,21,443,377,0.8510158013544018,0,0,False,insufficient_months

@@ -1,0 +1,4 @@
+model,horizon_days,fold_id,rows_explained,feature_count,max_abs_additivity_error
+LGBM_LOGRATIO,7,1,279,69,2.2898349882893854e-16
+LGBM_LOGRATIO,7,2,279,69,2.1337098754514727e-16
+LGBM_LOGRATIO,14,3,274,69,5.273559366969494e-16

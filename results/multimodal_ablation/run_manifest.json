@@ -1,0 +1,69 @@
+{
+  "experiment": "implemented_tree_multimodal_progressive_ablation",
+  "scientific_scope": "Executable LightGBM/CatBoost trees; proposed TFT/CNN/GNN is not trained here.",
+  "origins": [
+    "2026-02-02",
+    "2026-03-02",
+    "2026-03-30",
+    "2026-04-27",
+    "2026-05-25",
+    "2026-06-22",
+    "2026-07-17"
+  ],
+  "horizons": [
+    7,
+    14
+  ],
+  "variants": [
+    "PRICE",
+    "PRICE_CALENDAR",
+    "PRICE_CALENDAR_WEATHER",
+    "PRICE_CALENDAR_WEATHER_PRODUCTION",
+    "PRICE_CALENDAR_WEATHER_PRODUCTION_SATELLITE",
+    "ALL_MODALITIES_STATIC_GRAPH",
+    "ALL_MODALITIES_DYNAMIC_GRAPH"
+  ],
+  "minimum_history": 240,
+  "panel": "<PROJECT_ROOT>/data/ready/model_dataset_eligible.parquet",
+  "panel_sha256": "dbe4fdcd3512f25b95e4ca5ba33abb5f13976d6281db0793ae791de9c25a8ce4",
+  "static_graph": "<PROJECT_ROOT>/data/processed/province_graph_static.parquet",
+  "static_graph_sha256": "21823ec368158ddc15aa01925ce0caeed038f56dbe4191ebedee3b1210be27b0",
+  "dynamic_graph": "<PROJECT_ROOT>/data/processed/province_graph_dynamic.parquet",
+  "dynamic_graph_sha256": "2a028217608d5b7fd99c5c65b080cd98dca0e1d1290fcfa9be69a11c6baf243b",
+  "runtime_seconds": 6199.521700799465,
+  "random_seed": 2026,
+  "python": "3.10.4",
+  "pandas": "2.3.3",
+  "package_versions": {
+    "catboost": "1.2.8",
+    "lightgbm": "4.6.0",
+    "numpy": "2.2.6",
+    "pandas": "2.3.3",
+    "pyarrow": "25.0.0",
+    "scikit-learn": "1.6.1"
+  },
+  "best_by_horizon": [
+    {
+      "horizon_days": 7,
+      "model": "LGBM_LOGRATIO__ALL_MODALITIES_DYNAMIC_GRAPH",
+      "variant": "ALL_MODALITIES_DYNAMIC_GRAPH",
+      "folds": 7,
+      "rows_scored": 1946,
+      "mae": 3538.4895695741798,
+      "rmse": 6459.340908407438,
+      "smape": 7.390022339394705,
+      "mean_error": -206.39930271093414
+    },
+    {
+      "horizon_days": 14,
+      "model": "LGBM_LOGRATIO__PRICE_CALENDAR",
+      "variant": "PRICE_CALENDAR",
+      "folds": 7,
+      "rows_scored": 1947,
+      "mae": 5308.467049599704,
+      "rmse": 8763.190047241216,
+      "smape": 11.054121907872446,
+      "mean_error": -923.5055470107127
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "method": "native_lightgbm_pred_contrib",
+  "contribution_scale": "log_ratio",
+  "meaning": "Prediction drivers only; not causal effects and not rupiah contributions.",
+  "snapshot": "<PROJECT_ROOT>/pasarpulse-native-lightgbm-xai/demo_data/forecasts/forecast_snapshot.csv",
+  "snapshot_sha256": "7ea2996cd7c13c0cdccfa11fa161505389412a6bf8f8a567a247ef3469c11dd0",
+  "project_root": "<PROJECT_ROOT>",
+  "input_sha256": {
+    "data/ready/model_dataset_eligible.parquet": "dbe4fdcd3512f25b95e4ca5ba33abb5f13976d6281db0793ae791de9c25a8ce4",
+    "data/processed/province_graph_static.parquet": "21823ec368158ddc15aa01925ce0caeed038f56dbe4191ebedee3b1210be27b0",
+    "data/processed/province_graph_dynamic.parquet": "2a028217608d5b7fd99c5c65b080cd98dca0e1d1290fcfa9be69a11c6baf243b"
+  },
+  "selected_models": {
+    "7": "LGBM_LOGRATIO__ALL_MODALITIES_DYNAMIC_GRAPH",
+    "14": "LGBM_LOGRATIO__PRICE_CALENDAR"
+  },
+  "forecast_count": 3893,
+  "contribution_count": 19465,
+  "max_prediction_error": 4.9401875003241e-05,
+  "runtime_seconds": 733.95
+}

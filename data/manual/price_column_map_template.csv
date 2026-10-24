@@ -1,0 +1,6 @@
+source_column,canonical_column
+Tanggal,date
+Provinsi,province_name
+Komoditas,commodity_name
+Level Pasar,market_level
+Harga,price_idr_per_kg

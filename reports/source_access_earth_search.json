@@ -1,0 +1,47 @@
+{
+  "checked_at_utc": "2026-08-09T11:30:47.533365+00:00",
+  "checks": {
+    "earth-search": {
+      "source": "Earth Search / AWS Registry of Open Data",
+      "checked_at_utc": "2026-08-09T11:30:47.526071+00:00",
+      "stac_reachable": true,
+      "collection": "sentinel-2-c1-l2a",
+      "stac_item_count": 2,
+      "sample_item_ids": [
+        "S2B_T47NLE_20240126T035141_L2A",
+        "S2A_T47NLE_20240121T035215_L2A"
+      ],
+      "sample_asset_keys": [
+        "aot",
+        "blue",
+        "cloud",
+        "coastal",
+        "granule_metadata",
+        "green",
+        "nir",
+        "nir08",
+        "nir09",
+        "preview",
+        "product_metadata",
+        "red",
+        "rededge1",
+        "rededge2",
+        "rededge3",
+        "scl",
+        "snow",
+        "swir16",
+        "swir22",
+        "thumbnail",
+        "tileinfo_metadata",
+        "visual",
+        "wvp"
+      ],
+      "public_cog_readable": true,
+      "raster_driver": "GTiff",
+      "raster_crs": "EPSG:32647",
+      "credentials_required": false
+    }
+  },
+  "errors": {},
+  "ok": true
+}

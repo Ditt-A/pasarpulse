@@ -1,0 +1,730 @@
+Production source: <PROJECT_ROOT>/data/processed/production_annual.csv; columns=['year', 'province_code', 'province_name', 'commodity_code', 'commodity_name', 'production_quintal', 'source_column_production', 'source_url_production', 'extracted_at_utc_production', 'province_mapping_status', 'production_kg', 'harvested_area_ha', 'source_column_area', 'source_url_area', 'extracted_at_utc_area', 'productivity_kg_per_ha', 'production_available', 'harvested_area_available', 'quality_flag']
+Geo patch matched 34 province centroids from <PROJECT_ROOT>/data/reference/indonesia_provinces.geojson
+Variant catalog contains 120 distinct architectures/pipelines.
+Feature-set sizes: {'short_price': 60, 'price_calendar': 77, 'full_price_calendar': 132, 'dynamic_graph': 157, 'graph_production': 169, 'full_context_geo_missing': 187}
+=== phase1_broad_screen: 120 variants × folds [2] × horizons [7, 14] ===
+[phase1_broad_screen] variant 1/120: cat__delta__short_price__shallow_recent
+[phase1_broad_screen] variant 2/120: cat__delta__short_price__balanced
+[phase1_broad_screen] variant 3/120: cat__delta__short_price__deep_full
+[phase1_broad_screen] variant 4/120: cat__delta__price_calendar__shallow_recent
+[phase1_broad_screen] variant 5/120: cat__delta__price_calendar__balanced
+[phase1_broad_screen] variant 6/120: cat__delta__price_calendar__deep_full
+[phase1_broad_screen] variant 7/120: cat__delta__full_price_calendar__shallow_recent
+[phase1_broad_screen] variant 8/120: cat__delta__full_price_calendar__balanced
+[phase1_broad_screen] variant 9/120: cat__delta__full_price_calendar__deep_full
+[phase1_broad_screen] variant 10/120: cat__delta__dynamic_graph__shallow_recent
+[phase1_broad_screen] variant 11/120: cat__delta__dynamic_graph__balanced
+[phase1_broad_screen] variant 12/120: cat__delta__dynamic_graph__deep_full
+[phase1_broad_screen] variant 13/120: cat__delta__graph_production__shallow_recent
+[phase1_broad_screen] variant 14/120: cat__delta__graph_production__balanced
+[phase1_broad_screen] variant 15/120: cat__delta__graph_production__deep_full
+[phase1_broad_screen] variant 16/120: cat__delta__full_context_geo_missing__shallow_recent
+[phase1_broad_screen] variant 17/120: cat__delta__full_context_geo_missing__balanced
+[phase1_broad_screen] variant 18/120: cat__delta__full_context_geo_missing__deep_full
+[phase1_broad_screen] variant 19/120: cat__logratio__short_price__shallow_recent
+[phase1_broad_screen] variant 20/120: cat__logratio__short_price__balanced
+[phase1_broad_screen] variant 21/120: cat__logratio__short_price__deep_full
+[phase1_broad_screen] variant 22/120: cat__logratio__price_calendar__shallow_recent
+[phase1_broad_screen] variant 23/120: cat__logratio__price_calendar__balanced
+[phase1_broad_screen] variant 24/120: cat__logratio__price_calendar__deep_full
+[phase1_broad_screen] variant 25/120: cat__logratio__full_price_calendar__shallow_recent
+[phase1_broad_screen] variant 26/120: cat__logratio__full_price_calendar__balanced
+[phase1_broad_screen] variant 27/120: cat__logratio__full_price_calendar__deep_full
+[phase1_broad_screen] variant 28/120: cat__logratio__dynamic_graph__shallow_recent
+[phase1_broad_screen] variant 29/120: cat__logratio__dynamic_graph__balanced
+[phase1_broad_screen] variant 30/120: cat__logratio__dynamic_graph__deep_full
+[phase1_broad_screen] variant 31/120: cat__logratio__graph_production__shallow_recent
+[phase1_broad_screen] variant 32/120: cat__logratio__graph_production__balanced
+[phase1_broad_screen] variant 33/120: cat__logratio__graph_production__deep_full
+[phase1_broad_screen] variant 34/120: cat__logratio__full_context_geo_missing__shallow_recent
+[phase1_broad_screen] variant 35/120: cat__logratio__full_context_geo_missing__balanced
+[phase1_broad_screen] variant 36/120: cat__logratio__full_context_geo_missing__deep_full
+[phase1_broad_screen] variant 37/120: cat__level__short_price__shallow_recent
+[phase1_broad_screen] variant 38/120: cat__level__short_price__balanced
+[phase1_broad_screen] variant 39/120: cat__level__short_price__deep_full
+[phase1_broad_screen] variant 40/120: cat__level__price_calendar__shallow_recent
+[phase1_broad_screen] variant 41/120: cat__level__price_calendar__balanced
+[phase1_broad_screen] variant 42/120: cat__level__price_calendar__deep_full
+[phase1_broad_screen] variant 43/120: cat__level__full_price_calendar__shallow_recent
+[phase1_broad_screen] variant 44/120: cat__level__full_price_calendar__balanced
+[phase1_broad_screen] variant 45/120: cat__level__full_price_calendar__deep_full
+[phase1_broad_screen] variant 46/120: cat__level__dynamic_graph__shallow_recent
+[phase1_broad_screen] variant 47/120: cat__level__dynamic_graph__balanced
+[phase1_broad_screen] variant 48/120: cat__level__dynamic_graph__deep_full
+[phase1_broad_screen] variant 49/120: cat__level__graph_production__shallow_recent
+[phase1_broad_screen] variant 50/120: cat__level__graph_production__balanced
+[phase1_broad_screen] variant 51/120: cat__level__graph_production__deep_full
+[phase1_broad_screen] variant 52/120: cat__level__full_context_geo_missing__shallow_recent
+[phase1_broad_screen] variant 53/120: cat__level__full_context_geo_missing__balanced
+[phase1_broad_screen] variant 54/120: cat__level__full_context_geo_missing__deep_full
+[phase1_broad_screen] variant 55/120: cat__scaled_delta__short_price__shallow_recent
+[phase1_broad_screen] variant 56/120: cat__scaled_delta__short_price__balanced
+[phase1_broad_screen] variant 57/120: cat__scaled_delta__short_price__deep_full
+[phase1_broad_screen] variant 58/120: cat__scaled_delta__price_calendar__shallow_recent
+[phase1_broad_screen] variant 59/120: cat__scaled_delta__price_calendar__balanced
+[phase1_broad_screen] variant 60/120: cat__scaled_delta__price_calendar__deep_full
+[phase1_broad_screen] variant 61/120: cat__scaled_delta__full_price_calendar__shallow_recent
+[phase1_broad_screen] variant 62/120: cat__scaled_delta__full_price_calendar__balanced
+[phase1_broad_screen] variant 63/120: cat__scaled_delta__full_price_calendar__deep_full
+[phase1_broad_screen] variant 64/120: cat__scaled_delta__dynamic_graph__shallow_recent
+[phase1_broad_screen] variant 65/120: cat__scaled_delta__dynamic_graph__balanced
+[phase1_broad_screen] variant 66/120: cat__scaled_delta__dynamic_graph__deep_full
+[phase1_broad_screen] variant 67/120: cat__scaled_delta__graph_production__shallow_recent
+[phase1_broad_screen] variant 68/120: cat__scaled_delta__graph_production__balanced
+[phase1_broad_screen] variant 69/120: cat__scaled_delta__graph_production__deep_full
+[phase1_broad_screen] variant 70/120: cat__scaled_delta__full_context_geo_missing__shallow_recent
+[phase1_broad_screen] variant 71/120: cat__scaled_delta__full_context_geo_missing__balanced
+[phase1_broad_screen] variant 72/120: cat__scaled_delta__full_context_geo_missing__deep_full
+[phase1_broad_screen] variant 73/120: cat__national_residual__short_price__shallow_recent
+[phase1_broad_screen] variant 74/120: cat__national_residual__short_price__balanced
+[phase1_broad_screen] variant 75/120: cat__national_residual__short_price__deep_full
+[phase1_broad_screen] variant 76/120: cat__national_residual__price_calendar__shallow_recent
+[phase1_broad_screen] variant 77/120: cat__national_residual__price_calendar__balanced
+[phase1_broad_screen] variant 78/120: cat__national_residual__price_calendar__deep_full
+[phase1_broad_screen] variant 79/120: cat__national_residual__full_price_calendar__shallow_recent
+[phase1_broad_screen] variant 80/120: cat__national_residual__full_price_calendar__balanced
+[phase1_broad_screen] variant 81/120: cat__national_residual__full_price_calendar__deep_full
+[phase1_broad_screen] variant 82/120: cat__national_residual__dynamic_graph__shallow_recent
+[phase1_broad_screen] variant 83/120: cat__national_residual__dynamic_graph__balanced
+[phase1_broad_screen] variant 84/120: cat__national_residual__dynamic_graph__deep_full
+[phase1_broad_screen] variant 85/120: cat__national_residual__graph_production__shallow_recent
+[phase1_broad_screen] variant 86/120: cat__national_residual__graph_production__balanced
+[phase1_broad_screen] variant 87/120: cat__national_residual__graph_production__deep_full
+[phase1_broad_screen] variant 88/120: cat__national_residual__full_context_geo_missing__shallow_recent
+[phase1_broad_screen] variant 89/120: cat__national_residual__full_context_geo_missing__balanced
+[phase1_broad_screen] variant 90/120: cat__national_residual__full_context_geo_missing__deep_full
+[phase1_broad_screen] variant 91/120: xgb__delta__price_calendar__xgb_shallow
+SUCCESS xgb__delta__price_calendar__xgb_shallow h=14 fold=2 MAE=5775.15 ratio=1.1806 runtime=2.9s
+[phase1_broad_screen] variant 92/120: xgb__delta__price_calendar__xgb_deep
+SUCCESS xgb__delta__price_calendar__xgb_deep h=7 fold=2 MAE=4073.04 ratio=1.5626 runtime=5.0s
+SUCCESS xgb__delta__price_calendar__xgb_deep h=14 fold=2 MAE=6139.61 ratio=1.2551 runtime=5.1s
+[phase1_broad_screen] variant 93/120: xgb__delta__dynamic_graph__xgb_shallow
+SUCCESS xgb__delta__dynamic_graph__xgb_shallow h=7 fold=2 MAE=3159.36 ratio=1.2121 runtime=4.5s
+SUCCESS xgb__delta__dynamic_graph__xgb_shallow h=14 fold=2 MAE=4883.04 ratio=0.9982 runtime=4.3s
+[phase1_broad_screen] variant 94/120: xgb__delta__dynamic_graph__xgb_deep
+SUCCESS xgb__delta__dynamic_graph__xgb_deep h=7 fold=2 MAE=3096.58 ratio=1.1880 runtime=7.8s
+SUCCESS xgb__delta__dynamic_graph__xgb_deep h=14 fold=2 MAE=4947.52 ratio=1.0114 runtime=7.8s
+[phase1_broad_screen] variant 95/120: xgb__delta__full_context_geo_missing__xgb_shallow
+SUCCESS xgb__delta__full_context_geo_missing__xgb_shallow h=7 fold=2 MAE=2991.88 ratio=1.1478 runtime=5.2s
+SUCCESS xgb__delta__full_context_geo_missing__xgb_shallow h=14 fold=2 MAE=5031.24 ratio=1.0285 runtime=5.1s
+[phase1_broad_screen] variant 96/120: xgb__delta__full_context_geo_missing__xgb_deep
+SUCCESS xgb__delta__full_context_geo_missing__xgb_deep h=7 fold=2 MAE=3155.24 ratio=1.2105 runtime=9.4s
+SUCCESS xgb__delta__full_context_geo_missing__xgb_deep h=14 fold=2 MAE=4891.52 ratio=1.0000 runtime=9.8s
+[phase1_broad_screen] variant 97/120: xgb__logratio__price_calendar__xgb_shallow
+SUCCESS xgb__logratio__price_calendar__xgb_shallow h=7 fold=2 MAE=3637.66 ratio=1.3956 runtime=2.4s
+SUCCESS xgb__logratio__price_calendar__xgb_shallow h=14 fold=2 MAE=5832.74 ratio=1.1924 runtime=2.4s
+[phase1_broad_screen] variant 98/120: xgb__logratio__price_calendar__xgb_deep
+SUCCESS xgb__logratio__price_calendar__xgb_deep h=7 fold=2 MAE=3649.91 ratio=1.4003 runtime=5.1s
+SUCCESS xgb__logratio__price_calendar__xgb_deep h=14 fold=2 MAE=5654.18 ratio=1.1559 runtime=5.2s
+[phase1_broad_screen] variant 99/120: xgb__logratio__dynamic_graph__xgb_shallow
+SUCCESS xgb__logratio__dynamic_graph__xgb_shallow h=7 fold=2 MAE=3003.34 ratio=1.1522 runtime=4.4s
+SUCCESS xgb__logratio__dynamic_graph__xgb_shallow h=14 fold=2 MAE=5226.74 ratio=1.0685 runtime=4.3s
+[phase1_broad_screen] variant 100/120: xgb__logratio__dynamic_graph__xgb_deep
+SUCCESS xgb__logratio__dynamic_graph__xgb_deep h=7 fold=2 MAE=3087.14 ratio=1.1844 runtime=8.2s
+SUCCESS xgb__logratio__dynamic_graph__xgb_deep h=14 fold=2 MAE=5135.40 ratio=1.0498 runtime=8.1s
+[phase1_broad_screen] variant 101/120: xgb__logratio__full_context_geo_missing__xgb_shallow
+SUCCESS xgb__logratio__full_context_geo_missing__xgb_shallow h=7 fold=2 MAE=2995.76 ratio=1.1493 runtime=5.2s
+SUCCESS xgb__logratio__full_context_geo_missing__xgb_shallow h=14 fold=2 MAE=5255.36 ratio=1.0743 runtime=5.2s
+[phase1_broad_screen] variant 102/120: xgb__logratio__full_context_geo_missing__xgb_deep
+SUCCESS xgb__logratio__full_context_geo_missing__xgb_deep h=7 fold=2 MAE=3109.05 ratio=1.1928 runtime=10.1s
+SUCCESS xgb__logratio__full_context_geo_missing__xgb_deep h=14 fold=2 MAE=5266.26 ratio=1.0766 runtime=9.9s
+[phase1_broad_screen] variant 103/120: xgb__level__price_calendar__xgb_shallow
+SUCCESS xgb__level__price_calendar__xgb_shallow h=7 fold=2 MAE=3728.85 ratio=1.4305 runtime=2.4s
+SUCCESS xgb__level__price_calendar__xgb_shallow h=14 fold=2 MAE=5823.35 ratio=1.1904 runtime=2.5s
+[phase1_broad_screen] variant 104/120: xgb__level__price_calendar__xgb_deep
+SUCCESS xgb__level__price_calendar__xgb_deep h=7 fold=2 MAE=4007.64 ratio=1.5375 runtime=5.2s
+SUCCESS xgb__level__price_calendar__xgb_deep h=14 fold=2 MAE=5949.57 ratio=1.2162 runtime=5.3s
+[phase1_broad_screen] variant 105/120: xgb__level__dynamic_graph__xgb_shallow
+SUCCESS xgb__level__dynamic_graph__xgb_shallow h=7 fold=2 MAE=3413.65 ratio=1.3096 runtime=4.4s
+SUCCESS xgb__level__dynamic_graph__xgb_shallow h=14 fold=2 MAE=5137.88 ratio=1.0503 runtime=4.3s
+[phase1_broad_screen] variant 106/120: xgb__level__dynamic_graph__xgb_deep
+SUCCESS xgb__level__dynamic_graph__xgb_deep h=7 fold=2 MAE=3308.32 ratio=1.2692 runtime=8.1s
+SUCCESS xgb__level__dynamic_graph__xgb_deep h=14 fold=2 MAE=5165.62 ratio=1.0560 runtime=8.1s
+[phase1_broad_screen] variant 107/120: xgb__level__full_context_geo_missing__xgb_shallow
+SUCCESS xgb__level__full_context_geo_missing__xgb_shallow h=7 fold=2 MAE=3146.50 ratio=1.2071 runtime=5.2s
+SUCCESS xgb__level__full_context_geo_missing__xgb_shallow h=14 fold=2 MAE=5300.66 ratio=1.0836 runtime=5.2s
+[phase1_broad_screen] variant 108/120: xgb__level__full_context_geo_missing__xgb_deep
+SUCCESS xgb__level__full_context_geo_missing__xgb_deep h=7 fold=2 MAE=3251.27 ratio=1.2473 runtime=9.7s
+SUCCESS xgb__level__full_context_geo_missing__xgb_deep h=14 fold=2 MAE=5139.91 ratio=1.0507 runtime=9.8s
+[phase1_broad_screen] variant 109/120: xgb__scaled_delta__price_calendar__xgb_shallow
+SUCCESS xgb__scaled_delta__price_calendar__xgb_shallow h=7 fold=2 MAE=3888.39 ratio=1.4917 runtime=2.4s
+SUCCESS xgb__scaled_delta__price_calendar__xgb_shallow h=14 fold=2 MAE=5845.14 ratio=1.1949 runtime=2.3s
+[phase1_broad_screen] variant 110/120: xgb__scaled_delta__price_calendar__xgb_deep
+SUCCESS xgb__scaled_delta__price_calendar__xgb_deep h=7 fold=2 MAE=3769.57 ratio=1.4462 runtime=5.0s
+SUCCESS xgb__scaled_delta__price_calendar__xgb_deep h=14 fold=2 MAE=5992.32 ratio=1.2250 runtime=5.3s
+[phase1_broad_screen] variant 111/120: xgb__scaled_delta__dynamic_graph__xgb_shallow
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_shallow h=7 fold=2 MAE=3124.65 ratio=1.1987 runtime=4.3s
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_shallow h=14 fold=2 MAE=4897.55 ratio=1.0012 runtime=4.4s
+[phase1_broad_screen] variant 112/120: xgb__scaled_delta__dynamic_graph__xgb_deep
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_deep h=7 fold=2 MAE=3075.45 ratio=1.1799 runtime=7.9s
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_deep h=14 fold=2 MAE=4798.39 ratio=0.9809 runtime=7.9s
+[phase1_broad_screen] variant 113/120: xgb__scaled_delta__full_context_geo_missing__xgb_shallow
+SUCCESS xgb__scaled_delta__full_context_geo_missing__xgb_shallow h=7 fold=2 MAE=3181.84 ratio=1.2207 runtime=5.1s
+SUCCESS xgb__scaled_delta__full_context_geo_missing__xgb_shallow h=14 fold=2 MAE=5077.60 ratio=1.0380 runtime=5.0s
+[phase1_broad_screen] variant 114/120: xgb__scaled_delta__full_context_geo_missing__xgb_deep
+SUCCESS xgb__scaled_delta__full_context_geo_missing__xgb_deep h=7 fold=2 MAE=3115.78 ratio=1.1953 runtime=9.9s
+SUCCESS xgb__scaled_delta__full_context_geo_missing__xgb_deep h=14 fold=2 MAE=4988.17 ratio=1.0197 runtime=9.7s
+[phase1_broad_screen] variant 115/120: xgb__national_residual__price_calendar__xgb_shallow
+SUCCESS xgb__national_residual__price_calendar__xgb_shallow h=7 fold=2 MAE=5784.65 ratio=2.2192 runtime=2.4s
+SUCCESS xgb__national_residual__price_calendar__xgb_shallow h=14 fold=2 MAE=8411.27 ratio=1.7195 runtime=2.4s
+[phase1_broad_screen] variant 116/120: xgb__national_residual__price_calendar__xgb_deep
+SUCCESS xgb__national_residual__price_calendar__xgb_deep h=7 fold=2 MAE=5530.64 ratio=2.1218 runtime=5.3s
+SUCCESS xgb__national_residual__price_calendar__xgb_deep h=14 fold=2 MAE=7274.08 ratio=1.4870 runtime=5.2s
+[phase1_broad_screen] variant 117/120: xgb__national_residual__dynamic_graph__xgb_shallow
+SUCCESS xgb__national_residual__dynamic_graph__xgb_shallow h=7 fold=2 MAE=3353.99 ratio=1.2867 runtime=4.4s
+SUCCESS xgb__national_residual__dynamic_graph__xgb_shallow h=14 fold=2 MAE=5484.66 ratio=1.1212 runtime=4.3s
+[phase1_broad_screen] variant 118/120: xgb__national_residual__dynamic_graph__xgb_deep
+SUCCESS xgb__national_residual__dynamic_graph__xgb_deep h=7 fold=2 MAE=3313.30 ratio=1.2711 runtime=8.3s
+SUCCESS xgb__national_residual__dynamic_graph__xgb_deep h=14 fold=2 MAE=5529.47 ratio=1.1304 runtime=8.0s
+[phase1_broad_screen] variant 119/120: xgb__national_residual__full_context_geo_missing__xgb_shallow
+SUCCESS xgb__national_residual__full_context_geo_missing__xgb_shallow h=7 fold=2 MAE=3343.00 ratio=1.2825 runtime=5.1s
+SUCCESS xgb__national_residual__full_context_geo_missing__xgb_shallow h=14 fold=2 MAE=5524.64 ratio=1.1294 runtime=5.0s
+[phase1_broad_screen] variant 120/120: xgb__national_residual__full_context_geo_missing__xgb_deep
+SUCCESS xgb__national_residual__full_context_geo_missing__xgb_deep h=7 fold=2 MAE=3491.44 ratio=1.3395 runtime=9.7s
+SUCCESS xgb__national_residual__full_context_geo_missing__xgb_deep h=14 fold=2 MAE=5440.24 ratio=1.1121 runtime=9.9s
+=== phase2_development: 20 variants × folds [1, 2, 3, 4] × horizons [7, 14] ===
+[phase2_development] variant 1/20: cat__scaled_delta__dynamic_graph__deep_full
+SUCCESS cat__scaled_delta__dynamic_graph__deep_full h=7 fold=1 MAE=3122.19 ratio=0.8465 runtime=14.7s
+SUCCESS cat__scaled_delta__dynamic_graph__deep_full h=7 fold=3 MAE=4247.02 ratio=1.0538 runtime=13.8s
+SUCCESS cat__scaled_delta__dynamic_graph__deep_full h=7 fold=4 MAE=3110.12 ratio=1.1494 runtime=14.4s
+SUCCESS cat__scaled_delta__dynamic_graph__deep_full h=14 fold=1 MAE=4148.91 ratio=0.7636 runtime=13.8s
+SUCCESS cat__scaled_delta__dynamic_graph__deep_full h=14 fold=3 MAE=5271.55 ratio=1.1489 runtime=14.1s
+SUCCESS cat__scaled_delta__dynamic_graph__deep_full h=14 fold=4 MAE=5528.88 ratio=1.1924 runtime=14.1s
+[phase2_development] variant 2/20: cat__delta__graph_production__balanced
+SUCCESS cat__delta__graph_production__balanced h=7 fold=1 MAE=3146.60 ratio=0.8531 runtime=8.1s
+SUCCESS cat__delta__graph_production__balanced h=7 fold=3 MAE=4367.57 ratio=1.0837 runtime=8.3s
+SUCCESS cat__delta__graph_production__balanced h=7 fold=4 MAE=3157.05 ratio=1.1667 runtime=8.1s
+SUCCESS cat__delta__graph_production__balanced h=14 fold=1 MAE=4459.37 ratio=0.8207 runtime=7.9s
+SUCCESS cat__delta__graph_production__balanced h=14 fold=3 MAE=5257.96 ratio=1.1460 runtime=8.2s
+SUCCESS cat__delta__graph_production__balanced h=14 fold=4 MAE=5529.03 ratio=1.1924 runtime=8.6s
+[phase2_development] variant 3/20: xgb__scaled_delta__dynamic_graph__xgb_deep
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_deep h=7 fold=1 MAE=2957.13 ratio=0.8017 runtime=8.0s
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_deep h=7 fold=3 MAE=4559.61 ratio=1.1313 runtime=8.3s
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_deep h=7 fold=4 MAE=3213.24 ratio=1.1875 runtime=8.5s
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_deep h=14 fold=1 MAE=4377.64 ratio=0.8057 runtime=7.9s
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_deep h=14 fold=3 MAE=5963.81 ratio=1.2998 runtime=8.5s
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_deep h=14 fold=4 MAE=5665.05 ratio=1.2218 runtime=8.5s
+[phase2_development] variant 4/20: xgb__delta__full_context_geo_missing__xgb_shallow
+SUCCESS xgb__delta__full_context_geo_missing__xgb_shallow h=7 fold=1 MAE=3080.47 ratio=0.8351 runtime=5.2s
+SUCCESS xgb__delta__full_context_geo_missing__xgb_shallow h=7 fold=3 MAE=4613.43 ratio=1.1447 runtime=5.3s
+SUCCESS xgb__delta__full_context_geo_missing__xgb_shallow h=7 fold=4 MAE=3218.09 ratio=1.1893 runtime=5.2s
+SUCCESS xgb__delta__full_context_geo_missing__xgb_shallow h=14 fold=1 MAE=4552.81 ratio=0.8379 runtime=5.0s
+SUCCESS xgb__delta__full_context_geo_missing__xgb_shallow h=14 fold=3 MAE=5441.28 ratio=1.1859 runtime=5.0s
+SUCCESS xgb__delta__full_context_geo_missing__xgb_shallow h=14 fold=4 MAE=5512.48 ratio=1.1889 runtime=5.2s
+[phase2_development] variant 5/20: cat__logratio__graph_production__deep_full
+SUCCESS cat__logratio__graph_production__deep_full h=7 fold=1 MAE=3203.27 ratio=0.8684 runtime=14.0s
+SUCCESS cat__logratio__graph_production__deep_full h=7 fold=3 MAE=3809.80 ratio=0.9453 runtime=14.6s
+SUCCESS cat__logratio__graph_production__deep_full h=7 fold=4 MAE=3115.43 ratio=1.1513 runtime=14.5s
+SUCCESS cat__logratio__graph_production__deep_full h=14 fold=1 MAE=4434.09 ratio=0.8161 runtime=14.6s
+SUCCESS cat__logratio__graph_production__deep_full h=14 fold=3 MAE=4980.93 ratio=1.0856 runtime=14.0s
+SUCCESS cat__logratio__graph_production__deep_full h=14 fold=4 MAE=5602.72 ratio=1.2083 runtime=14.8s
+[phase2_development] variant 6/20: cat__delta__full_context_geo_missing__balanced
+SUCCESS cat__delta__full_context_geo_missing__balanced h=7 fold=1 MAE=2976.73 ratio=0.8070 runtime=8.6s
+SUCCESS cat__delta__full_context_geo_missing__balanced h=7 fold=3 MAE=4429.70 ratio=1.0991 runtime=8.5s
+SUCCESS cat__delta__full_context_geo_missing__balanced h=7 fold=4 MAE=3183.67 ratio=1.1766 runtime=8.6s
+SUCCESS cat__delta__full_context_geo_missing__balanced h=14 fold=1 MAE=4317.82 ratio=0.7947 runtime=8.7s
+SUCCESS cat__delta__full_context_geo_missing__balanced h=14 fold=3 MAE=5339.79 ratio=1.1638 runtime=9.0s
+SUCCESS cat__delta__full_context_geo_missing__balanced h=14 fold=4 MAE=5523.69 ratio=1.1913 runtime=9.1s
+[phase2_development] variant 7/20: xgb__logratio__dynamic_graph__xgb_shallow
+SUCCESS xgb__logratio__dynamic_graph__xgb_shallow h=7 fold=1 MAE=3333.94 ratio=0.9039 runtime=4.4s
+SUCCESS xgb__logratio__dynamic_graph__xgb_shallow h=7 fold=3 MAE=4512.13 ratio=1.1195 runtime=4.4s
+SUCCESS xgb__logratio__dynamic_graph__xgb_shallow h=7 fold=4 MAE=3166.52 ratio=1.1702 runtime=4.5s
+SUCCESS xgb__logratio__dynamic_graph__xgb_shallow h=14 fold=1 MAE=5108.66 ratio=0.9402 runtime=4.2s
+SUCCESS xgb__logratio__dynamic_graph__xgb_shallow h=14 fold=3 MAE=5289.11 ratio=1.1528 runtime=4.4s
+SUCCESS xgb__logratio__dynamic_graph__xgb_shallow h=14 fold=4 MAE=5420.11 ratio=1.1690 runtime=4.4s
+[phase2_development] variant 8/20: xgb__logratio__full_context_geo_missing__xgb_shallow
+SUCCESS xgb__logratio__full_context_geo_missing__xgb_shallow h=7 fold=1 MAE=3285.41 ratio=0.8907 runtime=5.4s
+SUCCESS xgb__logratio__full_context_geo_missing__xgb_shallow h=7 fold=3 MAE=4473.52 ratio=1.1100 runtime=5.3s
+SUCCESS xgb__logratio__full_context_geo_missing__xgb_shallow h=7 fold=4 MAE=3084.36 ratio=1.1399 runtime=5.2s
+SUCCESS xgb__logratio__full_context_geo_missing__xgb_shallow h=14 fold=1 MAE=4932.89 ratio=0.9079 runtime=5.2s
+SUCCESS xgb__logratio__full_context_geo_missing__xgb_shallow h=14 fold=3 MAE=5393.67 ratio=1.1755 runtime=5.1s
+SUCCESS xgb__logratio__full_context_geo_missing__xgb_shallow h=14 fold=4 MAE=5397.09 ratio=1.1640 runtime=5.5s
+[phase2_development] variant 9/20: xgb__scaled_delta__dynamic_graph__xgb_shallow
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_shallow h=7 fold=1 MAE=3151.13 ratio=0.8543 runtime=4.5s
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_shallow h=7 fold=3 MAE=4539.56 ratio=1.1263 runtime=4.5s
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_shallow h=7 fold=4 MAE=3211.81 ratio=1.1870 runtime=4.4s
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_shallow h=14 fold=1 MAE=4592.58 ratio=0.8452 runtime=4.6s
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_shallow h=14 fold=3 MAE=5796.43 ratio=1.2633 runtime=4.3s
+SUCCESS xgb__scaled_delta__dynamic_graph__xgb_shallow h=14 fold=4 MAE=5214.19 ratio=1.1245 runtime=4.3s
+[phase2_development] variant 10/20: xgb__delta__full_context_geo_missing__xgb_deep
+SUCCESS xgb__delta__full_context_geo_missing__xgb_deep h=7 fold=1 MAE=2903.12 ratio=0.7871 runtime=9.0s
+SUCCESS xgb__delta__full_context_geo_missing__xgb_deep h=7 fold=3 MAE=4651.52 ratio=1.1541 runtime=9.5s
+SUCCESS xgb__delta__full_context_geo_missing__xgb_deep h=7 fold=4 MAE=3151.48 ratio=1.1647 runtime=10.1s
+SUCCESS xgb__delta__full_context_geo_missing__xgb_deep h=14 fold=1 MAE=4095.08 ratio=0.7537 runtime=9.1s
+SUCCESS xgb__delta__full_context_geo_missing__xgb_deep h=14 fold=3 MAE=5770.43 ratio=1.2577 runtime=9.6s
+SUCCESS xgb__delta__full_context_geo_missing__xgb_deep h=14 fold=4 MAE=5528.88 ratio=1.1924 runtime=9.7s
+[phase2_development] variant 11/20: cat__delta__graph_production__deep_full
+SUCCESS cat__delta__graph_production__deep_full h=7 fold=1 MAE=3102.08 ratio=0.8410 runtime=14.6s
+SUCCESS cat__delta__graph_production__deep_full h=7 fold=3 MAE=4119.49 ratio=1.0221 runtime=14.2s
+SUCCESS cat__delta__graph_production__deep_full h=7 fold=4 MAE=3257.84 ratio=1.2040 runtime=14.8s
+SUCCESS cat__delta__graph_production__deep_full h=14 fold=1 MAE=4368.34 ratio=0.8040 runtime=14.2s
+SUCCESS cat__delta__graph_production__deep_full h=14 fold=3 MAE=5484.83 ratio=1.1954 runtime=14.6s
+SUCCESS cat__delta__graph_production__deep_full h=14 fold=4 MAE=5540.23 ratio=1.1949 runtime=14.6s
+[phase2_development] variant 12/20: cat__scaled_delta__full_context_geo_missing__deep_full
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full h=7 fold=1 MAE=2975.07 ratio=0.8066 runtime=15.1s
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full h=7 fold=3 MAE=4094.46 ratio=1.0159 runtime=14.7s
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full h=7 fold=4 MAE=3089.52 ratio=1.1418 runtime=15.2s
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full h=14 fold=1 MAE=4088.06 ratio=0.7524 runtime=14.7s
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full h=14 fold=3 MAE=5315.57 ratio=1.1585 runtime=15.4s
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full h=14 fold=4 MAE=5418.60 ratio=1.1686 runtime=15.1s
+[phase2_development] variant 13/20: xgb__scaled_delta__full_context_geo_missing__xgb_deep
+SUCCESS xgb__scaled_delta__full_context_geo_missing__xgb_deep h=7 fold=1 MAE=2896.66 ratio=0.7853 runtime=9.3s
+SUCCESS xgb__scaled_delta__full_context_geo_missing__xgb_deep h=7 fold=3 MAE=4446.68 ratio=1.1033 runtime=9.7s
+SUCCESS xgb__scaled_delta__full_context_geo_missing__xgb_deep h=7 fold=4 MAE=2930.73 ratio=1.0831 runtime=9.8s
+SUCCESS xgb__scaled_delta__full_context_geo_missing__xgb_deep h=14 fold=1 MAE=4305.15 ratio=0.7923 runtime=9.3s
+SUCCESS xgb__scaled_delta__full_context_geo_missing__xgb_deep h=14 fold=3 MAE=5788.24 ratio=1.2615 runtime=9.8s
+SUCCESS xgb__scaled_delta__full_context_geo_missing__xgb_deep h=14 fold=4 MAE=5520.28 ratio=1.1906 runtime=10.1s
+[phase2_development] variant 14/20: cat__scaled_delta__graph_production__balanced
+SUCCESS cat__scaled_delta__graph_production__balanced h=7 fold=1 MAE=3192.50 ratio=0.8655 runtime=8.6s
+SUCCESS cat__scaled_delta__graph_production__balanced h=7 fold=3 MAE=4194.88 ratio=1.0408 runtime=8.1s
+SUCCESS cat__scaled_delta__graph_production__balanced h=7 fold=4 MAE=3203.64 ratio=1.1839 runtime=8.1s
+SUCCESS cat__scaled_delta__graph_production__balanced h=14 fold=1 MAE=4356.92 ratio=0.8019 runtime=8.5s
+SUCCESS cat__scaled_delta__graph_production__balanced h=14 fold=3 MAE=5636.04 ratio=1.2284 runtime=8.3s
+SUCCESS cat__scaled_delta__graph_production__balanced h=14 fold=4 MAE=5259.91 ratio=1.1344 runtime=8.1s
+[phase2_development] variant 15/20: cat__level__graph_production__balanced
+SUCCESS cat__level__graph_production__balanced h=7 fold=1 MAE=3285.54 ratio=0.8907 runtime=8.1s
+SUCCESS cat__level__graph_production__balanced h=7 fold=3 MAE=4665.66 ratio=1.1576 runtime=8.4s
+SUCCESS cat__level__graph_production__balanced h=7 fold=4 MAE=3209.72 ratio=1.1862 runtime=8.0s
+SUCCESS cat__level__graph_production__balanced h=14 fold=1 MAE=4741.59 ratio=0.8727 runtime=8.3s
+SUCCESS cat__level__graph_production__balanced h=14 fold=3 MAE=5495.57 ratio=1.1978 runtime=8.2s
+SUCCESS cat__level__graph_production__balanced h=14 fold=4 MAE=5370.40 ratio=1.1582 runtime=8.0s
+[phase2_development] variant 16/20: cat__logratio__dynamic_graph__deep_full
+SUCCESS cat__logratio__dynamic_graph__deep_full h=7 fold=1 MAE=3193.42 ratio=0.8658 runtime=13.8s
+SUCCESS cat__logratio__dynamic_graph__deep_full h=7 fold=3 MAE=3891.04 ratio=0.9654 runtime=14.6s
+SUCCESS cat__logratio__dynamic_graph__deep_full h=7 fold=4 MAE=3116.29 ratio=1.1517 runtime=14.1s
+SUCCESS cat__logratio__dynamic_graph__deep_full h=14 fold=1 MAE=4461.04 ratio=0.8210 runtime=13.9s
+SUCCESS cat__logratio__dynamic_graph__deep_full h=14 fold=3 MAE=4930.40 ratio=1.0746 runtime=13.9s
+SUCCESS cat__logratio__dynamic_graph__deep_full h=14 fold=4 MAE=5644.49 ratio=1.2173 runtime=14.5s
+[phase2_development] variant 17/20: cat__delta__dynamic_graph__deep_full
+SUCCESS cat__delta__dynamic_graph__deep_full h=7 fold=1 MAE=3036.59 ratio=0.8233 runtime=13.7s
+SUCCESS cat__delta__dynamic_graph__deep_full h=7 fold=3 MAE=4246.88 ratio=1.0537 runtime=14.3s
+SUCCESS cat__delta__dynamic_graph__deep_full h=7 fold=4 MAE=3214.64 ratio=1.1880 runtime=13.9s
+SUCCESS cat__delta__dynamic_graph__deep_full h=14 fold=1 MAE=4361.65 ratio=0.8027 runtime=14.0s
+SUCCESS cat__delta__dynamic_graph__deep_full h=14 fold=3 MAE=5225.22 ratio=1.1388 runtime=14.2s
+SUCCESS cat__delta__dynamic_graph__deep_full h=14 fold=4 MAE=5618.04 ratio=1.2116 runtime=14.1s
+[phase2_development] variant 18/20: cat__scaled_delta__graph_production__deep_full
+SUCCESS cat__scaled_delta__graph_production__deep_full h=7 fold=1 MAE=3066.50 ratio=0.8314 runtime=16.5s
+SUCCESS cat__scaled_delta__graph_production__deep_full h=7 fold=3 MAE=4116.21 ratio=1.0213 runtime=14.4s
+SUCCESS cat__scaled_delta__graph_production__deep_full h=7 fold=4 MAE=3117.19 ratio=1.1520 runtime=14.4s
+SUCCESS cat__scaled_delta__graph_production__deep_full h=14 fold=1 MAE=4116.02 ratio=0.7575 runtime=14.0s
+SUCCESS cat__scaled_delta__graph_production__deep_full h=14 fold=3 MAE=5299.80 ratio=1.1551 runtime=14.3s
+SUCCESS cat__scaled_delta__graph_production__deep_full h=14 fold=4 MAE=5437.99 ratio=1.1728 runtime=14.3s
+[phase2_development] variant 19/20: xgb__delta__dynamic_graph__xgb_deep
+SUCCESS xgb__delta__dynamic_graph__xgb_deep h=7 fold=1 MAE=2849.33 ratio=0.7725 runtime=8.0s
+SUCCESS xgb__delta__dynamic_graph__xgb_deep h=7 fold=3 MAE=4759.83 ratio=1.1810 runtime=8.0s
+SUCCESS xgb__delta__dynamic_graph__xgb_deep h=7 fold=4 MAE=3228.34 ratio=1.1931 runtime=8.5s
+SUCCESS xgb__delta__dynamic_graph__xgb_deep h=14 fold=1 MAE=4418.32 ratio=0.8132 runtime=7.8s
+SUCCESS xgb__delta__dynamic_graph__xgb_deep h=14 fold=3 MAE=5669.23 ratio=1.2356 runtime=8.3s
+SUCCESS xgb__delta__dynamic_graph__xgb_deep h=14 fold=4 MAE=5751.04 ratio=1.2403 runtime=8.5s
+[phase2_development] variant 20/20: xgb__logratio__dynamic_graph__xgb_deep
+SUCCESS xgb__logratio__dynamic_graph__xgb_deep h=7 fold=1 MAE=3123.17 ratio=0.8467 runtime=8.2s
+SUCCESS xgb__logratio__dynamic_graph__xgb_deep h=7 fold=3 MAE=4277.96 ratio=1.0614 runtime=8.6s
+SUCCESS xgb__logratio__dynamic_graph__xgb_deep h=7 fold=4 MAE=3074.01 ratio=1.1360 runtime=8.6s
+SUCCESS xgb__logratio__dynamic_graph__xgb_deep h=14 fold=1 MAE=4776.63 ratio=0.8791 runtime=8.0s
+SUCCESS xgb__logratio__dynamic_graph__xgb_deep h=14 fold=3 MAE=5201.65 ratio=1.1337 runtime=8.4s
+SUCCESS xgb__logratio__dynamic_graph__xgb_deep h=14 fold=4 MAE=5636.73 ratio=1.2157 runtime=8.7s
+=== phase3_holdout_confirmation: 8 variants × folds [5, 6, 7] × horizons [7, 14] ===
+[phase3_holdout_confirmation] variant 1/8: cat__scaled_delta__full_context_geo_missing__deep_full
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full h=7 fold=5 MAE=3382.67 ratio=1.2613 runtime=15.8s
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full h=7 fold=6 MAE=4825.71 ratio=0.7759 runtime=15.4s
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full h=7 fold=7 MAE=3629.50 ratio=0.9596 runtime=15.5s
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full h=14 fold=5 MAE=5741.64 ratio=0.9656 runtime=15.5s
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full h=14 fold=6 MAE=5711.68 ratio=0.6913 runtime=15.4s
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full h=14 fold=7 MAE=4919.36 ratio=0.7556 runtime=15.4s
+[phase3_holdout_confirmation] variant 2/8: cat__logratio__graph_production__deep_full
+SUCCESS cat__logratio__graph_production__deep_full h=7 fold=5 MAE=3302.24 ratio=1.2313 runtime=14.8s
+SUCCESS cat__logratio__graph_production__deep_full h=7 fold=6 MAE=4699.18 ratio=0.7555 runtime=14.7s
+SUCCESS cat__logratio__graph_production__deep_full h=7 fold=7 MAE=3599.43 ratio=0.9517 runtime=15.1s
+SUCCESS cat__logratio__graph_production__deep_full h=14 fold=5 MAE=5579.93 ratio=0.9384 runtime=14.7s
+SUCCESS cat__logratio__graph_production__deep_full h=14 fold=6 MAE=5334.56 ratio=0.6457 runtime=15.0s
+SUCCESS cat__logratio__graph_production__deep_full h=14 fold=7 MAE=4828.99 ratio=0.7418 runtime=15.3s
+[phase3_holdout_confirmation] variant 3/8: cat__scaled_delta__dynamic_graph__deep_full
+SUCCESS cat__scaled_delta__dynamic_graph__deep_full h=7 fold=5 MAE=3236.17 ratio=1.2066 runtime=14.1s
+SUCCESS cat__scaled_delta__dynamic_graph__deep_full h=7 fold=6 MAE=4884.20 ratio=0.7853 runtime=14.3s
+SUCCESS cat__scaled_delta__dynamic_graph__deep_full h=7 fold=7 MAE=3663.70 ratio=0.9687 runtime=14.8s
+SUCCESS cat__scaled_delta__dynamic_graph__deep_full h=14 fold=5 MAE=5747.15 ratio=0.9665 runtime=14.1s
+SUCCESS cat__scaled_delta__dynamic_graph__deep_full h=14 fold=6 MAE=5699.81 ratio=0.6899 runtime=14.5s
+SUCCESS cat__scaled_delta__dynamic_graph__deep_full h=14 fold=7 MAE=4887.74 ratio=0.7508 runtime=14.8s
+[phase3_holdout_confirmation] variant 4/8: cat__logratio__dynamic_graph__deep_full
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+SUCCESS cat__logratio__dynamic_graph__deep_full h=7 fold=5 MAE=3308.08 ratio=1.2335 runtime=32.2s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__logratio__dynamic_graph__deep_full h=7 fold=6 MAE=4714.08 ratio=0.7579 runtime=38.2s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__logratio__dynamic_graph__deep_full h=7 fold=7 MAE=3625.25 ratio=0.9585 runtime=39.0s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__logratio__dynamic_graph__deep_full h=14 fold=5 MAE=5285.00 ratio=0.8888 runtime=39.8s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__logratio__dynamic_graph__deep_full h=14 fold=6 MAE=5382.13 ratio=0.6514 runtime=40.3s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__logratio__dynamic_graph__deep_full h=14 fold=7 MAE=4739.25 ratio=0.7280 runtime=41.4s
+[phase3_holdout_confirmation] variant 5/8: cat__scaled_delta__graph_production__deep_full
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__graph_production__deep_full h=7 fold=5 MAE=3184.52 ratio=1.1874 runtime=39.3s
+SUCCESS cat__scaled_delta__graph_production__deep_full h=7 fold=6 MAE=4787.52 ratio=0.7697 runtime=37.4s
+SUCCESS cat__scaled_delta__graph_production__deep_full h=7 fold=7 MAE=3628.26 ratio=0.9593 runtime=38.4s
+SUCCESS cat__scaled_delta__graph_production__deep_full h=14 fold=5 MAE=5965.52 ratio=1.0032 runtime=37.9s
+SUCCESS cat__scaled_delta__graph_production__deep_full h=14 fold=6 MAE=5731.64 ratio=0.6937 runtime=38.6s
+SUCCESS cat__scaled_delta__graph_production__deep_full h=14 fold=7 MAE=4977.96 ratio=0.7646 runtime=39.5s
+[phase3_holdout_confirmation] variant 6/8: cat__delta__graph_production__balanced
+SUCCESS cat__delta__graph_production__balanced h=7 fold=5 MAE=3442.46 ratio=1.2836 runtime=16.0s
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+SUCCESS cat__delta__graph_production__balanced h=7 fold=6 MAE=5105.13 ratio=0.8208 runtime=19.1s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__delta__graph_production__balanced h=7 fold=7 MAE=3749.89 ratio=0.9915 runtime=20.2s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__delta__graph_production__balanced h=14 fold=5 MAE=6075.60 ratio=1.0217 runtime=21.0s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__delta__graph_production__balanced h=14 fold=6 MAE=6166.12 ratio=0.7463 runtime=21.4s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__delta__graph_production__balanced h=14 fold=7 MAE=5428.83 ratio=0.8339 runtime=21.4s
+[phase3_holdout_confirmation] variant 7/8: cat__delta__dynamic_graph__deep_full
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__delta__dynamic_graph__deep_full h=7 fold=5 MAE=3339.01 ratio=1.2450 runtime=32.7s
+SUCCESS cat__delta__dynamic_graph__deep_full h=7 fold=6 MAE=4821.10 ratio=0.7751 runtime=38.2s
+SUCCESS cat__delta__dynamic_graph__deep_full h=7 fold=7 MAE=3656.23 ratio=0.9667 runtime=37.9s
+SUCCESS cat__delta__dynamic_graph__deep_full h=14 fold=5 MAE=5760.13 ratio=0.9687 runtime=38.1s
+SUCCESS cat__delta__dynamic_graph__deep_full h=14 fold=6 MAE=5671.79 ratio=0.6865 runtime=39.2s
+SUCCESS cat__delta__dynamic_graph__deep_full h=14 fold=7 MAE=5030.18 ratio=0.7727 runtime=40.0s
+[phase3_holdout_confirmation] variant 8/8: cat__delta__full_context_geo_missing__balanced
+SUCCESS cat__delta__full_context_geo_missing__balanced h=7 fold=5 MAE=3372.88 ratio=1.2576 runtime=19.7s
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+SUCCESS cat__delta__full_context_geo_missing__balanced h=7 fold=6 MAE=5092.63 ratio=0.8188 runtime=15.5s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__delta__full_context_geo_missing__balanced h=7 fold=7 MAE=3729.13 ratio=0.9860 runtime=19.5s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__delta__full_context_geo_missing__balanced h=14 fold=5 MAE=6192.55 ratio=1.0414 runtime=20.1s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__delta__full_context_geo_missing__balanced h=14 fold=6 MAE=6098.56 ratio=0.7381 runtime=19.6s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__delta__full_context_geo_missing__balanced h=14 fold=7 MAE=5347.23 ratio=0.8214 runtime=20.3s
+=== group_refinement: 3 variants × folds [1, 2, 3, 4, 5, 6, 7] × horizons [7, 14] ===
+[group_refinement] variant 1/3: cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=7 fold=1 MAE=2670.95 ratio=0.7241 runtime=90.1s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 46571.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 45461.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=7 fold=2 MAE=3233.63 ratio=1.2406 runtime=97.0s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44887.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44589.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44435.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=7 fold=3 MAE=4083.09 ratio=1.0131 runtime=95.8s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44355.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44313.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44291.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=7 fold=4 MAE=3143.42 ratio=1.1617 runtime=96.2s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44279.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44273.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44271.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=7 fold=5 MAE=3468.93 ratio=1.2934 runtime=95.6s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=7 fold=6 MAE=4715.21 ratio=0.7581 runtime=96.6s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=7 fold=7 MAE=3581.65 ratio=0.9470 runtime=95.4s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=14 fold=1 MAE=3838.82 ratio=0.7065 runtime=95.9s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=14 fold=2 MAE=5740.04 ratio=1.1734 runtime=96.5s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=14 fold=3 MAE=5163.95 ratio=1.1255 runtime=97.5s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=14 fold=4 MAE=5678.67 ratio=1.2247 runtime=96.7s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=14 fold=5 MAE=5413.78 ratio=0.9104 runtime=95.4s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=14 fold=6 MAE=5625.87 ratio=0.6809 runtime=96.0s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity h=14 fold=7 MAE=4767.99 ratio=0.7324 runtime=96.6s
+[group_refinement] variant 2/3: cat__scaled_delta__full_context_geo_missing__deep_full__per_market
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=7 fold=1 MAE=2786.27 ratio=0.7554 runtime=94.3s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=7 fold=2 MAE=2827.71 ratio=1.0848 runtime=96.9s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=7 fold=3 MAE=3812.98 ratio=0.9461 runtime=95.0s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=7 fold=4 MAE=2943.20 ratio=1.0877 runtime=94.0s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=7 fold=5 MAE=3265.32 ratio=1.2175 runtime=94.8s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=7 fold=6 MAE=4543.88 ratio=0.7306 runtime=92.8s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=7 fold=7 MAE=3598.88 ratio=0.9515 runtime=94.5s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=14 fold=1 MAE=4094.95 ratio=0.7536 runtime=94.4s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=14 fold=2 MAE=4896.56 ratio=1.0010 runtime=94.7s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=14 fold=3 MAE=4613.97 ratio=1.0056 runtime=97.4s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=14 fold=4 MAE=5331.25 ratio=1.1498 runtime=95.6s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=14 fold=5 MAE=5565.87 ratio=0.9360 runtime=95.2s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=14 fold=6 MAE=5393.77 ratio=0.6528 runtime=93.5s
+<PROJECT_ROOT>/TEMP_pasarpulse_sweep50.py:713: FutureWarning: In a future version of pandas, a length 1 tuple will be returned when iterating over a groupby with a grouper equal to a list of length 1. Don't supply a list with a single grouper to avoid this warning.
+  for key, test_group in test.groupby(group_columns, observed=True):
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_market h=14 fold=7 MAE=4677.41 ratio=0.7185 runtime=93.6s
+[group_refinement] variant 3/3: cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44269.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=7 fold=1 MAE=2432.89 ratio=0.6596 runtime=287.2s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 46571.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=7 fold=2 MAE=3046.47 ratio=1.1687 runtime=295.4s
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 46571.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 45461.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44887.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44589.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=7 fold=3 MAE=3798.63 ratio=0.9425 runtime=290.2s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=7 fold=4 MAE=2841.07 ratio=1.0500 runtime=303.8s
+Warning: less than 75% GPU memory available for training. Free: 21319.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 46571.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 45461.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=7 fold=5 MAE=3124.12 ratio=1.1649 runtime=290.6s
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 46571.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=7 fold=6 MAE=4710.91 ratio=0.7574 runtime=290.0s
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=7 fold=7 MAE=3624.47 ratio=0.9583 runtime=297.1s
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 46571.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 45461.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44887.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44589.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44435.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=14 fold=1 MAE=3698.16 ratio=0.6806 runtime=288.2s
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 46571.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=14 fold=2 MAE=5182.71 ratio=1.0595 runtime=290.0s
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 46571.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 45461.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44887.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44589.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44435.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=14 fold=3 MAE=4383.35 ratio=0.9554 runtime=287.7s
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 46571.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 45461.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44887.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44589.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44435.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=14 fold=4 MAE=5338.70 ratio=1.1514 runtime=288.8s
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 46571.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 45461.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44887.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44589.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=14 fold=5 MAE=5105.01 ratio=0.8585 runtime=290.8s
+Warning: less than 75% GPU memory available for training. Free: 60793.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 52835.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 48709.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 46571.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 45461.1875 Total: 81251.1875
+Warning: less than 75% GPU memory available for training. Free: 44887.1875 Total: 81251.1875
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=14 fold=6 MAE=5682.27 ratio=0.6877 runtime=292.3s
+SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=14 fold=7 MAE=4626.76 ratio=0.7107 runtime=304.7s
+=== FINAL HOLDOUT SUMMARY ===
+                                                                     variant  horizon_days               scope  folds  rows         mae  mean_mae_ratio  worst_fold_mae  runtime_seconds
+          cat__scaled_delta__full_context_geo_missing__deep_full__per_market             7 holdout_origins_5_7      3  1674 3804.617439        0.965644     4543.881527       569.841637
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market             7 holdout_origins_5_7      3  1674 3822.326886        0.959468     4710.910364      1753.773265
+                                  cat__logratio__graph_production__deep_full             7 holdout_origins_5_7      3   837 3868.976787        0.978602     4699.184078        44.590683
+                              cat__scaled_delta__graph_production__deep_full             7 holdout_origins_5_7      3  1674 3869.211474        0.971377     4787.518843       228.245344
+                                     cat__logratio__dynamic_graph__deep_full             7 holdout_origins_5_7      3  1674 3884.526211        0.982407     4714.075729       228.057334
+       cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity             7 holdout_origins_5_7      3  1674 3924.135555        0.998554     4718.691798       575.188257
+                                 cat__scaled_delta__dynamic_graph__deep_full             7 holdout_origins_5_7      3   837 3930.500985        0.986085     4884.196755        43.243375
+                                        cat__delta__dynamic_graph__deep_full             7 holdout_origins_5_7      3  1674 3940.929599        0.994720     4821.099870       222.322389
+                      cat__scaled_delta__full_context_geo_missing__deep_full             7 holdout_origins_5_7      3   837 3947.982135        0.997993     4825.713893        46.788220
+                              cat__delta__full_context_geo_missing__balanced             7 holdout_origins_5_7      3  1674 4067.363924        1.019953     5092.634753       114.726619
+                                      cat__delta__graph_production__balanced             7 holdout_origins_5_7      3  1674 4101.516497        1.031047     5105.134451       118.277479
+                                     cat__logratio__dynamic_graph__deep_full            14 holdout_origins_5_7      3  1670 5137.832547        0.756223     5382.126537       245.057288
+          cat__scaled_delta__full_context_geo_missing__deep_full__per_market            14 holdout_origins_5_7      3  1670 5215.556363        0.769406     5565.874747       570.595494
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market            14 holdout_origins_5_7      3  1395 5242.464393        0.760818     5682.273020      1472.824479
+                                  cat__logratio__graph_production__deep_full            14 holdout_origins_5_7      3   835 5250.333769        0.775464     5579.925490        45.059326
+       cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity            14 holdout_origins_5_7      3  1670 5272.768780        0.774920     5625.871735       577.182293
+                                 cat__scaled_delta__dynamic_graph__deep_full            14 holdout_origins_5_7      3  1110 5309.374146        0.789830     5747.149045        77.696612
+                      cat__scaled_delta__full_context_geo_missing__deep_full            14 holdout_origins_5_7      3   835 5460.783144        0.804460     5741.636831        46.244971
+                                        cat__delta__dynamic_graph__deep_full            14 holdout_origins_5_7      3  1670 5490.101773        0.809490     5760.127534       229.254715
+                              cat__scaled_delta__graph_production__deep_full            14 holdout_origins_5_7      3  1670 5561.847147        0.820860     5965.515531       227.861635
+                              cat__delta__full_context_geo_missing__balanced            14 holdout_origins_5_7      3  1670 5882.634265        0.867235     6192.550794       121.637220
+                                      cat__delta__graph_production__balanced            14 holdout_origins_5_7      3  1670 5892.944289        0.867510     6166.119569       119.986867
+=== FINAL HOLDOUT ENSEMBLES ===
+                      model  horizon_days             scope  rows                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        weights  shrink_alpha         mae        rmse     smape  mean_error
+      FIXED_DEV_NNMAE_BLEND             7 holdout_folds_5_7   837     {"cat__scaled_delta__full_context_geo_missing__deep_full": 5.219708046122634e-10, "cat__logratio__graph_production__deep_full": 4.219952216335029e-10, "cat__scaled_delta__dynamic_graph__deep_full": 3.900887480033219e-10, "cat__logratio__dynamic_graph__deep_full": 5.219900284214599e-10, "cat__scaled_delta__graph_production__deep_full": 7.429871506854983e-10, "cat__delta__graph_production__balanced": 8.7108228761633e-10, "cat__delta__dynamic_graph__deep_full": 6.128883402251642e-10, "cat__delta__full_context_geo_missing__balanced": 1.099392309626812e-09, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 2.886015498416607e-12, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.13409849383297914, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.2764456738537416, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.11887880540157733, "INCUMBENT_expert_lgb_logratio": 0.47057702172642113}           NaN 3642.354901 5967.129051  7.865898  559.442159
+     DEV_SHRUNK_NNMAE_BLEND             7 holdout_folds_5_7   837     {"cat__scaled_delta__full_context_geo_missing__deep_full": 5.219708046122634e-10, "cat__logratio__graph_production__deep_full": 4.219952216335029e-10, "cat__scaled_delta__dynamic_graph__deep_full": 3.900887480033219e-10, "cat__logratio__dynamic_graph__deep_full": 5.219900284214599e-10, "cat__scaled_delta__graph_production__deep_full": 7.429871506854983e-10, "cat__delta__graph_production__balanced": 8.7108228761633e-10, "cat__delta__dynamic_graph__deep_full": 6.128883402251642e-10, "cat__delta__full_context_geo_missing__balanced": 1.099392309626812e-09, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 2.886015498416607e-12, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.13409849383297914, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.2764456738537416, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.11887880540157733, "INCUMBENT_expert_lgb_logratio": 0.47057702172642113}           1.0 3642.354901 5967.129051  7.865898  559.442159
+                 EQUAL_TOP3             7 holdout_folds_5_7   837     {"cat__scaled_delta__full_context_geo_missing__deep_full": 5.219708046122634e-10, "cat__logratio__graph_production__deep_full": 4.219952216335029e-10, "cat__scaled_delta__dynamic_graph__deep_full": 3.900887480033219e-10, "cat__logratio__dynamic_graph__deep_full": 5.219900284214599e-10, "cat__scaled_delta__graph_production__deep_full": 7.429871506854983e-10, "cat__delta__graph_production__balanced": 8.7108228761633e-10, "cat__delta__dynamic_graph__deep_full": 6.128883402251642e-10, "cat__delta__full_context_geo_missing__balanced": 1.099392309626812e-09, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 2.886015498416607e-12, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.13409849383297914, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.2764456738537416, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.11887880540157733, "INCUMBENT_expert_lgb_logratio": 0.47057702172642113}           NaN 3652.608946 6036.806474  7.889469  542.190591
+                   DEV_TOP1             7 holdout_folds_5_7   837     {"cat__scaled_delta__full_context_geo_missing__deep_full": 5.219708046122634e-10, "cat__logratio__graph_production__deep_full": 4.219952216335029e-10, "cat_SUCCESS cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market h=14 fold=7 MAE=4626.76 ratio=0.7107 runtime=315.5s
+=== FINAL HOLDOUT SUMMARY ===
+                                                                     variant  horizon_days               scope  folds  rows         mae  mean_mae_ratio  worst_fold_mae  runtime_seconds
+          cat__scaled_delta__full_context_geo_missing__deep_full__per_market             7 holdout_origins_5_7      3  1674 3804.617439        0.965644     4543.881527       569.841637
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market             7 holdout_origins_5_7      3  1674 3822.326886        0.959468     4710.910364      1753.773265
+                                  cat__logratio__graph_production__deep_full             7 holdout_origins_5_7      3   837 3868.976787        0.978602     4699.184078        44.590683
+                              cat__scaled_delta__graph_production__deep_full             7 holdout_origins_5_7      3  1674 3869.211474        0.971377     4787.518843       228.245344
+                                     cat__logratio__dynamic_graph__deep_full             7 holdout_origins_5_7      3  1674 3884.526211        0.982407     4714.075729       228.057334
+       cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity             7 holdout_origins_5_7      3  1674 3924.135555        0.998554     4718.691798       575.188257
+                                 cat__scaled_delta__dynamic_graph__deep_full             7 holdout_origins_5_7      3   837 3930.500985        0.986085     4884.196755        43.243375
+                                        cat__delta__dynamic_graph__deep_full             7 holdout_origins_5_7      3  1674 3940.929599        0.994720     4821.099870       222.322389
+                      cat__scaled_delta__full_context_geo_missing__deep_full             7 holdout_origins_5_7      3   837 3947.982135        0.997993     4825.713893        46.788220
+                              cat__delta__full_context_geo_missing__balanced             7 holdout_origins_5_7      3  1674 4067.363924        1.019953     5092.634753       114.726619
+                                      cat__delta__graph_production__balanced             7 holdout_origins_5_7      3  1674 4101.516497        1.031047     5105.134451       118.277479
+                                     cat__logratio__dynamic_graph__deep_full            14 holdout_origins_5_7      3  1670 5137.832547        0.756223     5382.126537       245.057288
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market            14 holdout_origins_5_7      3  1670 5141.075148        0.752564     5682.273020      1788.330986
+          cat__scaled_delta__full_context_geo_missing__deep_full__per_market            14 holdout_origins_5_7      3  1670 5215.556363        0.769406     5565.874747       570.595494
+                                  cat__logratio__graph_production__deep_full            14 holdout_origins_5_7      3   835 5250.333769        0.775464     5579.925490        45.059326
+       cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity            14 holdout_origins_5_7      3  1670 5272.768780        0.774920     5625.871735       577.182293
+                                 cat__scaled_delta__dynamic_graph__deep_full            14 holdout_origins_5_7      3  1110 5309.374146        0.789830     5747.149045        77.696612
+                      cat__scaled_delta__full_context_geo_missing__deep_full            14 holdout_origins_5_7      3   835 5460.783144        0.804460     5741.636831        46.244971
+                                        cat__delta__dynamic_graph__deep_full            14 holdout_origins_5_7      3  1670 5490.101773        0.809490     5760.127534       229.254715
+                              cat__scaled_delta__graph_production__deep_full            14 holdout_origins_5_7      3  1670 5561.847147        0.820860     5965.515531       227.861635
+                              cat__delta__full_context_geo_missing__balanced            14 holdout_origins_5_7      3  1670 5882.634265        0.867235     6192.550794       121.637220
+                                      cat__delta__graph_production__balanced            14 holdout_origins_5_7      3  1670 5892.944289        0.867510     6166.119569       119.986867
+=== FINAL HOLDOUT ENSEMBLES ===
+                      model  horizon_days             scope  rows                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        weights  shrink_alpha         mae        rmse     smape  mean_error
+      FIXED_DEV_NNMAE_BLEND             7 holdout_folds_5_7   837     {"cat__scaled_delta__full_context_geo_missing__deep_full": 5.219708046122634e-10, "cat__logratio__graph_production__deep_full": 4.219952216335029e-10, "cat__scaled_delta__dynamic_graph__deep_full": 3.900887480033219e-10, "cat__logratio__dynamic_graph__deep_full": 5.219900284214599e-10, "cat__scaled_delta__graph_production__deep_full": 7.429871506854983e-10, "cat__delta__graph_production__balanced": 8.7108228761633e-10, "cat__delta__dynamic_graph__deep_full": 6.128883402251642e-10, "cat__delta__full_context_geo_missing__balanced": 1.099392309626812e-09, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 2.886015498416607e-12, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.13409849383297914, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.2764456738537416, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.11887880540157733, "INCUMBENT_expert_lgb_logratio": 0.47057702172642113}           NaN 3642.354901 5967.129051  7.865898  559.442159
+     DEV_SHRUNK_NNMAE_BLEND             7 holdout_folds_5_7   837     {"cat__scaled_delta__full_context_geo_missing__deep_full": 5.219708046122634e-10, "cat__logratio__graph_production__deep_full": 4.219952216335029e-10, "cat__scaled_delta__dynamic_graph__deep_full": 3.900887480033219e-10, "cat__logratio__dynamic_graph__deep_full": 5.219900284214599e-10, "cat__scaled_delta__graph_production__deep_full": 7.429871506854983e-10, "cat__delta__graph_production__balanced": 8.7108228761633e-10, "cat__delta__dynamic_graph__deep_full": 6.128883402251642e-10, "cat__delta__full_context_geo_missing__balanced": 1.099392309626812e-09, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 2.886015498416607e-12, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.13409849383297914, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.2764456738537416, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.11887880540157733, "INCUMBENT_expert_lgb_logratio": 0.47057702172642113}           1.0 3642.354901 5967.129051  7.865898  559.442159
+                 EQUAL_TOP3             7 holdout_folds_5_7   837     {"cat__scaled_delta__full_context_geo_missing__deep_full": 5.219708046122634e-10, "cat__logratio__graph_production__deep_full": 4.219952216335029e-10, "cat__scaled_delta__dynamic_graph__deep_full": 3.900887480033219e-10, "cat__logratio__dynamic_graph__deep_full": 5.219900284214599e-10, "cat__scaled_delta__graph_production__deep_full": 7.429871506854983e-10, "cat__delta__graph_production__balanced": 8.7108228761633e-10, "cat__delta__dynamic_graph__deep_full": 6.128883402251642e-10, "cat__delta__full_context_geo_missing__balanced": 1.099392309626812e-09, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 2.886015498416607e-12, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.13409849383297914, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.2764456738537416, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.11887880540157733, "INCUMBENT_expert_lgb_logratio": 0.47057702172642113}           NaN 3652.608946 6036.806474  7.889469  542.190591
+                   DEV_TOP1             7 holdout_folds_5_7   837     {"cat__scaled_delta__full_context_geo_missing__deep_full": 5.219708046122634e-10, "cat__logratio__graph_production__deep_full": 4.219952216335029e-10, "cat__scaled_delta__dynamic_graph__deep_full": 3.900887480033219e-10, "cat__logratio__dynamic_graph__deep_full": 5.219900284214599e-10, "cat__scaled_delta__graph_production__deep_full": 7.429871506854983e-10, "cat__delta__graph_production__balanced": 8.7108228761633e-10, "cat__delta__dynamic_graph__deep_full": 6.128883402251642e-10, "cat__delta__full_context_geo_missing__balanced": 1.099392309626812e-09, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 2.886015498416607e-12, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.13409849383297914, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.2764456738537416, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.11887880540157733, "INCUMBENT_expert_lgb_logratio": 0.47057702172642113}           NaN 3683.195243 6359.669629  7.959618  460.159113
+DEV_COMMODITY_MARKET_ROUTER             7 holdout_folds_5_7   837     {"cat__scaled_delta__full_context_geo_missing__deep_full": 5.219708046122634e-10, "cat__logratio__graph_production__deep_full": 4.219952216335029e-10, "cat__scaled_delta__dynamic_graph__deep_full": 3.900887480033219e-10, "cat__logratio__dynamic_graph__deep_full": 5.219900284214599e-10, "cat__scaled_delta__graph_production__deep_full": 7.429871506854983e-10, "cat__delta__graph_production__balanced": 8.7108228761633e-10, "cat__delta__dynamic_graph__deep_full": 6.128883402251642e-10, "cat__delta__full_context_geo_missing__balanced": 1.099392309626812e-09, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 2.886015498416607e-12, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.13409849383297914, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.2764456738537416, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.11887880540157733, "INCUMBENT_expert_lgb_logratio": 0.47057702172642113}           NaN 3760.504005 6323.042670  8.099824  716.757999
+                 EQUAL_TOP3            14 holdout_folds_5_7   835 {"cat__scaled_delta__full_context_geo_missing__deep_full": 2.32415781161574e-17, "cat__logratio__graph_production__deep_full": 7.845762295162096e-17, "cat__scaled_delta__dynamic_graph__deep_full": 1.2191889231314503e-12, "cat__logratio__dynamic_graph__deep_full": 6.503189701729453e-17, "cat__scaled_delta__graph_production__deep_full": 5.366522760846123e-13, "cat__delta__graph_production__balanced": 1.3081249260083975e-17, "cat__delta__dynamic_graph__deep_full": 8.101982253214145e-17, "cat__delta__full_context_geo_missing__balanced": 8.850088568682052e-18, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 1.0586997525482958e-16, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.22480817444990067, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.5197236847038853, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.04050282267015702, "INCUMBENT_expert_lgb_logratio": 0.21496531817430092}           NaN 5004.567094 7565.675472 10.798015 1029.036785
+      FIXED_DEV_NNMAE_BLEND            14 holdout_folds_5_7   835 {"cat__scaled_delta__full_context_geo_missing__deep_full": 2.32415781161574e-17, "cat__logratio__graph_production__deep_full": 7.845762295162096e-17, "cat__scaled_delta__dynamic_graph__deep_full": 1.2191889231314503e-12, "cat__logratio__dynamic_graph__deep_full": 6.503189701729453e-17, "cat__scaled_delta__graph_production__deep_full": 5.366522760846123e-13, "cat__delta__graph_production__balanced": 1.3081249260083975e-17, "cat__delta__dynamic_graph__deep_full": 8.101982253214145e-17, "cat__delta__full_context_geo_missing__balanced": 8.850088568682052e-18, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 1.0586997525482958e-16, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.22480817444990067, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.5197236847038853, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.04050282267015702, "INCUMBENT_expert_lgb_logratio": 0.21496531817430092}           NaN 5025.391237 7565.760658 10.868901 1044.512678
+DEV_COMMODITY_MARKET_ROUTER            14 holdout_folds_5_7   835 {"cat__scaled_delta__full_context_geo_missing__deep_full": 2.32415781161574e-17, "cat__logratio__graph_production__deep_full": 7.845762295162096e-17, "cat__scaled_delta__dynamic_graph__deep_full": 1.2191889231314503e-12, "cat__logratio__dynamic_graph__deep_full": 6.503189701729453e-17, "cat__scaled_delta__graph_production__deep_full": 5.366522760846123e-13, "cat__delta__graph_production__balanced": 1.3081249260083975e-17, "cat__delta__dynamic_graph__deep_full": 8.101982253214145e-17, "cat__delta__full_context_geo_missing__balanced": 8.850088568682052e-18, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 1.0586997525482958e-16, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.22480817444990067, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.5197236847038853, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.04050282267015702, "INCUMBENT_expert_lgb_logratio": 0.21496531817430092}           NaN 5050.239308 7587.112021 10.958459  905.643274
+                   DEV_TOP1            14 holdout_folds_5_7   835 {"cat__scaled_delta__full_context_geo_missing__deep_full": 2.32415781161574e-17, "cat__logratio__graph_production__deep_full": 7.845762295162096e-17, "cat__scaled_delta__dynamic_graph__deep_full": 1.2191889231314503e-12, "cat__logratio__dynamic_graph__deep_full": 6.503189701729453e-17, "cat__scaled_delta__graph_production__deep_full": 5.366522760846123e-13, "cat__delta__graph_production__balanced": 1.3081249260083975e-17, "cat__delta__dynamic_graph__deep_full": 8.101982253214145e-17, "cat__delta__full_context_geo_missing__balanced": 8.850088568682052e-18, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 1.0586997525482958e-16, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.22480817444990067, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.5197236847038853, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.04050282267015702, "INCUMBENT_expert_lgb_logratio": 0.21496531817430092}           NaN 5141.075148 7644.246637 11.157952 1102.851831
+     DEV_SHRUNK_NNMAE_BLEND            14 holdout_folds_5_7   835 {"cat__scaled_delta__full_context_geo_missing__deep_full": 2.32415781161574e-17, "cat__logratio__graph_production__deep_full": 7.845762295162096e-17, "cat__scaled_delta__dynamic_graph__deep_full": 1.2191889231314503e-12, "cat__logratio__dynamic_graph__deep_full": 6.503189701729453e-17, "cat__scaled_delta__graph_production__deep_full": 5.366522760846123e-13, "cat__delta__graph_production__balanced": 1.3081249260083975e-17, "cat__delta__dynamic_graph__deep_full": 8.101982253214145e-17, "cat__delta__full_context_geo_missing__balanced": 8.850088568682052e-18, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity": 1.0586997525482958e-16, "cat__scaled_delta__full_context_geo_missing__deep_full__per_market": 0.22480817444990067, "cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market": 0.5197236847038853, "INCUMBENT_PROPOSED_tree_dynamic_graph_ensemble": 0.04050282267015702, "INCUMBENT_expert_lgb_logratio": 0.21496531817430092}           0.8 5249.085946 7879.463463 11.322505 1263.729903

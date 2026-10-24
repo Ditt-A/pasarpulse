@@ -1,0 +1,2 @@
+forecast_origin,target_date,province_name,commodity_name,market_level,horizon_days,current_price,predicted_price,lower_bound,upper_bound,risk_state
+2026-07-17,2026-07-24,Example Province,Cabai Rawit Merah,retail,7,76500,80200,74000,87000,WATCH

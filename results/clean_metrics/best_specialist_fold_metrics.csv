@@ -1,0 +1,15 @@
+variant,horizon_days,fold_id,forecast_origin,rows,mae,rmse,wape,mean_error
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,7,1,2026-02-02,279,2432.887932296703,4351.399431697482,5.754433675922415,-600.5822713726698
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,7,2,2026-03-02,280,3046.4674411915776,5256.171210419635,6.499378136566282,-592.6914308404764
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,7,3,2026-03-30,280,3798.634630460528,6351.225636647329,7.513865355475281,955.767357240411
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,7,4,2026-04-27,271,2841.073367576732,5673.802031566076,6.577373364485781,-619.8404167024318
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,7,5,2026-05-25,277,3124.115570942245,4646.336285914498,5.924521287425347,484.32697988351634
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,7,6,2026-06-22,280,4710.910364489988,6818.930264729754,9.808412293520297,1041.1515609098985
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,7,7,2026-07-17,280,3624.473885899543,5705.272831409926,8.880638169114274,626.7807359906475
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,14,1,2026-02-02,279,3698.157863439078,6580.0994304629785,8.383903499295124,-1423.5713086190792
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,14,2,2026-03-02,279,5182.712488739043,8662.244869462447,10.44286688278447,-1554.3625447009297
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,14,3,2026-03-30,280,4383.3514912730025,7369.132948571098,8.877288635259523,2504.700278571777
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,14,4,2026-04-27,271,5338.704135694974,9368.531164624126,11.942325261443342,-2079.7715663151353
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,14,5,2026-05-25,280,5105.012980199389,7944.16476495767,9.828099012694738,578.2777871468642
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,14,6,2026-06-22,280,5682.273020345011,7993.5733965403015,12.348548987120884,2174.877890433258
+cat__scaled_delta__full_context_geo_missing__deep_full__per_commodity_market,14,7,2026-07-17,275,4626.755157626573,6936.297571228037,11.64997338607897,545.4461417943231

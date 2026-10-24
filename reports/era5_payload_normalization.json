@@ -1,0 +1,38 @@
+{
+  "normalized_at_utc": "2026-08-09T16:06:08.250556+00:00",
+  "reason": "CDS returned a ZIP container with two aligned NetCDF variable groups despite an unarchived NetCDF request",
+  "canonical_path": "data/raw/era5_land/era5_land_2026_06.nc",
+  "archived_original_path": "data/archive/era5_original_zip_20260809/era5_land_2026_06.cds_payload.zip",
+  "original_zip_bytes": 135783139,
+  "original_zip_sha256": "10f69cb5a4851763b99c39c117dbf7c0d7ae0f2c8e562f9c3e2fa569ac37a248",
+  "zip_members": [
+    "data_0.nc",
+    "data_1.nc"
+  ],
+  "merge_rule": "disjoint variables; exact time/latitude/longitude coordinates; exact per-variable expver retained",
+  "normalized_netcdf_bytes": 133291969,
+  "normalized_netcdf_sha256": "9deb73f4f1e9560524de9499e31f15a9b29d95ebbbd0c5afdc9e2ea45284815b",
+  "dataset_sizes": {
+    "valid_time": 720,
+    "latitude": 181,
+    "longitude": 476
+  },
+  "variables": [
+    "source_expver_ssrd",
+    "source_expver_swvl1",
+    "source_expver_t2m",
+    "source_expver_tp",
+    "ssrd",
+    "swvl1",
+    "t2m",
+    "tp"
+  ],
+  "source_expver_variables": [
+    "source_expver_ssrd",
+    "source_expver_swvl1",
+    "source_expver_t2m",
+    "source_expver_tp"
+  ],
+  "expected_timestamps": 720,
+  "status": "completed"
+}

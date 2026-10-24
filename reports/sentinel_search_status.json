@@ -1,0 +1,15 @@
+{
+  "recorded_at_utc": "2026-08-09T13:54:45.529030+00:00",
+  "stage": "sentinel_search",
+  "status": {
+    "stage": "sentinel_search",
+    "status": "completed",
+    "message": ""
+  },
+  "paths": {
+    "sentinel_manifest_csv": "<PROJECT_ROOT>/data/raw/sentinel2_asset_manifest.csv",
+    "sentinel_manifest_parquet": "<PROJECT_ROOT>/data/raw/sentinel2_asset_manifest.parquet"
+  },
+  "result_type": "DataFrame",
+  "errors": {}
+}

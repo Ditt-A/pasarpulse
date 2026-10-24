@@ -1,0 +1,39 @@
+province_code,province_name,official_market_count,official_market_schedule_count,official_market_every_day_count,official_market_days_per_week_mean,official_market_days_per_week_median,market_context_effective_date,official_market_schedule_coverage,official_market_daily_equivalent,official_market_province_coverage_status,official_market_context_source,official_market_source_vintage
+11,Aceh,36.0,36.0,29.0,5.888888888888889,7.0,2024-07-04,1.0,30.285714285714285,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+12,Sumatera Utara,36.0,36.0,18.0,4.277777777777778,4.5,2024-07-04,1.0,22.0,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+13,Sumatera Barat,18.0,17.0,6.0,3.588235294117647,2.0,2024-07-04,0.9444444444444444,9.226890756302522,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+14,Riau,5.0,5.0,1.0,2.2,1.0,2024-07-04,1.0,1.5714285714285714,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+15,Jambi,14.0,14.0,8.0,4.571428571428571,7.0,2024-07-04,1.0,9.142857142857142,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+16,Sumatera Selatan,18.0,18.0,7.0,3.888888888888889,2.5,2024-07-04,1.0,10.0,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+17,Bengkulu,5.0,5.0,4.0,6.2,7.0,2024-07-04,1.0,4.428571428571429,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+18,Lampung,10.0,10.0,4.0,4.2,3.5,2024-07-04,1.0,6.0,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+19,Kepulauan Bangka Belitung,9.0,9.0,9.0,7.0,7.0,2024-07-04,1.0,9.0,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+21,Kepulauan Riau,6.0,6.0,5.0,6.166666666666667,7.0,2024-07-04,1.0,5.285714285714286,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+31,DKI Jakarta,,,,,,2024-07-04,,,no_points_in_source,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+32,Jawa Barat,27.0,27.0,26.0,6.814814814814815,7.0,2024-07-04,1.0,26.285714285714285,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+33,Jawa Tengah,69.0,65.0,56.0,6.292307692307692,7.0,2024-07-04,0.9420289855072463,62.02417582417582,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+34,DI Yogyakarta,5.0,5.0,4.0,6.0,7.0,2024-07-04,1.0,4.285714285714286,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+35,Jawa Timur,72.0,72.0,64.0,6.5,7.0,2024-07-04,1.0,66.85714285714286,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+36,Banten,1.0,1.0,1.0,7.0,7.0,2024-07-04,1.0,1.0,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+51,Bali,16.0,15.0,15.0,7.0,7.0,2024-07-04,0.9375,16.0,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+52,Nusa Tenggara Barat,22.0,22.0,21.0,6.7272727272727275,7.0,2024-07-04,1.0,21.142857142857142,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+53,Nusa Tenggara Timur,14.0,14.0,5.0,3.2142857142857144,1.0,2024-07-04,1.0,6.428571428571429,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+61,Kalimantan Barat,5.0,5.0,5.0,7.0,7.0,2024-07-04,1.0,5.0,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+62,Kalimantan Tengah,12.0,12.0,5.0,4.0,2.5,2024-07-04,1.0,6.857142857142857,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+63,Kalimantan Selatan,10.0,10.0,8.0,5.8,7.0,2024-07-04,1.0,8.285714285714286,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+64,Kalimantan Timur,6.0,6.0,5.0,6.0,7.0,2024-07-04,1.0,5.142857142857143,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+65,Kalimantan Utara,5.0,5.0,5.0,7.0,7.0,2024-07-04,1.0,5.0,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+71,Sulawesi Utara,24.0,17.0,13.0,6.0588235294117645,7.0,2024-07-04,0.7083333333333334,20.77310924369748,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+72,Sulawesi Tengah,9.0,9.0,3.0,3.111111111111111,1.0,2024-07-04,1.0,4.0,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+73,Sulawesi Selatan,91.0,89.0,27.0,3.651685393258427,3.0,2024-07-04,0.978021978021978,47.471910112359545,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+74,Sulawesi Tenggara,34.0,34.0,10.0,3.6176470588235294,3.0,2024-07-04,1.0,17.571428571428573,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+75,Gorontalo,4.0,4.0,1.0,2.5,1.0,2024-07-04,1.0,1.4285714285714286,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+76,Sulawesi Barat,7.0,7.0,1.0,2.4285714285714284,2.0,2024-07-04,1.0,2.4285714285714284,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+81,Maluku,12.0,12.0,9.0,6.0,7.0,2024-07-04,1.0,10.285714285714286,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+82,Maluku Utara,6.0,6.0,6.0,7.0,7.0,2024-07-04,1.0,6.0,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+91,Papua Barat,5.0,5.0,4.0,5.8,7.0,2024-07-04,1.0,4.142857142857143,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+92,Papua Barat Daya,3.0,3.0,2.0,5.333333333333333,7.0,2024-07-04,1.0,2.2857142857142856,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+94,Papua,3.0,3.0,2.0,6.0,7.0,2024-07-04,1.0,2.5714285714285716,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+95,Papua Selatan,2.0,2.0,2.0,7.0,7.0,2024-07-04,1.0,2.0,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+96,Papua Tengah,3.0,3.0,3.0,7.0,7.0,2024-07-04,1.0,3.0,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition
+97,Papua Pegunungan,1.0,1.0,0.0,2.0,2.0,2024-07-04,1.0,0.2857142857142857,available,BIG/Kemendag Peta Sebaran Pasar Rakyat dan Pasar Desa,2020-2021 acquisition

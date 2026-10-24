@@ -1,0 +1,2 @@
+date,province_code,province_name,commodity_code,commodity_name,market_level,price_idr_per_kg,source_location_name,source_version,revision_flag
+2026-01-02,35,Jawa Timur,CRM,Cabai Rawit Merah,retail,76000,Example Market,download_2026-01-03,false
