@@ -1,85 +1,114 @@
-# Dashboard interaction guide
+# Monitoring workspace
 
-PasarPulse uses a consistent light interface with forest green, sage, warm
-white, and muted earth colors. Amber, terracotta, and red distinguish monitoring
-levels. Labels accompany every warning color.
+The interface is organized around an analyst's first task: comparing provincial
+price forecasts. A compact navigation bar links **Pemantauan**, **Perbandingan**,
+and **Data & metode**. Monitoring begins with data rows, rather than a stack of
+summary cards. The optional assistant is secondary and appears in navigation
+only when its health endpoint reports an available reasoning service.
 
-## Workspaces
+## Layout and typography
 
-- **Market overview** keeps commodity, market level, horizon, and forecast date
-  visible. Coverage and monitoring counts reflect the selected snapshot.
-- **National map** renders the repository's BIG province geometry locally, with
-  warning, projected-change, and evidence layers. No external map tiles or font
-  service are needed. Select a province or return to the national view.
-- **Province detail** shows the price at the origin, the forecast endpoint,
-  projected change, dates, and source evidence. Saved model contributions are
-  shown only when a real attribution artifact exists.
-- **Province table** supports search, warning filters, numeric sorting,
-  pagination, and keyboard-accessible selection. CSV export includes only
-  forecast-time fields from the selected snapshot.
-- **Alert queue** opens the corresponding province while retaining forecast
-  context.
-- **Regional intelligence** compares two provinces under the same filters,
-  using their actual observed and predicted endpoints.
-- **Model performance** separates saved evaluation families and horizons.
-  Diagnostic same-fold-weighted results remain explicitly excluded from
-  headline comparisons.
-- **Assistant** displays service availability and disables requests when the
-  optional reasoning service is not configured. No synthetic answer is shown.
+- A 56 px global header contains the identity, navigation, and active data mode.
+- The workspace title is 22 px; normal body text is 14 px; table values are 13 px;
+  controls and secondary labels are 11–12 px. Forecast prices use stronger weight
+  than snapshot prices. Numeric columns are right-aligned and use tabular figures.
+- White and neutral gray form the interface. Forest green indicates active
+  controls and selection. Amber, terracotta, and red carry price-rise warnings.
+- Four forecast controls fit into a compact row: commodity, market, horizon,
+  and snapshot date. A second row contains review scope, warning level, search,
+  and the List / Map switch.
+- Coverage is a small inline summary. The main content begins immediately below
+  the controls and uses the remaining viewport height.
 
-## Replay and data boundaries
+## List, map, and inspector
 
-Runtime mode remains **Historical Replay**. The interface reads:
+**Daftar** is the default. A sticky table header and an internal scroll area keep
+controls visible while reading all available provinces. Rows show province,
+snapshot price, projected price, change, and warning. Selecting a row opens a
+372 px inspector on wide screens. The original table remains available.
 
-- `demo_data/forecasts/forecast_snapshot.csv` — 3,893 saved forecast rows;
-- `demo_data/evidence/evidence_snapshot.json` — forecast-time source context;
-- `demo_data/geography/indonesia_provinces.geojson` — 38 province geometries;
-- `results/` — saved benchmark and attribution artifacts exposed by the API.
+**Peta** occupies the same workspace, with shared filters and selection. It
+renders local BIG geometry and requires no external map tiles. A filter limits
+highlighted and selectable provinces; muted background geometry remains context,
+not a fabricated unavailable forecast. Layer controls and a national reset are
+adjacent to the canvas. There is no duplicate table underneath the map.
 
-The selected filters can have fewer than 34 forecast provinces. Coverage is
-calculated from that selection, not the geometry count. Missing provinces show
-an explicit unavailable state and never inherit another province's forecast.
+On compact screens, province detail uses a native dialog with focus containment,
+Escape dismissal, and restored focus. The table's province column stays visible
+while numeric columns scroll horizontally. No page-wide horizontal scroll is
+required. Closing detail retains view, query, filters, and sorting.
 
-Later realized prices require an explicit reveal and are labeled as historical
-evaluation. Changing province, date, commodity, market level, or horizon resets
-the reveal. Warnings, rankings, comparisons, and CSV exports never use the later
-realized price.
+Inspector tabs show forecast values, source evidence, and saved model
+contributions when the attribution API provides them. The chart contains only
+an observed endpoint and a forecast endpoint, not an invented daily price path.
 
-The chart in province detail connects two values: an observation and a forecast
-endpoint. Its dashed line does not claim a daily price trajectory.
+## Context and compatibility
 
-## Interaction and accessibility
+List/map view, warning scope, search, province, commodity, market, horizon, and
+origin can be restored from the monitoring URL. For example:
 
-Navigation has active states, a skip link, visible keyboard focus, and a native
-mobile dialog with Escape dismissal. Detail tabs support arrow keys. Mobile
-table selections scroll to the province detail. Tables scroll within their own
-container without widening the page. Map bounds adapt to narrow screens.
+```text
+/?commodity=CRM&market=retail&horizon=7&origin=2026-02-02&view=map&warning=ATTENTION
+```
 
-Transitions are short and respect `prefers-reduced-motion`. Data loading,
-request failures, empty filters, missing forecasts, and an unavailable assistant
-have distinct states.
+Invalid values recover to valid available settings. `/alerts` remains a
+compatible entry point and redirects to monitoring with the review filter.
 
-## Validation
+**Perbandingan** compares two provinces using the same origin, commodity, market,
+and horizon. **Data & metode** separates the six-modality inventory, selected-model
+benchmark families, and chronological validation into three tabs.
+
+The versioned UI data catalog is `app/frontend/lib/data-catalog.json`. Tests check
+its feature examples and horizon-use flags against the actual saved feature
+contracts; they also verify that the documented artifact paths exist.
+
+## Artifact and evaluation boundary
+
+Runtime remains **Historical Replay**, using the 3,893 saved forecast rows,
+source evidence, BIG geometry, benchmark CSVs, and available saved native
+LightGBM contributions. No model is loaded or trained for a view or interaction.
+
+Later realized prices are opt-in evaluation data. Changing forecast context
+resets the reveal. Warning counts, ranking, CSV export, and comparisons use only
+snapshot prices and stored predictions. CSV export follows the current scope
+and search, not just the currently visible scroll position.
+
+The six groups and horizon-specific use are documented in the repository README.
+Raw-source availability is distinct from feature-contract membership. In
+particular, the 14-day selected model uses price/calendar, while the other
+modalities are additional context. Thirty SP2KP downloads have recorded parsing
+failures; PIHPS supplies the deployed price snapshot.
+
+## Accessibility and motion
+
+Navigation has active states and a skip link. Table rows are keyboard-selectable;
+arrow keys move between province buttons. View and detail tabs support arrow
+keys. Dialogs use native focus handling. Empty search, missing provinces, request
+failures, and an unavailable assistant have explicit states.
+
+Control feedback is short; inspector entry uses 180 ms and map focusing uses
+450 ms. `prefers-reduced-motion` is respected. Filtering changes the current
+workspace in place rather than running a whole-page entrance sequence.
+
+## Verification
 
 From `app/frontend`:
 
 ```bash
-npm ci
 npm run test
 npm run typecheck
 npm run lint
 npm run build
 ```
 
-Frontend tests cover forecast-only ranking, composed search and warning filters,
-summary counts, valid and invalid deep links, preserved analyst context,
-benchmark-only dates, CSV escaping, and exclusion of later outcomes.
+Tests cover forecast-only ranking, attention scope, search, URL recovery,
+preserved context, CSV escaping, exclusion of realized outcomes, modality
+contracts, and replay provenance. Browser checks additionally exercise list/map
+selection, detail/evidence/reveal, matching exported rows, compatible alerts
+routing, comparison, data/method tabs, compact dialogs, and responsive layouts.
+Screenshots in `docs/images/` use the actual 2 February 2026 snapshot.
 
-Browser checks cover real map selection, layer controls, forecast/evidence tabs,
-evaluation reveal/reset, table interactions, downloads, alert routing, province
-comparisons, benchmark filters, assistant availability, missing-province states,
-and layouts at desktop, tablet, and mobile widths. Screenshot examples use
-actual historical data and are stored in `docs/images/`.
-
-The frontend continues to use the same-origin `/api` proxy. See
-`README_DEPLOYMENT.md` for runtime variables and container setup.
+The layout direction was informed by the official Vercel Analytics interface,
+Linear issue views, and CARTO Builder's 2026 map layout. Their product assets are
+not bundled into PasarPulse; only the interaction and information-organization
+principles are adapted.

@@ -10,7 +10,7 @@ export function pct(value: number | null | undefined) {
 }
 export function shortDate(value: string | null | undefined) {
   if (!value) return "—";
-  return new Intl.DateTimeFormat("en-GB", {
+  return new Intl.DateTimeFormat("id-ID", {
     day: "2-digit",
     month: "short",
     year: "numeric",

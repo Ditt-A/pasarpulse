@@ -39,7 +39,7 @@ export default function IntelligencePage() {
     color: ["#a9bf9b", "#285c45"],
     grid: { top: 40, right: 30, bottom: 20, left: 20, containLabel: true },
     legend: {
-      data: ["Current price", "Forecast"],
+      data: ["Harga snapshot", "Proyeksi"],
       right: 20,
       top: 0,
       icon: "roundRect",
@@ -64,14 +64,14 @@ export default function IntelligencePage() {
     },
     series: [
       {
-        name: "Current price",
+        name: "Harga snapshot",
         type: "bar",
         barMaxWidth: 36,
         itemStyle: { borderRadius: [4, 4, 0, 0] },
         data: [first?.current_price, comparison?.current_price],
       },
       {
-        name: "Forecast",
+        name: "Proyeksi",
         type: "bar",
         barMaxWidth: 36,
         itemStyle: { borderRadius: [4, 4, 0, 0] },
@@ -83,10 +83,10 @@ export default function IntelligencePage() {
     <>
       <div className="page-heading">
         <div>
-          <div className="eyebrow">Compare markets</div>
-          <h1>Regional intelligence</h1>
+          <h1>Perbandingan wilayah</h1>
           <p>
-            Two provinces. The same commodity, market level, and forecast date.
+            Bandingkan dua provinsi dengan komoditas, pasar, dan tanggal
+            snapshot yang sama.
           </p>
         </div>
         <GitCompareArrows
@@ -102,20 +102,20 @@ export default function IntelligencePage() {
         <RequestState />
       ) : !ranked.length ? (
         <div className="surface empty-state">
-          No forecasts match the selected context.
+          Belum ada proyeksi untuk filter ini.
         </div>
       ) : (
         <>
           <div className="grid gap-5 md:grid-cols-2">
             <CompareCard
-              title="Selected province"
+              title="Provinsi pertama"
               forecast={first}
               value={firstCode}
               onChange={(value) => state.set({ selectedProvince: value })}
               options={ranked}
             />
             <CompareCard
-              title="Compare against"
+              title="Provinsi pembanding"
               forecast={comparison}
               value={secondCode}
               onChange={setSecond}
@@ -126,9 +126,9 @@ export default function IntelligencePage() {
             <section className="surface mt-5">
               <div className="surface-heading">
                 <div>
-                  <h2>Current and projected prices</h2>
+                  <h2>Harga snapshot dan proyeksi</h2>
                   <p>
-                    IDR per kilogram · {state.horizon}-day horizon · As of{" "}
+                    IDR per kilogram · {state.horizon} hari · Snapshot{" "}
                     {shortDate(state.origin)}
                   </p>
                 </div>
@@ -141,8 +141,8 @@ export default function IntelligencePage() {
           <section className="surface mt-5">
             <div className="surface-heading">
               <div>
-                <h2>Regional ranking</h2>
-                <p>Highest projected changes in this snapshot</p>
+                <h2>Urutan wilayah</h2>
+                <p>Diurutkan dari kenaikan proyeksi tertinggi</p>
               </div>
             </div>
             <div className="grid gap-3 p-5 md:grid-cols-2 xl:grid-cols-3">
@@ -155,7 +155,7 @@ export default function IntelligencePage() {
                   className="flex items-center justify-between gap-3 rounded-md border border-line p-4 text-left transition hover:bg-sage"
                 >
                   <span className="flex items-center gap-3">
-                    <span className="text-[10px] text-[#94a48b]">
+                    <span className="text-xs text-[#94a48b]">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="text-xs font-medium">
@@ -176,8 +176,8 @@ export default function IntelligencePage() {
       <div className="notice mt-5">
         <Info size={15} />
         <span>
-          Comparisons use forecast-time prices and saved predictions. Later
-          realized prices are excluded from this ranking.
+          Perbandingan menggunakan harga snapshot dan proyeksi tersimpan. Harga
+          aktual setelah snapshot tidak masuk dalam urutan wilayah.
         </span>
       </div>
     </>
@@ -199,7 +199,7 @@ function CompareCard({
   return (
     <section className="surface">
       <div className="border-b border-line p-5">
-        <label className="text-[11px] text-[#71816a]">
+        <label className="text-xs text-[#71816a]">
           {title}
           <select
             className="mt-2 block w-full rounded-md border border-line bg-white p-2.5 text-sm font-medium text-[#304c36]"
@@ -207,7 +207,9 @@ function CompareCard({
             onChange={(e) => onChange(e.target.value)}
           >
             {!options.some((x) => x.province_code === value) && (
-              <option value={value}>No forecast for selected province</option>
+              <option value={value}>
+                Belum ada proyeksi untuk provinsi ini
+              </option>
             )}
             {[...options]
               .sort((a, b) => a.province_name.localeCompare(b.province_name))
@@ -233,27 +235,27 @@ function CompareCard({
           </div>
           <div className="flex items-center justify-between gap-3">
             <div>
-              <div className="text-[10px] text-[#71816a]">Current / kg</div>
+              <div className="text-xs text-[#71816a]">Snapshot / kg</div>
               <strong className="mt-1 block text-xl font-medium tracking-[-.6px]">
                 {idr(forecast.current_price)}
               </strong>
             </div>
             <ArrowRight size={16} className="text-[#9cae92]" />
             <div>
-              <div className="text-[10px] text-[#71816a]">Forecast / kg</div>
+              <div className="text-xs text-[#71816a]">Proyeksi / kg</div>
               <strong className="mt-1 block text-xl font-semibold tracking-[-.6px]">
                 {idr(forecast.predicted_price)}
               </strong>
             </div>
           </div>
-          <p className="mt-4 text-[10px] text-[#71816a]">
-            As of {shortDate(forecast.forecast_origin)} · Target{" "}
+          <p className="mt-4 text-xs text-[#71816a]">
+            Snapshot {shortDate(forecast.forecast_origin)} · Proyeksi{" "}
             {shortDate(forecast.target_date)}
           </p>
         </div>
       ) : (
         <div className="empty-state text-xs">
-          No forecast is available for this province. Choose another province.
+          Belum ada proyeksi pada provinsi ini. Pilih provinsi lain.
         </div>
       )}
     </section>

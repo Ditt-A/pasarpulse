@@ -41,6 +41,21 @@ export function resolveDashboardParams(search, metadata, current = {}) {
       current.origin || metadata.latest_origin,
     ),
     selectedProvince: /^\d{2}$/.test(province || "") ? province : "",
+    view: allowed("view", ["list", "map"], current.view || "list"),
+    risk: allowed(
+      "warning",
+      [
+        "ALL",
+        "ATTENTION",
+        "HIGH",
+        "ELEVATED",
+        "WATCH",
+        "STABLE",
+        "INSUFFICIENT",
+      ],
+      current.risk || "ALL",
+    ),
+    search: (p.has("q") ? p.get("q") : current.search || "").slice(0, 80),
     layer: allowed(
       "layer",
       ["risk", "change", "evidence"],
@@ -75,7 +90,10 @@ export function rankForecasts(
     .filter(
       (x) =>
         (!q || x.province_name.toLocaleLowerCase().includes(q)) &&
-        (warning === "ALL" || x.warning_level === warning),
+        (warning === "ALL" ||
+          (warning === "ATTENTION"
+            ? ["HIGH", "ELEVATED", "WATCH"].includes(x.warning_level)
+            : x.warning_level === warning)),
     )
     .sort((a, b) => {
       const order =

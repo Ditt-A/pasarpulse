@@ -18,5 +18,8 @@ COPY results/proposed_model_run/pooled_metrics.csv /srv/results/proposed_model_r
 COPY results/multimodal_ablation/pooled_metrics.csv /srv/results/multimodal_ablation/pooled_metrics.csv
 COPY results/clean_metrics/early_warning_metrics.csv /srv/results/clean_metrics/early_warning_metrics.csv
 
+COPY results/dashboard_xai/forecast_top5.csv /srv/results/dashboard_xai/forecast_top5.csv
+COPY results/dashboard_xai/manifest.json /srv/results/dashboard_xai/manifest.json
+
 EXPOSE 8000
 CMD ["uvicorn", "app.backend.main:app", "--host", "0.0.0.0", "--port", "8000"]

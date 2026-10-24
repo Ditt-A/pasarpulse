@@ -30,3 +30,18 @@ results/*
 !results/multimodal_ablation/pooled_metrics.csv
 !results/clean_metrics/
 !results/clean_metrics/early_warning_metrics.csv
+
+# Serving uses replay artifacts; keep local configuration and research panels out.
+.venv
+.venv-*
+venv-pasarpulse
+data/ready
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+!results/dashboard_xai/
+!results/dashboard_xai/forecast_top5.csv
+!results/dashboard_xai/manifest.json

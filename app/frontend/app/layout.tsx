@@ -4,15 +4,20 @@ import { QueryProvider } from "@/components/common/QueryProvider";
 import { AppShell } from "@/components/common/AppShell";
 
 export const metadata: Metadata = {
-  title: "PasarPulse | National Food Price Early-Warning Intelligence",
-  description: "Operational replay and evidence interface for PasarPulse research artifacts.",
+  title: "PasarPulse | Pemantauan harga pangan",
+  description:
+    "Pemantauan proyeksi harga pangan, perbandingan wilayah, dan sumber data PasarPulse.",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="id">
       <body>
-        <QueryProvider><AppShell>{children}</AppShell></QueryProvider>
+        <QueryProvider>
+          <AppShell>{children}</AppShell>
+        </QueryProvider>
       </body>
     </html>
   );

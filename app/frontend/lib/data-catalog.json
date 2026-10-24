@@ -1,0 +1,114 @@
+{
+  "modalities": [
+    {
+      "id": "price",
+      "name": "Harga pangan",
+      "source": "PIHPS · Bank Indonesia",
+      "description": "Harga harian per provinsi, komoditas, dan jenis pasar; lag, perubahan, dan statistik bergulir.",
+      "features": ["current_price", "price_lag_7", "price_roll_mean_28"],
+      "paths": [
+        "data/processed/price_daily.csv",
+        "data/processed/pihps_snapshot_manifest.csv"
+      ],
+      "days7": true,
+      "days14": true
+    },
+    {
+      "id": "calendar",
+      "name": "Kalender",
+      "source": "Tabel kalender peristiwa & tanggal",
+      "description": "Hari, minggu, musim, Ramadan, Idulfitri, hari libur, dan jarak terhadap peristiwa.",
+      "features": ["day_of_week", "is_eid_al_fitr", "seasonal_sin"],
+      "paths": [
+        "data/manual/calendar_events.csv",
+        "data/processed/calendar_features.csv"
+      ],
+      "days7": true,
+      "days14": true
+    },
+    {
+      "id": "weather",
+      "name": "Cuaca",
+      "source": "ERA5-Land · Copernicus CDS",
+      "description": "Agregasi provinsi untuk suhu, hujan, kelembapan tanah, dan radiasi matahari.",
+      "features": [
+        "temperature_c_mean",
+        "rainfall_mm_sum",
+        "soil_moisture_layer1_mean"
+      ],
+      "paths": [
+        "data/processed/weather_daily.csv",
+        "data/processed/weather_metadata.json"
+      ],
+      "days7": true,
+      "days14": false
+    },
+    {
+      "id": "production",
+      "name": "Produksi pertanian",
+      "source": "Badan Pusat Statistik",
+      "description": "Produksi tahunan, luas panen, produktivitas, dan usia data; konteks struktural, bukan pasokan harian.",
+      "features": [
+        "production_kg",
+        "harvested_area_ha",
+        "productivity_kg_per_ha"
+      ],
+      "paths": [
+        "data/processed/production_annual.csv",
+        "data/processed/bps_acquisition_manifest.csv"
+      ],
+      "days7": true,
+      "days14": false
+    },
+    {
+      "id": "satellite",
+      "name": "Vegetasi satelit",
+      "source": "Sentinel-2 L2A · Earth Search / AWS",
+      "description": "NDVI, EVI, NDWI, anomali vegetasi, awan, piksel valid, dan usia observasi pada zona proksi provinsi.",
+      "features": ["ndvi_mean", "evi_mean", "ndwi_mean"],
+      "paths": [
+        "data/processed/satellite_features.csv",
+        "data/raw/sentinel2_asset_manifest.csv"
+      ],
+      "days7": true,
+      "days14": false
+    },
+    {
+      "id": "market_static",
+      "name": "Pasar & konektivitas statis",
+      "source": "Kemendag/BIG · OpenStreetMap/Geofabrik",
+      "description": "Lokasi dan jadwal pasar, jalan, pelabuhan, penyeberangan, serta keterhubungan kandidat antarprovinsi.",
+      "features": [
+        "official_market_count",
+        "major_road_length_km",
+        "static_candidate_degree"
+      ],
+      "paths": [
+        "data/processed/official_market_province_summary.csv",
+        "data/processed/osm_province_transport_summary.csv",
+        "data/processed/province_graph_static.csv"
+      ],
+      "days7": true,
+      "days14": false
+    }
+  ],
+  "dynamicGraph": {
+    "id": "dynamic_graph",
+    "name": "Graph ketergantungan harga",
+    "source": "Diturunkan dari riwayat PIHPS",
+    "description": "Hubungan harga bergulir 90 hari, korelasi, lead-lag, dan fitur tetangga. Bukan arus pengiriman yang teramati atau GNN.",
+    "features": [
+      "dynamic_in_degree",
+      "dynamic_out_corr_mean",
+      "dynamic_graph_age_days"
+    ],
+    "paths": ["data/processed/province_graph_dynamic.csv"],
+    "days7": true,
+    "days14": false
+  },
+  "geometry": {
+    "source": "BIG",
+    "path": "demo_data/geography/indonesia_provinces.geojson",
+    "provinceCount": 38
+  }
+}

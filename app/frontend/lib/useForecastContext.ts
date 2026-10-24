@@ -35,6 +35,9 @@ export function useForecastContext(syncUrl = false) {
     });
     if (state.selectedProvince) params.set("province", state.selectedProvince);
     if (state.layer !== "risk") params.set("layer", state.layer);
+    if (state.view !== "list") params.set("view", state.view);
+    if (state.risk !== "ALL") params.set("warning", state.risk);
+    if (state.search) params.set("q", state.search);
     window.history.replaceState(
       null,
       "",
@@ -49,6 +52,9 @@ export function useForecastContext(syncUrl = false) {
     state.origin,
     state.selectedProvince,
     state.layer,
+    state.view,
+    state.risk,
+    state.search,
   ]);
   const params = {
     origin: state.origin || undefined,

@@ -3,7 +3,7 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import { useQuery } from "@tanstack/react-query";
 import {
-  ArrowLeft,
+  X,
   ArrowUpRight,
   CalendarDays,
   Check,
@@ -18,7 +18,12 @@ import type { Forecast } from "@/lib/types";
 import { api } from "@/lib/api";
 import { idr, pct, shortDate } from "@/components/common/format";
 import { StatusBadge } from "@/components/common/StatusBadge";
-const Chart = dynamic(() => import("echarts-for-react"), { ssr: false });
+const Chart = dynamic(() => import("echarts-for-react"), {
+  ssr: false,
+  loading: () => (
+    <div className="skeleton my-2 h-[145px]" aria-label="Memuat grafik harga" />
+  ),
+});
 
 export function ProvinceInsight({
   forecast,
@@ -49,6 +54,11 @@ export function ProvinceInsight({
     "evidence",
     ...(xai.data?.drivers.length ? ["drivers"] : []),
   ];
+  const tabLabels: Record<string, string> = {
+    forecast: "Harga",
+    evidence: "Data pendukung",
+    drivers: "Kontribusi",
+  };
   const rising = forecast.projected_change_pct > 0;
   const chart = {
     animationDuration: 450,
@@ -72,7 +82,7 @@ export function ProvinceInsight({
       ],
       axisLine: { lineStyle: { color: "#dfe6dd" } },
       axisTick: { show: false },
-      axisLabel: { color: "#7a8a73", fontSize: 10 },
+      axisLabel: { color: "#7a8a73", fontSize: 11 },
     },
     yAxis: {
       type: "value",
@@ -81,7 +91,7 @@ export function ProvinceInsight({
       axisLabel: {
         formatter: (v: number) => `${Math.round(v / 1000)}k`,
         color: "#7a8a73",
-        fontSize: 9,
+        fontSize: 11,
       },
       splitLine: { lineStyle: { color: "#e9eee5", type: "dashed" } },
     },
@@ -111,33 +121,43 @@ export function ProvinceInsight({
       className="surface panel-enter province-insight"
       aria-label={`${forecast.province_name} forecast`}
     >
-      <div className="px-5 pt-4 pb-3">
-        <button className="ui-link text-[10px]" onClick={onClose}>
-          <ArrowLeft size={12} />
-          All provinces
+      <div className="relative px-5 pt-4 pb-4">
+        <button
+          className="ui-button icon-only absolute right-4 top-4"
+          aria-label="Tutup detail"
+          onClick={onClose}
+        >
+          <X size={16} />
         </button>
-        <div className="mt-4 flex items-start justify-between gap-3">
+        <div className="mt-4 flex items-start justify-between gap-3 pr-6">
           <div>
-            <div className="eyebrow mb-2">Province outlook</div>
+            <div className="eyebrow mb-2">Detail wilayah</div>
             <h2 className="text-xl font-semibold tracking-[-.5px]">
               {forecast.province_name}
             </h2>
           </div>
-          <StatusBadge label={forecast.warning_level} />
+          <span className="self-end pb-1">
+            <StatusBadge label={forecast.warning_level} />
+          </span>
         </div>
-        <p className="mt-2 text-[11px] text-[#72806b]">
-          {forecast.commodity_name} · {forecast.market_level}
+        <p className="mt-2 text-xs text-[#72806b]">
+          {forecast.commodity_name} ·{" "}
+          {{
+            retail: "Eceran",
+            producer: "Produsen",
+            wholesale: "Pedagang besar",
+          }[forecast.market_level] || forecast.market_level}
         </p>
-        <p className="mt-2 flex items-center gap-1.5 text-[10px] text-[#72806b]">
+        <p className="mt-2 flex items-center gap-1.5 text-xs text-[#72806b]">
           <CalendarDays size={11} />
-          As of {shortDate(forecast.forecast_origin)} · {forecast.horizon_days}{" "}
-          days
+          Snapshot {shortDate(forecast.forecast_origin)} ·{" "}
+          {forecast.horizon_days} hari
         </p>
       </div>
       <div
         className="flex gap-5 border-b border-line px-5"
         role="tablist"
-        aria-label="Forecast detail"
+        aria-label="Detail proyeksi"
       >
         {tabs.map((item) => (
           <button
@@ -159,9 +179,9 @@ export function ProvinceInsight({
               }
             }}
             onClick={() => setTab(item)}
-            className={`border-b-2 py-3 text-[11px] capitalize ${tab === item ? "border-cyanpulse font-semibold text-cyanpulse" : "border-transparent text-[#788570]"}`}
+            className={`border-b-2 py-3 text-xs capitalize ${tab === item ? "border-cyanpulse font-semibold text-cyanpulse" : "border-transparent text-[#788570]"}`}
           >
-            {item === "drivers" ? "Model drivers" : item}
+            {tabLabels[item]}
           </button>
         ))}
       </div>
@@ -175,16 +195,16 @@ export function ProvinceInsight({
           <>
             <div className="grid grid-cols-2 gap-3">
               <div>
-                <p className="text-[10px] text-[#7a8772]">Current price / kg</p>
-                <div className="mt-1 text-base font-medium tracking-[-.4px]">
+                <p className="text-xs text-[#7a8772]">Harga snapshot / kg</p>
+                <div className="mt-1 text-xl font-medium tracking-[-.4px]">
                   {idr(forecast.current_price)}
                 </div>
               </div>
               <div>
-                <p className="text-[10px] text-[#7a8772]">
-                  {forecast.horizon_days}-day forecast / kg
+                <p className="text-xs text-[#7a8772]">
+                  Proyeksi {forecast.horizon_days} hari / kg
                 </p>
-                <div className="mt-1 text-base font-semibold tracking-[-.4px]">
+                <div className="mt-1 text-xl font-semibold tracking-[-.4px]">
                   {idr(forecast.predicted_price)}
                 </div>
               </div>
@@ -195,50 +215,48 @@ export function ProvinceInsight({
               >
                 {pct(forecast.projected_change_pct)}
               </strong>
-              <span className="text-[10px] text-[#7a8772]">
-                projected movement
-              </span>
+              <span className="text-xs text-[#7a8772]">perubahan proyeksi</span>
             </div>
             <Chart option={chart} style={{ height: 145 }} />
-            <p className="text-[9px] leading-relaxed text-[#7a8772]">
-              Observed price → forecast endpoint. The dashed line connects two
-              values; it is not a daily price trajectory.
+            <p className="text-xs leading-relaxed text-[#7a8772]">
+              Harga snapshot → titik proyeksi. Garis putus-putus menghubungkan
+              dua nilai, bukan pergerakan harga harian.
             </p>
-            <div className="mt-4 flex justify-between border-t border-line pt-3 text-[10px] text-[#718169]">
-              <span>Target date</span>
+            <div className="mt-4 flex justify-between border-t border-line pt-3 text-xs text-[#718169]">
+              <span>Tanggal proyeksi</span>
               <strong className="font-medium text-[#385337]">
                 {shortDate(forecast.target_date)}
               </strong>
             </div>
             {forecast.historical_evaluation.available && (
-              <div className="mt-4 rounded-md bg-[#f7f6ee] p-3 text-[10px] leading-relaxed text-[#81734c]">
+              <div className="mt-4 rounded-md bg-[#f7f6ee] p-3 text-xs leading-relaxed text-[#81734c]">
                 <strong className="block font-semibold">
-                  Historical evaluation only
+                  Evaluasi historis
                 </strong>
                 <p className="mt-1">
-                  Outcomes recorded after the forecast date.
+                  Harga aktual tercatat setelah tanggal snapshot.
                 </p>
                 {!reveal ? (
                   <button
-                    className="ui-link mt-2 text-[10px]"
+                    className="ui-link mt-2 text-xs"
                     onClick={() => setReveal(true)}
                   >
                     <Eye size={12} />
-                    Reveal later outcome
+                    Lihat hasil aktual
                   </button>
                 ) : evaluation.isPending ? (
-                  <p className="mt-2">Loading historical outcome…</p>
+                  <p className="mt-2">Memuat hasil aktual…</p>
                 ) : evaluation.isError ? (
                   <button
-                    className="ui-link mt-2 text-[10px]"
+                    className="ui-link mt-2 text-xs"
                     onClick={() => void evaluation.refetch()}
                   >
-                    Retry historical outcome
+                    Coba lagi
                   </button>
                 ) : (
                   <div className="mt-3 grid grid-cols-2 gap-3">
                     <div>
-                      Realized later
+                      <span>Aktual kemudian</span>
                       <strong className="mt-1 block text-xs text-[#4b513f]">
                         {idr(
                           evaluation.data?.historical_evaluation.realized_price,
@@ -246,7 +264,7 @@ export function ProvinceInsight({
                       </strong>
                     </div>
                     <div>
-                      Absolute error
+                      <span>Galat absolut</span>
                       <strong className="mt-1 block text-xs text-[#4b513f]">
                         {idr(
                           evaluation.data?.historical_evaluation.absolute_error,
@@ -262,22 +280,24 @@ export function ProvinceInsight({
         {tab === "evidence" && (
           <div className="space-y-3">
             {evidence.isPending ? (
-              <p className="py-8 text-xs text-[#718169]">Loading evidence…</p>
+              <p className="py-8 text-xs text-[#718169]">
+                Memuat data pendukung…
+              </p>
             ) : evidence.isError ? (
               <div className="py-5 text-xs text-[#718169]">
-                Evidence is temporarily unavailable.
+                Data pendukung belum tersedia.
                 <button
                   className="ui-link mt-3 block"
                   onClick={() => void evidence.refetch()}
                 >
-                  Try again
+                  Coba lagi
                 </button>
               </div>
             ) : (
               <>
-                <p className="text-[11px] leading-relaxed text-[#718169]">
-                  Availability and freshness describe the source data, not model
-                  confidence.
+                <p className="text-xs leading-relaxed text-[#718169]">
+                  Ketersediaan dan usia menunjukkan kondisi sumber data, bukan
+                  probabilitas keyakinan model.
                 </p>
                 {evidence.data?.items.map((item) => (
                   <div
@@ -291,32 +311,34 @@ export function ProvinceInsight({
                       {item.available ? (
                         <Check size={13} className="text-cyanpulse" />
                       ) : (
-                        <span className="text-[9px] text-[#84917c]">
-                          Unavailable
+                        <span className="text-xs text-[#84917c]">
+                          Tidak tersedia
                         </span>
                       )}
                     </div>
-                    <div className="mt-1.5 flex gap-2 text-[9px] text-[#7a8772]">
+                    <div className="mt-1.5 flex gap-2 text-xs text-[#7a8772]">
                       <span>
                         {item.used_by_model
-                          ? "In model contract"
-                          : "Context only"}
+                          ? "Dipakai model"
+                          : "Konteks tambahan"}
                       </span>
                       {item.observation_age_days != null && (
                         <span className="flex items-center gap-1">
                           <Clock3 size={10} />
-                          {item.observation_age_days}d old
+                          {item.observation_age_days} hari
                         </span>
                       )}
                     </div>
-                    <p className="mt-2 text-[10px] leading-relaxed text-[#718169]">
-                      {item.note || item.source || "No source note available."}
+                    <p className="mt-2 text-xs leading-relaxed text-[#718169]">
+                      {item.note ||
+                        item.source ||
+                        "Catatan sumber belum tersedia."}
                     </p>
                   </div>
                 ))}
-                <div className="flex gap-2 text-[10px] leading-relaxed text-[#718169]">
+                <div className="flex gap-2 text-xs leading-relaxed text-[#718169]">
                   <Info size={13} className="shrink-0" />
-                  Evidence availability is not a causal explanation.
+                  Konteks data tidak membuktikan hubungan sebab-akibat.
                 </div>
               </>
             )}
@@ -324,13 +346,13 @@ export function ProvinceInsight({
         )}
         {tab === "drivers" && xai.data && (
           <div>
-            <p className="mb-4 text-[11px] leading-relaxed text-[#718169]">
-              Saved feature contributions to the model’s log-ratio output. These
-              are predictive contributions, not causal effects.
+            <p className="mb-4 text-xs leading-relaxed text-[#718169]">
+              Kontribusi fitur tersimpan terhadap keluaran log-ratio model.
+              Nilai ini bukan dampak kausal atau nominal rupiah.
             </p>
             {xai.data.drivers.map((driver) => (
               <div key={driver.rank} className="border-b border-line py-3">
-                <div className="flex justify-between gap-3 text-[10px]">
+                <div className="flex justify-between gap-3 text-xs">
                   <span className="min-w-0 break-words text-[#496040]">
                     {driver.feature.replaceAll("_", " ")}
                   </span>
@@ -351,9 +373,9 @@ export function ProvinceInsight({
         )}
       </div>
       <div className="panel-bottom">
-        <Link className="ui-link text-[11px]" href="/intelligence">
+        <Link className="ui-link text-xs" href="/intelligence">
           <MapPin size={12} />
-          Compare regions <ArrowUpRight size={12} />
+          Bandingkan wilayah <ArrowUpRight size={12} />
         </Link>
         <Database size={13} />
       </div>

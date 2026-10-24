@@ -35,3 +35,8 @@ service-account*.json
 *.key
 *.p12
 *.pfx
+
+# Local Python environments
+.venv/
+.venv-*/
+venv-pasarpulse/

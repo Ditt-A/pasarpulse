@@ -7,6 +7,9 @@ export interface DashboardContext {
   origin: string;
   selectedProvince: string;
   layer: string;
+  view: "list" | "map";
+  risk: string;
+  search: string;
 }
 export function resolveDashboardParams(
   search: string,

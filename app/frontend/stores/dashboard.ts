@@ -8,6 +8,9 @@ interface DashboardState {
   selectedProvince: string;
   selectedForecastId: string;
   layer: string;
+  view: "list" | "map";
+  risk: string;
+  search: string;
   reveal: boolean;
   copilotOpen: boolean;
   set: (value: Partial<DashboardState>) => void;
@@ -21,6 +24,9 @@ export const useDashboardStore = create<DashboardState>((set) => ({
   selectedProvince: "",
   selectedForecastId: "",
   layer: "risk",
+  view: "list",
+  risk: "ALL",
+  search: "",
   reveal: false,
   copilotOpen: false,
   set: (value) =>

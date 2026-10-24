@@ -1,34 +1,20 @@
 "use client";
-
 import Link from "next/link";
-import {
-  Activity,
-  ArrowUpRight,
-  Bell,
-  ChartNoAxesCombined,
-  ChevronRight,
-  LayoutDashboard,
-  Menu,
-  MessageCircle,
-  ShieldCheck,
-  Sprout,
-  X,
-} from "lucide-react";
-import { usePathname, useRouter } from "next/navigation";
+import { Menu, MessageSquare, X } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { api } from "@/lib/api";
 import { StatusBadge } from "./StatusBadge";
 
 const links = [
-  { href: "/", label: "Market overview", icon: LayoutDashboard },
-  { href: "/alerts", label: "Alert queue", icon: Bell },
-  { href: "/intelligence", label: "Regional intelligence", icon: Activity },
-  { href: "/model", label: "Model performance", icon: ChartNoAxesCombined },
+  { href: "/", label: "Pemantauan" },
+  { href: "/intelligence", label: "Perbandingan" },
+  { href: "/model", label: "Data & metode" },
 ];
 function Brand() {
   return (
-    <Link href="/" className="brand" aria-label="PasarPulse home">
+    <Link href="/" className="brand" aria-label="Beranda PasarPulse">
       <svg
         className="brand-mark"
         viewBox="0 0 38 40"
@@ -44,30 +30,29 @@ function Brand() {
         />
         <path
           d="M8 23H15L18 16L21 23H28"
-          stroke="#f2f6ec"
+          stroke="#fff"
           strokeWidth="1.8"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
       </svg>
-      <span>
-        <strong>PasarPulse</strong>
-        <small>Food price intelligence</small>
-      </span>
+      <span>PasarPulse</span>
     </Link>
   );
 }
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const router = useRouter();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
   const metadata = useQuery({ queryKey: ["metadata"], queryFn: api.metadata });
+  const health = useQuery({ queryKey: ["health"], queryFn: api.health });
+  const assistantAvailable =
+    health.data?.reasoning_service.status === "healthy";
   useEffect(() => {
-    setMenuOpen(false);
+    setOpen(false);
   }, [pathname]);
   useEffect(() => {
-    if (!menuOpen) {
+    if (!open) {
       dialog.current?.close();
       return;
     }
@@ -77,118 +62,81 @@ export function AppShell({ children }: { children: React.ReactNode }) {
     return () => {
       document.body.style.overflow = previous;
     };
-  }, [menuOpen]);
-  const title =
-    links.find((link) => link.href === pathname)?.label || "Research assistant";
-  const sidebar = (mobile = false) => (
-    <aside className="app-sidebar">
-      <div className="flex items-center justify-between">
-        <Brand />
-        {mobile && (
-          <button
-            className="ui-button icon-only"
-            aria-label="Close navigation"
-            onClick={() => setMenuOpen(false)}
-          >
-            <X size={17} />
-          </button>
-        )}
-      </div>
-      <div className="sidebar-label">Workspace</div>
-      <nav
-        className="app-nav"
-        aria-label={mobile ? "Mobile navigation" : "Main navigation"}
-      >
-        {links.map(({ href, label, icon: Icon }) => (
-          <Link
-            href={href}
-            key={href}
-            aria-current={pathname === href ? "page" : undefined}
-            onClick={() => setMenuOpen(false)}
-          >
-            <Icon size={17} strokeWidth={1.65} />
-            {label}
-            {pathname === href && <i className="nav-current" />}
-          </Link>
-        ))}
-      </nav>
-      <div className="sidebar-bottom">
-        <ShieldCheck
-          size={22}
-          strokeWidth={1.4}
-          className="sidebar-note-icon"
-        />
-        <strong className="block text-xs font-semibold text-[#425a40]">
-          Built for informed decisions.
-        </strong>
-        <p className="mt-2">
-          Forecasts support monitoring and verification by your team.
-        </p>
-        <Link href="/model">
-          Explore the methodology <ArrowUpRight size={13} />
+  }, [open]);
+  const navigation = (mobile = false) => (
+    <nav
+      className={mobile ? "mobile-nav" : "primary-nav"}
+      aria-label={mobile ? "Navigasi mobile" : "Navigasi utama"}
+    >
+      {links.map((link) => (
+        <Link
+          key={link.href}
+          href={link.href}
+          aria-current={pathname === link.href ? "page" : undefined}
+          onClick={() => setOpen(false)}
+        >
+          {link.label}
         </Link>
-        <div className="mt-7 flex items-center gap-2 text-[10px]">
-          <Sprout size={12} /> Indonesian food markets
-        </div>
-      </div>
-    </aside>
+      ))}
+      {mobile && assistantAvailable && (
+        <Link href="/assistant" onClick={() => setOpen(false)}>
+          Asisten
+        </Link>
+      )}
+    </nav>
   );
   return (
     <>
-      <a className="skip-link" href="#main-content">
-        Skip to content
+      <a href="#main-content" className="skip-link">
+        Langsung ke konten
       </a>
-      {sidebar()}
+      <header className="app-header">
+        <div className="header-left">
+          <Brand />
+          {navigation()}
+        </div>
+        <div className="header-actions">
+          {metadata.data && <StatusBadge label={metadata.data.mode_label} />}{" "}
+          {assistantAvailable && (
+            <Link href="/assistant" className="assistant-link">
+              <MessageSquare size={15} />
+              Asisten
+            </Link>
+          )}
+          <button
+            className="ui-button icon-only mobile-menu-button"
+            aria-label="Buka navigasi"
+            aria-expanded={open}
+            onClick={() => setOpen(true)}
+          >
+            <Menu size={18} />
+          </button>
+        </div>
+      </header>
       <dialog
-        className="mobile-dialog"
         ref={dialog}
-        onCancel={() => setMenuOpen(false)}
-        onClick={(event) => {
-          if (event.target === event.currentTarget) setMenuOpen(false);
-        }}
-        aria-label="Navigation"
+        className="navigation-dialog"
+        onCancel={() => setOpen(false)}
+        aria-label="Navigasi"
       >
-        {sidebar(true)}
+        <div className="flex items-center justify-between border-b border-line p-4">
+          <Brand />
+          <button
+            className="ui-button icon-only"
+            aria-label="Tutup navigasi"
+            onClick={() => setOpen(false)}
+          >
+            <X size={18} />
+          </button>
+        </div>
+        {navigation(true)}
       </dialog>
-      <div className="app-body">
-        <header className="app-header">
-          <div className="breadcrumbs">
-            <button
-              className="ui-button icon-only mobile-menu-button"
-              aria-label="Open navigation"
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen(true)}
-            >
-              <Menu size={17} />
-            </button>
-            <span>Workspace</span>
-            <ChevronRight size={12} />
-            <strong className="hidden sm:inline">{title}</strong>
-            <strong className="sm:hidden">PasarPulse</strong>
-          </div>
-          <div className="header-actions">
-            {metadata.data && <StatusBadge label={metadata.data.mode_label} />}
-            <button
-              onClick={() => router.push("/assistant")}
-              aria-label="Ask PasarPulse"
-              className="ui-button primary"
-            >
-              <MessageCircle size={15} />
-              <span className="assistant-label">Ask PasarPulse</span>
-            </button>
-          </div>
-        </header>
-        <main id="main-content" className="app-main page-enter" key={pathname}>
-          {children}
-        </main>
-        <footer className="app-footer">
-          <span>
-            Decision support for food-price monitoring. Forecasts are estimates;
-            historical outcomes remain separate from forecast-time information.
-          </span>
-          <span>PasarPulse · Indonesia</span>
-        </footer>
-      </div>
+      <main
+        id="main-content"
+        className={pathname === "/" ? "app-main app-main--monitor" : "app-main"}
+      >
+        {children}
+      </main>
     </>
   );
 }

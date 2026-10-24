@@ -3,16 +3,16 @@ import type { Metadata } from "@/lib/types";
 import { useDashboardStore } from "@/stores/dashboard";
 import { shortDate } from "@/components/common/format";
 const marketLabels: Record<string, string> = {
-  producer: "Producer market",
-  wholesale: "Wholesale market",
-  retail: "Retail market",
+  producer: "Produsen",
+  wholesale: "Pedagang besar",
+  retail: "Eceran",
 };
 export function FilterBar({ metadata }: { metadata: Metadata }) {
   const state = useDashboardStore();
   return (
-    <section className="filters" aria-label="Forecast filters">
-      <div className="filter-field">
-        <label htmlFor="commodity-filter">Commodity</label>
+    <section className="filters" aria-label="Filter proyeksi">
+      <label className="filter-field">
+        <span>Komoditas</span>
         <select
           id="commodity-filter"
           value={state.commodity}
@@ -24,9 +24,9 @@ export function FilterBar({ metadata }: { metadata: Metadata }) {
             </option>
           ))}
         </select>
-      </div>
-      <div className="filter-field">
-        <label htmlFor="market-filter">Market level</label>
+      </label>
+      <label className="filter-field">
+        <span>Pasar</span>
         <select
           id="market-filter"
           value={state.marketLevel}
@@ -38,35 +38,35 @@ export function FilterBar({ metadata }: { metadata: Metadata }) {
             </option>
           ))}
         </select>
-      </div>
-      <fieldset className="filter-field">
-        <legend>Forecast horizon</legend>
-        <div className="segmented" aria-label="Forecast horizon">
-          {metadata.horizons.map((item) => (
+      </label>
+      <fieldset className="filter-field horizon-field">
+        <legend>Horizon</legend>
+        <div className="segmented" aria-label="Horizon proyeksi">
+          {metadata.horizons.map((days) => (
             <button
-              key={item}
-              onClick={() => state.set({ horizon: item })}
-              aria-pressed={state.horizon === item}
+              key={days}
+              aria-pressed={state.horizon === days}
+              onClick={() => state.set({ horizon: days })}
             >
-              {item} days
+              {days} hari
             </button>
           ))}
         </div>
       </fieldset>
-      <div className="filter-field">
-        <label htmlFor="origin-filter">Forecast as of</label>
+      <label className="filter-field">
+        <span>Snapshot</span>
         <select
           id="origin-filter"
           value={state.origin || metadata.latest_origin || ""}
           onChange={(e) => state.set({ origin: e.target.value })}
         >
-          {metadata.forecast_origins.map((item) => (
-            <option key={item} value={item}>
-              {shortDate(item)}
+          {metadata.forecast_origins.map((date) => (
+            <option key={date} value={date}>
+              {shortDate(date)}
             </option>
           ))}
         </select>
-      </div>
+      </label>
     </section>
   );
 }

@@ -108,12 +108,14 @@ export function IndonesiaMap({
   layer,
   selectedProvince = "",
   resetKey = 0,
+  visibleProvinces,
   onSelect,
 }: {
   geojson?: GeoJson;
   layer: string;
   selectedProvince?: string;
   resetKey?: number;
+  visibleProvinces?: string[];
   onSelect: (code: string, forecastId?: string) => void;
 }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -126,6 +128,7 @@ export function IndonesiaMap({
   } | null>(null);
   const [failed, setFailed] = useState(false);
   const [loaded, setLoaded] = useState(false);
+  const [sourceReady, setSourceReady] = useState(false);
   useEffect(() => {
     if (!ref.current) return;
     let map: MapLibreMap;
@@ -166,10 +169,14 @@ export function IndonesiaMap({
     map.addControl(
       new maplibregl.AttributionControl({
         compact: true,
-        customAttribution: "BIG · Indonesian province boundaries",
+        customAttribution: "Batas provinsi · BIG",
       }),
       "bottom-right",
     );
+    map.on("sourcedata", (event) => {
+      if (event.sourceId === "provinces" && map.getSource("provinces"))
+        setSourceReady(map.isSourceLoaded("provinces"));
+    });
     map.on("load", () => {
       map.addSource("grid", { type: "geojson", data: graticule });
       map.addLayer({
@@ -189,6 +196,12 @@ export function IndonesiaMap({
           features: [],
         }) as GeoJSON.FeatureCollection,
         promoteId: "province_code",
+      });
+      map.addLayer({
+        id: "province-context",
+        type: "fill",
+        source: "provinces",
+        paint: { "fill-color": "#e5ebe6", "fill-opacity": 1 },
       });
       map.addLayer({
         id: "province-fill",
@@ -249,8 +262,8 @@ export function IndonesiaMap({
             name: String(feature.properties.province_name),
             change:
               feature.properties.has_forecast && change != null
-                ? `${Number(change) >= 0 ? "+" : ""}${Number(change).toFixed(1)}% projected`
-                : "No forecast in this snapshot",
+                ? `${Number(change) >= 0 ? "+" : ""}${Number(change).toFixed(1)}% proyeksi`
+                : "Belum ada proyeksi pada snapshot ini",
           });
         }
       });
@@ -318,10 +331,22 @@ export function IndonesiaMap({
     const map = mapRef.current;
     if (!map || !loaded) return;
     const source = map.getSource("provinces") as maplibregl.GeoJSONSource;
-    if (geojson) source.setData(geojson as GeoJSON.FeatureCollection);
+    if (geojson) {
+      setSourceReady(false);
+      source.setData(geojson as GeoJSON.FeatureCollection);
+    }
+  }, [geojson, loaded]);
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map || !loaded) return;
     map.setPaintProperty("province-fill", "fill-color", paint(layer));
+    const filter: ExpressionSpecification | null = visibleProvinces
+      ? ["in", ["get", "province_code"], ["literal", visibleProvinces]]
+      : null;
+    map.setFilter("province-fill", filter);
+    map.setFilter("province-line", filter);
     setHovered(null);
-  }, [geojson, layer, loaded]);
+  }, [layer, loaded, visibleProvinces]);
   useEffect(() => {
     const map = mapRef.current;
     if (!map || !loaded) return;
@@ -339,20 +364,29 @@ export function IndonesiaMap({
       maxZoom: bounds ? 6.2 : 4.5,
       duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches
         ? 0
-        : 650,
+        : 450,
     });
   }, [selectedProvince, resetKey, loaded, geojson]);
   return (
     <div
       className="relative h-full w-full"
-      aria-label="Interactive map of Indonesian province forecasts"
+      aria-label="Peta interaktif proyeksi provinsi"
       role="region"
+      data-map-ready={sourceReady}
     >
       <div ref={ref} className="h-full w-full" />
+      {!sourceReady && !failed && (
+        <div
+          role="status"
+          className="absolute left-3 top-3 rounded border border-line bg-white px-3 py-2 text-xs text-[#68736c]"
+        >
+          Memuat geometri wilayah…
+        </div>
+      )}
       {failed && (
         <div className="absolute inset-0 empty-state">
-          <p>The map is unavailable in this browser.</p>
-          <p>Explore provinces in the forecast table below.</p>
+          <p>Peta belum dapat ditampilkan pada browser ini.</p>
+          <p>Gunakan tampilan daftar untuk memilih provinsi.</p>
         </div>
       )}
       {hovered && (

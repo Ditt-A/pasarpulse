@@ -89,6 +89,9 @@ test("deep links accept only available dates, horizons, and filter values", () =
     origin: "2026-06-22",
     selectedProvince: "32",
     layer: "change",
+    view: "list",
+    risk: "ALL",
+    search: "",
   });
   const invalid = resolveDashboardParams(
     "?commodity=FAKE&market=invalid&horizon=90&origin=2099-01-01&province=script&layer=confidence",
@@ -109,6 +112,9 @@ test("returning to the overview preserves valid analyst context", () => {
     origin: "2026-06-22",
     selectedProvince: "12",
     layer: "evidence",
+    view: "map",
+    risk: "ATTENTION",
+    search: "Jawa",
   };
   assert.deepEqual(resolveDashboardParams("", metadata, current), current);
   assert.equal(
@@ -136,4 +142,37 @@ test("CSV export whitelists forecast-time fields and escapes quoted names", () =
     /target_price|historical_evaluation|realized_price|123/,
   );
   assert.equal(forecastsToCsv([]).split("\r\n").length, 1);
+});
+
+test("attention filter contains only actionable price-rise warning groups", () => {
+  assert.deepEqual(
+    rankForecasts(rows, { warning: "ATTENTION" }).map((x) => x.province_code),
+    ["32", "31"],
+  );
+  assert.equal(
+    rankForecasts(
+      [
+        ...rows,
+        { ...rows[0], province_code: "99", warning_level: "INSUFFICIENT" },
+      ],
+      { warning: "ATTENTION" },
+    ).length,
+    2,
+  );
+});
+test("workspace URL restores list/map, warning scope, and bounded search", () => {
+  const state = resolveDashboardParams(
+    "?view=map&warning=ATTENTION&q=Jawa",
+    metadata,
+  );
+  assert.equal(state.view, "map");
+  assert.equal(state.risk, "ATTENTION");
+  assert.equal(state.search, "Jawa");
+  const invalid = resolveDashboardParams(
+    "?view=fake&warning=CONFIDENT&q=" + "x".repeat(200),
+    metadata,
+  );
+  assert.equal(invalid.view, "list");
+  assert.equal(invalid.risk, "ALL");
+  assert.equal(invalid.search.length, 80);
 });
