@@ -170,6 +170,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             {metadata.data && <StatusBadge label={metadata.data.mode_label} />}
             <button
               onClick={() => router.push("/assistant")}
+              aria-label="Ask PasarPulse"
               className="ui-button primary"
             >
               <MessageCircle size={15} />
