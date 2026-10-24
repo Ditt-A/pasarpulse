@@ -1,14 +1,149 @@
-export type WarningLevel = "STABLE" | "WATCH" | "ELEVATED" | "HIGH" | "INSUFFICIENT";
-export interface Forecast { forecast_id: string; series_id: string; province_code: string; province_name: string; commodity_code: string; commodity_name: string; market_level: string; forecast_origin: string; target_date: string; horizon_days: number; current_price: number; predicted_price: number; projected_change: number; projected_change_pct: number; warning_level: WarningLevel; model: string; model_version?: string | null; data_version?: string | null; feature_version?: string | null; evidence_status: string; evidence_quality_score?: number | null; attribution_available: boolean; interval_available: boolean; shock_probability_available: boolean; propagation_available: boolean; abstention_required: boolean; historical_evaluation: { available: boolean; realized_price?: number | null; absolute_error?: number | null; label: string } }
-export interface Alert extends Forecast { alert_id: string; priority: number }
-export interface Commodity { code: string; name: string }
-export interface Metadata { mode: string; mode_label: string; mode_detail: string; latest_origin: string | null; forecast_origins: string[]; horizons: number[]; commodities: Commodity[]; market_levels: string[]; models: string[]; province_count_in_forecast: number; province_count_in_geometry: number; warning_thresholds: { watch: number; elevated: number; high: number }; warning_note: string; unsupported_outputs: string[]; product_identity: { name: string; subtitle: string; tagline: string }; forecast_available: boolean; startup_warning?: string | null }
-export interface EvidenceItem { evidence_id: string; modality: string; status: string; available: boolean; observation_date?: string | null; observation_age_days?: number | null; source?: string | null; note?: string | null; is_model_attribution: boolean; used_by_model: boolean; values: Record<string, unknown> }
-export interface Evidence { forecast_id: string; evidence_quality_score: number | null; evidence_quality_label: string; items: EvidenceItem[]; attribution_available: boolean; attribution_note: string; abstention_required: boolean; abstention_reason?: string | null; model?: string | null; model_feature_contract?: string | null; model_modalities: string[] }
-export interface XaiDriver { rank: number; feature: string; feature_value?: string | number | null; contribution_logratio: number }
-export interface AuditedXaiSample { case_id: string; selection_rule: string; model: string; horizon_days: number; forecast_origin: string; province_name: string; commodity_name: string; market_level: string; drivers: XaiDriver[] }
-export interface ForecastXai { forecast_id: string; model: string; horizon_days: number; forecast_origin: string; drivers: XaiDriver[] }
-export interface GeoFeature { type: "Feature"; properties: Record<string, unknown>; geometry: Record<string, unknown> }
-export interface GeoJson { type: "FeatureCollection"; features: GeoFeature[] }
-export interface Benchmark { model: string; horizon_days: number | null; mae_idr_per_kg: number; rmse_idr_per_kg?: number | null; wape_percent?: number | null; smape_percent?: number | null; rows_scored?: number | null; folds_scored?: number | null; group: string; headline_eligible: boolean; note: string; source_file: string }
-export interface CopilotResult { summary: string; reasons: { text: string; evidence_ids: string[] }[]; actions: { action_id: string; evidence_ids: string[] }[]; dashboard_actions: { type: string; value?: unknown }[]; abstained: boolean; mode: string; validation_note?: string | null }
+export type WarningLevel =
+  | "STABLE"
+  | "WATCH"
+  | "ELEVATED"
+  | "HIGH"
+  | "INSUFFICIENT";
+export interface Forecast {
+  forecast_id: string;
+  series_id: string;
+  province_code: string;
+  province_name: string;
+  commodity_code: string;
+  commodity_name: string;
+  market_level: string;
+  forecast_origin: string;
+  target_date: string;
+  horizon_days: number;
+  current_price: number;
+  predicted_price: number;
+  projected_change: number;
+  projected_change_pct: number;
+  warning_level: WarningLevel;
+  model: string;
+  model_version?: string | null;
+  data_version?: string | null;
+  feature_version?: string | null;
+  evidence_status: string;
+  evidence_quality_score?: number | null;
+  attribution_available: boolean;
+  interval_available: boolean;
+  shock_probability_available: boolean;
+  propagation_available: boolean;
+  abstention_required: boolean;
+  historical_evaluation: {
+    available: boolean;
+    realized_price?: number | null;
+    absolute_error?: number | null;
+    label: string;
+  };
+}
+export interface Alert extends Forecast {
+  alert_id: string;
+  priority: number;
+}
+export interface Commodity {
+  code: string;
+  name: string;
+}
+export interface Metadata {
+  mode: string;
+  mode_label: string;
+  mode_detail: string;
+  latest_origin: string | null;
+  forecast_origins: string[];
+  horizons: number[];
+  commodities: Commodity[];
+  market_levels: string[];
+  models: string[];
+  province_count_in_forecast: number;
+  province_count_in_geometry: number;
+  warning_thresholds: { watch: number; elevated: number; high: number };
+  warning_note: string;
+  unsupported_outputs: string[];
+  product_identity: { name: string; subtitle: string; tagline: string };
+  forecast_available: boolean;
+  startup_warning?: string | null;
+}
+export interface EvidenceItem {
+  evidence_id: string;
+  modality: string;
+  status: string;
+  available: boolean;
+  observation_date?: string | null;
+  observation_age_days?: number | null;
+  source?: string | null;
+  note?: string | null;
+  is_model_attribution: boolean;
+  used_by_model: boolean;
+  values: Record<string, unknown>;
+}
+export interface Evidence {
+  forecast_id: string;
+  evidence_quality_score: number | null;
+  evidence_quality_label: string;
+  items: EvidenceItem[];
+  attribution_available: boolean;
+  attribution_note: string;
+  abstention_required: boolean;
+  abstention_reason?: string | null;
+  model?: string | null;
+  model_feature_contract?: string | null;
+  model_modalities: string[];
+}
+export interface XaiDriver {
+  rank: number;
+  feature: string;
+  feature_value?: string | number | null;
+  contribution_logratio: number;
+}
+export interface AuditedXaiSample {
+  case_id: string;
+  selection_rule: string;
+  model: string;
+  horizon_days: number;
+  forecast_origin: string;
+  province_name: string;
+  commodity_name: string;
+  market_level: string;
+  drivers: XaiDriver[];
+}
+export interface ForecastXai {
+  forecast_id: string;
+  model: string;
+  horizon_days: number;
+  forecast_origin: string;
+  drivers: XaiDriver[];
+}
+export interface GeoFeature {
+  type: "Feature";
+  properties: Record<string, unknown>;
+  geometry: GeoJSON.Geometry;
+}
+export interface GeoJson {
+  type: "FeatureCollection";
+  features: GeoFeature[];
+}
+export interface Benchmark {
+  model: string;
+  horizon_days: number | null;
+  mae_idr_per_kg: number;
+  rmse_idr_per_kg?: number | null;
+  wape_percent?: number | null;
+  smape_percent?: number | null;
+  rows_scored?: number | null;
+  folds_scored?: number | null;
+  group: string;
+  headline_eligible: boolean;
+  note: string;
+  source_file: string;
+}
+export interface CopilotResult {
+  summary: string;
+  reasons: { text: string; evidence_ids: string[] }[];
+  actions: { action_id: string; evidence_ids: string[] }[];
+  dashboard_actions: { type: string; value?: unknown }[];
+  abstained: boolean;
+  mode: string;
+  validation_note?: string | null;
+}

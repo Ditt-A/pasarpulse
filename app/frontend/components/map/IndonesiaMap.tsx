@@ -1,156 +1,366 @@
 "use client";
-
 import "maplibre-gl/dist/maplibre-gl.css";
-import maplibregl, { type Map as MapLibreMap } from "maplibre-gl";
+import maplibregl, {
+  type Map as MapLibreMap,
+  type ExpressionSpecification,
+} from "maplibre-gl";
 import { useEffect, useRef, useState } from "react";
 import type { GeoFeature, GeoJson } from "@/lib/types";
+import { WARNING_COLORS } from "@/lib/overview.mjs";
 
-const riskColors: any = ["match", ["get", "warning_level"], "HIGH", "#dc2626", "ELEVATED", "#f97316", "WATCH", "#eab308", "STABLE", "#0f766e", "#cbd5e1"];
-const changeColors: any = ["interpolate", ["linear"], ["coalesce", ["get", "projected_change_pct"], 0], -5, "#2563eb", 0, "#bfdbfe", 5, "#fde68a", 10, "#fb923c", 20, "#dc2626"];
-const evidenceColors: any = ["match", ["get", "evidence_status"], "AVAILABLE_CONTEXT", "#0f766e", "INSUFFICIENT", "#cbd5e1", "#94a3b8"];
-const INDONESIA_BOUNDS: [[number, number], [number, number]] = [[94.2, -11.8], [141.5, 6.8]];
-const PAN_BOUNDS: [[number, number], [number, number]] = [[91, -16], [145, 11]];
-
+const BOUNDS: [[number, number], [number, number]] = [
+  [94.2, -11.8],
+  [141.5, 6.8],
+];
+const riskColors: ExpressionSpecification = [
+  "match",
+  ["get", "warning_level"],
+  "HIGH",
+  WARNING_COLORS.HIGH,
+  "ELEVATED",
+  WARNING_COLORS.ELEVATED,
+  "WATCH",
+  WARNING_COLORS.WATCH,
+  "STABLE",
+  WARNING_COLORS.STABLE,
+  WARNING_COLORS.INSUFFICIENT,
+];
+const changeColors: ExpressionSpecification = [
+  "interpolate",
+  ["linear"],
+  ["coalesce", ["get", "projected_change_pct"], 0],
+  -5,
+  "#7c9b71",
+  0,
+  "#e1e9d5",
+  5,
+  "#d6bc74",
+  10,
+  "#cd966b",
+  20,
+  "#b34b3e",
+];
+const evidenceColors: ExpressionSpecification = [
+  "match",
+  ["get", "evidence_status"],
+  "AVAILABLE_CONTEXT",
+  "#7c9b71",
+  "#d2dcd0",
+];
+function paint(layer: string): ExpressionSpecification {
+  return [
+    "case",
+    ["boolean", ["get", "has_forecast"], false],
+    layer === "change"
+      ? changeColors
+      : layer === "evidence"
+        ? evidenceColors
+        : riskColors,
+    "#d2dcd0",
+  ];
+}
 function featureBounds(feature?: GeoFeature) {
   if (!feature?.geometry) return null;
   const bounds = new maplibregl.LngLatBounds();
-  let found = false;
   const walk = (value: unknown) => {
     if (!Array.isArray(value)) return;
-    if (value.length >= 2 && typeof value[0] === "number" && typeof value[1] === "number") {
+    if (
+      value.length >= 2 &&
+      typeof value[0] === "number" &&
+      typeof value[1] === "number"
+    )
       bounds.extend([value[0], value[1]]);
-      found = true;
-      return;
-    }
-    value.forEach(walk);
+    else value.forEach(walk);
   };
   walk((feature.geometry as { coordinates?: unknown }).coordinates);
-  return found ? bounds : null;
+  return bounds.isEmpty() ? null : bounds;
 }
+const graticule = {
+  type: "FeatureCollection" as const,
+  features: [
+    ...Array.from({ length: 6 }, (_, i) => ({
+      type: "Feature" as const,
+      properties: {},
+      geometry: {
+        type: "LineString" as const,
+        coordinates: [
+          [90 + i * 10, -16],
+          [90 + i * 10, 12],
+        ],
+      },
+    })),
+    ...[-10, -5, 0, 5, 10].map((lat) => ({
+      type: "Feature" as const,
+      properties: {},
+      geometry: {
+        type: "LineString" as const,
+        coordinates: [
+          [90, lat],
+          [145, lat],
+        ],
+      },
+    })),
+  ],
+};
 
-export function IndonesiaMap({ geojson, layer, selectedProvince, onSelect }: { geojson?: GeoJson; layer: string; selectedProvince?: string; onSelect: (provinceCode: string, forecastId?: string) => void }) {
+export function IndonesiaMap({
+  geojson,
+  layer,
+  selectedProvince = "",
+  resetKey = 0,
+  onSelect,
+}: {
+  geojson?: GeoJson;
+  layer: string;
+  selectedProvince?: string;
+  resetKey?: number;
+  onSelect: (code: string, forecastId?: string) => void;
+}) {
   const ref = useRef<HTMLDivElement>(null);
   const mapRef = useRef<MapLibreMap | null>(null);
-  const selectRef = useRef(onSelect);
-  const [hovered, setHovered] = useState<string | null>(null);
-  selectRef.current = onSelect;
-
+  const latest = useRef({ geojson, layer, selectedProvince, onSelect });
+  latest.current = { geojson, layer, selectedProvince, onSelect };
+  const [hovered, setHovered] = useState<{
+    name: string;
+    change: string;
+  } | null>(null);
+  const [failed, setFailed] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   useEffect(() => {
-    if (!ref.current || !geojson || mapRef.current) return;
-
-    const map = new maplibregl.Map({
-      container: ref.current,
-      style: {
-        version: 8,
-        sources: {
-          "light-basemap": {
-            type: "raster",
-            tiles: ["https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"],
-            tileSize: 256,
-            attribution: "© OpenStreetMap contributors © CARTO",
-          },
+    if (!ref.current) return;
+    let map: MapLibreMap;
+    try {
+      map = new maplibregl.Map({
+        container: ref.current,
+        style: {
+          version: 8,
+          sources: {},
+          layers: [
+            {
+              id: "background",
+              type: "background",
+              paint: { "background-color": "#edf2ec" },
+            },
+          ],
         },
-        layers: [
-          { id: "background", type: "background", paint: { "background-color": "#f8fafc" } },
-          { id: "light-basemap", type: "raster", source: "light-basemap", paint: { "raster-opacity": 0.88 } },
+        bounds: BOUNDS,
+        fitBoundsOptions: { padding: 25 },
+        maxBounds: [
+          [80, -45],
+          [155, 45],
         ],
-      } as any,
-      bounds: INDONESIA_BOUNDS,
-      fitBoundsOptions: { padding: 44 },
-      maxBounds: PAN_BOUNDS,
-      minZoom: 3.25,
-      maxZoom: 10,
-      renderWorldCopies: true,
-      attributionControl: false,
-    });
-
+        minZoom: 1.2,
+        maxZoom: 10,
+        attributionControl: false,
+        renderWorldCopies: false,
+      });
+    } catch {
+      setFailed(true);
+      return;
+    }
     mapRef.current = map;
-    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "bottom-left");
-    map.addControl(new maplibregl.AttributionControl({ compact: true }), "bottom-right");
-
+    map.addControl(
+      new maplibregl.NavigationControl({ showCompass: false }),
+      "bottom-right",
+    );
+    map.addControl(
+      new maplibregl.AttributionControl({
+        compact: true,
+        customAttribution: "BIG · Indonesian province boundaries",
+      }),
+      "bottom-right",
+    );
     map.on("load", () => {
-      map.addSource("provinces", { type: "geojson", data: geojson as any });
+      map.addSource("grid", { type: "geojson", data: graticule });
+      map.addLayer({
+        id: "grid",
+        type: "line",
+        source: "grid",
+        paint: {
+          "line-color": "#dce5d8",
+          "line-width": 0.65,
+          "line-dasharray": [2, 5],
+        },
+      });
+      map.addSource("provinces", {
+        type: "geojson",
+        data: (latest.current.geojson || {
+          type: "FeatureCollection",
+          features: [],
+        }) as GeoJSON.FeatureCollection,
+        promoteId: "province_code",
+      });
       map.addLayer({
         id: "province-fill",
         type: "fill",
         source: "provinces",
         paint: {
-          "fill-color": riskColors,
-          "fill-opacity": ["case", ["get", "has_forecast"], 0.72, 0.18],
+          "fill-color": paint(latest.current.layer),
+          "fill-opacity": [
+            "case",
+            ["boolean", ["feature-state", "hover"], false],
+            0.95,
+            0.82,
+          ],
         },
       });
       map.addLayer({
         id: "province-line",
         type: "line",
         source: "provinces",
-        paint: { "line-color": "#ffffff", "line-opacity": 0.95, "line-width": 0.8 },
+        paint: { "line-color": "#f9fbf6", "line-width": 0.9 },
       });
       map.addLayer({
         id: "province-selected",
         type: "line",
         source: "provinces",
-        filter: ["==", ["get", "province_code"], selectedProvince || "__none__"],
-        paint: { "line-color": "#0f172a", "line-opacity": 1, "line-width": 2.8 },
+        filter: [
+          "==",
+          ["get", "province_code"],
+          latest.current.selectedProvince || "__none__",
+        ],
+        paint: { "line-color": "#2e4c36", "line-width": 2 },
       });
-
-      map.on("click", "province-fill", (event) => {
-        const feature = event.features?.[0];
-        if (!feature) return;
-        selectRef.current(
-          String(feature.properties?.province_code || ""),
-          feature.properties?.forecast_id ? String(feature.properties.forecast_id) : undefined,
-        );
-      });
-      map.on("mousemove", "province-fill", (event) => {
+      let previousHover: string | number | undefined;
+      map.on("mousemove", (event) => {
         map.getCanvas().style.cursor = "pointer";
-        const feature = event.features?.[0];
-        setHovered(feature ? `${feature.properties?.province_name || "Province"} · ${feature.properties?.warning_level || "INSUFFICIENT"}` : null);
+        const feature = map.queryRenderedFeatures(event.point, {
+          layers: ["province-fill", "province-line"],
+        })[0];
+        if (!feature) {
+          map.getCanvas().style.cursor = "";
+          setHovered(null);
+          return;
+        }
+        if (previousHover != null)
+          map.setFeatureState(
+            { source: "provinces", id: previousHover },
+            { hover: false },
+          );
+        previousHover = feature?.id;
+        if (previousHover != null)
+          map.setFeatureState(
+            { source: "provinces", id: previousHover },
+            { hover: true },
+          );
+        if (feature) {
+          const change = feature.properties.projected_change_pct;
+          setHovered({
+            name: String(feature.properties.province_name),
+            change:
+              feature.properties.has_forecast && change != null
+                ? `${Number(change) >= 0 ? "+" : ""}${Number(change).toFixed(1)}% projected`
+                : "No forecast in this snapshot",
+          });
+        }
       });
-      map.on("mouseleave", "province-fill", () => {
+      map.on("mouseout", () => {
         map.getCanvas().style.cursor = "";
         setHovered(null);
+        if (previousHover != null)
+          map.setFeatureState(
+            { source: "provinces", id: previousHover },
+            { hover: false },
+          );
+      });
+      // Include boundary strokes so narrow islands and province edges remain selectable.
+      map.on("click", (event) => {
+        const p = map.queryRenderedFeatures(event.point, {
+          layers: ["province-fill", "province-line"],
+        })[0]?.properties;
+        if (p)
+          latest.current.onSelect(
+            String(p.province_code),
+            p.forecast_id ? String(p.forecast_id) : undefined,
+          );
+      });
+      const regions: [string, [number, number]][] = [
+        ["SUMATRA", [101.5, 2.6]],
+        ["JAVA", [110, -9]],
+        ["KALIMANTAN", [114, 1.5]],
+        ["SULAWESI", [121, 3]],
+        ["MALUKU", [128, 1]],
+        ["PAPUA", [137.5, -2]],
+      ];
+      for (const [name, coordinate] of regions) {
+        const element = document.createElement("span");
+        element.className = "map-region";
+        element.textContent = name;
+        new maplibregl.Marker({ element, anchor: "center" })
+          .setLngLat(coordinate)
+          .addTo(map);
+      }
+      setLoaded(true);
+    });
+    const observer = new ResizeObserver(() => {
+      map.resize();
+      const current = latest.current;
+      const bounds = featureBounds(
+        current.geojson?.features.find(
+          (x) =>
+            String(x.properties.province_code) === current.selectedProvince,
+        ),
+      );
+      map.fitBounds(bounds || BOUNDS, {
+        padding: bounds ? 65 : 25,
+        maxZoom: bounds ? 6.2 : 4.5,
+        duration: 0,
       });
     });
-
+    observer.observe(ref.current);
     return () => {
+      observer.disconnect();
       map.remove();
       mapRef.current = null;
     };
-  }, [geojson]);
-
+  }, []);
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || !geojson) return;
-    const source = map.getSource("provinces") as maplibregl.GeoJSONSource | undefined;
-    if (source) source.setData(geojson as any);
-    if (map.getLayer("province-fill")) {
-      map.setPaintProperty("province-fill", "fill-color", layer === "change" ? changeColors : layer === "evidence" ? evidenceColors : riskColors);
-    }
-  }, [geojson, layer]);
-
+    if (!map || !loaded) return;
+    const source = map.getSource("provinces") as maplibregl.GeoJSONSource;
+    if (geojson) source.setData(geojson as GeoJSON.FeatureCollection);
+    map.setPaintProperty("province-fill", "fill-color", paint(layer));
+    setHovered(null);
+  }, [geojson, layer, loaded]);
   useEffect(() => {
     const map = mapRef.current;
-    if (!map || !selectedProvince || !geojson) return;
-    if (map.getLayer("province-selected")) map.setFilter("province-selected", ["==", ["get", "province_code"], selectedProvince]);
-    const feature = geojson.features.find((item) => String(item.properties.province_code || "") === selectedProvince);
-    const bounds = featureBounds(feature);
-    if (bounds) map.fitBounds(bounds, { padding: 120, maxZoom: 6.4, duration: 650 });
-  }, [selectedProvince, geojson]);
-
-  const layerTitle = layer === "change" ? "Projected change" : layer === "evidence" ? "Evidence" : "Price-shock risk";
-
+    if (!map || !loaded) return;
+    map.setFilter("province-selected", [
+      "==",
+      ["get", "province_code"],
+      selectedProvince || "__none__",
+    ]);
+    const feature = geojson?.features.find(
+      (x) => String(x.properties.province_code) === selectedProvince,
+    );
+    const bounds = selectedProvince ? featureBounds(feature) : null;
+    map.fitBounds(bounds || BOUNDS, {
+      padding: bounds ? 65 : 25,
+      maxZoom: bounds ? 6.2 : 4.5,
+      duration: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? 0
+        : 650,
+    });
+  }, [selectedProvince, resetKey, loaded, geojson]);
   return (
-    <div className="relative h-full w-full overflow-hidden bg-slate-100">
+    <div
+      className="relative h-full w-full"
+      aria-label="Interactive map of Indonesian province forecasts"
+      role="region"
+    >
       <div ref={ref} className="h-full w-full" />
-      <div className="pointer-events-none absolute bottom-7 left-3 rounded-xl border border-slate-200 bg-white/95 px-3 py-2 shadow-sm backdrop-blur sm:left-14">
-        <div className="mb-1.5 text-[10px] font-semibold uppercase tracking-[.12em] text-slate-500">{layerTitle}</div>
-        {layer === "evidence" ? (
-          <div className="flex gap-3 text-[10px] font-medium text-slate-700"><span><i className="mr-1 inline-block h-2 w-2 rounded-full bg-teal-700" />Available</span><span><i className="mr-1 inline-block h-2 w-2 rounded-full bg-slate-300" />Insufficient</span></div>
-        ) : (
-          <div className="flex flex-wrap gap-x-3 gap-y-1 text-[10px] font-medium text-slate-700"><span><i className="mr-1 inline-block h-2 w-2 rounded-full bg-red-600" />High</span><span><i className="mr-1 inline-block h-2 w-2 rounded-full bg-orange-500" />Elevated</span><span><i className="mr-1 inline-block h-2 w-2 rounded-full bg-yellow-500" />Watch</span><span><i className="mr-1 inline-block h-2 w-2 rounded-full bg-teal-700" />Stable</span></div>
-        )}
-      </div>
-      {hovered && <div className="pointer-events-none absolute bottom-7 right-3 rounded-lg border border-slate-200 bg-white/95 px-3 py-2 text-xs font-semibold text-slate-800 shadow-sm backdrop-blur sm:right-12">{hovered}</div>}
+      {failed && (
+        <div className="absolute inset-0 empty-state">
+          <p>The map is unavailable in this browser.</p>
+          <p>Explore provinces in the forecast table below.</p>
+        </div>
+      )}
+      {hovered && (
+        <output className="map-hover">
+          <strong>{hovered.name}</strong>
+          <span className="text-[#72806c]">{hovered.change}</span>
+        </output>
+      )}
     </div>
   );
 }

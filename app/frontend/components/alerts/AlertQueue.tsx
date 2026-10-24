@@ -1,11 +1,92 @@
 "use client";
-
-import { ArrowUpRight, Search } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import type { Alert } from "@/lib/types";
 import { idr, pct } from "@/components/common/format";
-import { Panel } from "@/components/common/Panel";
 import { StatusBadge } from "@/components/common/StatusBadge";
-
-export function AlertQueue({ alerts, onSelect, compact = false }: { alerts: Alert[]; onSelect?: (alert: Alert) => void; compact?: boolean }) {
-  return <Panel title="National alert queue" eyebrow="Prioritized monitoring work queue" action={<div className="flex items-center gap-2 text-[10px] text-slate-500"><Search size={13} /> {alerts.length} rows</div>}><div className="overflow-x-auto"><table className="w-full min-w-[760px] text-left text-xs"><thead className="border-b border-line/70 text-[10px] uppercase tracking-[.12em] text-slate-500"><tr><th className="px-4 py-3">Priority</th><th className="px-4 py-3">Province</th><th className="px-4 py-3">Commodity</th><th className="px-4 py-3">Market</th><th className="px-4 py-3">Current → forecast</th><th className="px-4 py-3">Move</th><th className="px-4 py-3">Warning</th><th className="px-4 py-3">Evidence</th><th /></tr></thead><tbody>{alerts.slice(0, compact ? 8 : 100).map((alert) => <tr key={alert.alert_id} onClick={() => onSelect?.(alert)} className="cursor-pointer border-b border-line/50 text-slate-300 transition hover:bg-white/[.035]"><td className="px-4 py-3 font-mono text-cyanpulse">{String(alert.priority).padStart(2, "0")}</td><td className="px-4 py-3 font-medium text-white">{alert.province_name}</td><td className="px-4 py-3">{alert.commodity_name}</td><td className="px-4 py-3 capitalize">{alert.market_level}</td><td className="px-4 py-3 whitespace-nowrap">{idr(alert.current_price)} <span className="text-slate-600">→</span> {idr(alert.predicted_price)}</td><td className={`px-4 py-3 font-semibold ${alert.projected_change_pct >= 10 ? "text-red-300" : "text-amberpulse"}`}>{pct(alert.projected_change_pct)}</td><td className="px-4 py-3"><StatusBadge label={alert.warning_level} /></td><td className="px-4 py-3 text-[10px] text-slate-400">{alert.evidence_status.replaceAll("_", " ")}</td><td className="px-4 py-3 text-slate-600"><ArrowUpRight size={14} /></td></tr>)}</tbody></table>{alerts.length === 0 && <div className="p-10 text-center text-sm text-slate-500">No forecast rows match this context.</div>}</div></Panel>;
+export function AlertQueue({
+  alerts,
+  onSelect,
+  compact = false,
+}: {
+  alerts: Alert[];
+  onSelect?: (alert: Alert) => void;
+  compact?: boolean;
+}) {
+  return (
+    <section className="surface">
+      <div className="surface-heading">
+        <div>
+          <h2>Monitoring queue</h2>
+          <p>
+            Open a province to inspect its forecast and supporting evidence.
+          </p>
+        </div>
+        <span className="eyebrow">{alerts.length} results</span>
+      </div>
+      <div className="overflow-x-auto">
+        <table className="data-table">
+          <caption className="sr-only">
+            Forecasts ordered by monitoring priority
+          </caption>
+          <thead>
+            <tr>
+              <th scope="col">Priority</th>
+              <th scope="col">Province</th>
+              <th scope="col">Current / kg</th>
+              <th scope="col">Forecast / kg</th>
+              <th scope="col">Projected change</th>
+              <th scope="col">Warning</th>
+              <th scope="col">
+                <span className="sr-only">Open forecast</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {alerts.slice(0, compact ? 8 : 100).map((alert) => (
+              <tr key={alert.alert_id}>
+                <td className="text-[#94a18a]">
+                  {String(alert.priority).padStart(2, "0")}
+                </td>
+                <td>
+                  <button
+                    className="province-name"
+                    onClick={() => onSelect?.(alert)}
+                  >
+                    {alert.province_name}
+                  </button>
+                </td>
+                <td className="text-[#72816a]">{idr(alert.current_price)}</td>
+                <td className="font-medium">{idr(alert.predicted_price)}</td>
+                <td
+                  className={
+                    alert.projected_change_pct > 0 ? "change-up" : "change-down"
+                  }
+                >
+                  {pct(alert.projected_change_pct)}
+                </td>
+                <td>
+                  <StatusBadge label={alert.warning_level} />
+                </td>
+                <td>
+                  <button
+                    aria-label={`Inspect ${alert.province_name}`}
+                    className="text-cyanpulse"
+                    onClick={() => onSelect?.(alert)}
+                  >
+                    <ArrowUpRight size={15} />
+                  </button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {!alerts.length && (
+        <div className="empty-state">
+          <h2>No forecasts at this warning level</h2>
+          <p>Choose another level or adjust the forecast context.</p>
+        </div>
+      )}
+    </section>
+  );
 }

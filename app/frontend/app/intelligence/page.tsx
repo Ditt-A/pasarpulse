@@ -1,25 +1,261 @@
 "use client";
-
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowDown, ArrowUp, GitCompare, Search } from "lucide-react";
+import dynamic from "next/dynamic";
+import { ArrowRight, GitCompareArrows, Info } from "lucide-react";
 import { api } from "@/lib/api";
+import type { Forecast } from "@/lib/types";
+import { rankForecasts } from "@/lib/overview.mjs";
+import { useForecastContext } from "@/lib/useForecastContext";
 import { idr, pct, shortDate } from "@/components/common/format";
-import { Panel } from "@/components/common/Panel";
+import { StatusBadge } from "@/components/common/StatusBadge";
 import { FilterBar } from "@/components/filters/FilterBar";
-import { useDashboardStore } from "@/stores/dashboard";
-
+import { RequestState } from "@/components/common/RequestState";
+const Chart = dynamic(() => import("echarts-for-react"), { ssr: false });
 export default function IntelligencePage() {
-  const state = useDashboardStore(); const [second, setSecond] = useState("32");
-  const metadata = useQuery({ queryKey: ["metadata"], queryFn: api.metadata });
-  useEffect(() => { if (metadata.data?.latest_origin && !state.origin) state.set({ origin: metadata.data.latest_origin }); }, [metadata.data?.latest_origin, state]);
-  const params = { origin: state.origin || undefined, commodity: state.commodity, market_level: state.marketLevel, horizon: state.horizon };
-  const forecasts = useQuery({ queryKey: ["intelligence", params], queryFn: () => api.forecasts(params), enabled: Boolean(metadata.data) });
-  const first = forecasts.data?.find((item) => item.province_code === state.selectedProvince) || forecasts.data?.[0];
-  const comparison = forecasts.data?.find((item) => item.province_code === second);
-  const ranking = useMemo(() => [...(forecasts.data || [])].sort((a, b) => b.projected_change_pct - a.projected_change_pct).slice(0, 12), [forecasts.data]);
-  if (!metadata.data) return <Panel title="Intelligence"><div className="p-8 text-sm text-slate-500">Loading intelligence workspace…</div></Panel>;
-  return <div className="space-y-4"><div><h1 className="text-2xl font-semibold text-white">Intelligence workspace</h1><p className="mt-2 max-w-3xl text-sm text-slate-400">Compare province-level forward movement, inspect cross-region ranking, and keep the forecast-as-of boundary visible while investigating.</p></div><FilterBar metadata={metadata.data} /><div className="grid gap-4 lg:grid-cols-2"><ComparisonCard label="Selected province" forecast={first} /><div className="space-y-3"><label className="block text-[10px] font-semibold uppercase tracking-[.13em] text-slate-500">Compare against<select value={second} onChange={(event) => setSecond(event.target.value)} className="mt-1 w-full rounded-lg border border-line bg-ink px-3 py-2 text-xs text-white">{forecasts.data?.map((item) => <option key={item.province_code} value={item.province_code}>{item.province_name}</option>)}</select></label><ComparisonCard label="Comparison province" forecast={comparison} /></div></div><Panel title="Cross-region ranking" eyebrow={`As of ${shortDate(state.origin)}`} action={<div className="flex items-center gap-2 text-[10px] text-slate-500"><Search size={13} /> Sorted by projected movement</div>}><div className="grid gap-2 p-4 md:grid-cols-2 xl:grid-cols-3">{ranking.map((item, index) => <div key={item.forecast_id} className="flex items-center justify-between rounded-xl border border-line/70 bg-ink/30 p-3"><div className="flex items-center gap-3"><div className="font-mono text-xs text-cyanpulse">{String(index + 1).padStart(2, "0")}</div><div><div className="text-xs font-semibold text-white">{item.province_name}</div><div className="text-[10px] capitalize text-slate-500">{item.market_level} · {item.commodity_name}</div></div></div><div className="text-right"><div className={`text-sm font-semibold ${item.projected_change_pct >= 10 ? "text-red-300" : "text-amberpulse"}`}>{pct(item.projected_change_pct)}</div><div className="text-[10px] text-slate-500">{item.warning_level}</div></div></div>)}</div></Panel><div className="rounded-xl border border-line/70 bg-panel/60 p-4 text-xs leading-relaxed text-slate-500"><GitCompare size={15} className="mr-2 inline text-cyanpulse" />Comparisons use the same forecast origin, commodity, market level, and horizon. Realized target prices remain evaluation-only and are not used to rank this view.</div></div>;
+  const { state, metadata, ready, params } = useForecastContext();
+  const [second, setSecond] = useState("32");
+  const forecasts = useQuery({
+    queryKey: ["forecasts", params],
+    queryFn: () => api.forecasts(params),
+    enabled: ready,
+  });
+  const ranked = useMemo(
+    () => rankForecasts(forecasts.data || []),
+    [forecasts.data],
+  );
+  const firstCode = state.selectedProvince || ranked[0]?.province_code || "";
+  const secondCode = ranked.some(
+    (x) => x.province_code === second && x.province_code !== firstCode,
+  )
+    ? second
+    : ranked.find((x) => x.province_code !== firstCode)?.province_code || "";
+  const first = ranked.find((x) => x.province_code === firstCode);
+  const comparison = ranked.find((x) => x.province_code === secondCode);
+  if (metadata.isError)
+    return <RequestState error retry={() => void metadata.refetch()} />;
+  if (!metadata.data) return <RequestState />;
+  const chart = {
+    color: ["#a9bf9b", "#285c45"],
+    grid: { top: 40, right: 30, bottom: 20, left: 20, containLabel: true },
+    legend: {
+      data: ["Current price", "Forecast"],
+      right: 20,
+      top: 0,
+      icon: "roundRect",
+      textStyle: { color: "#71816a", fontSize: 11 },
+    },
+    tooltip: { trigger: "axis", valueFormatter: (v: number) => `${idr(v)}/kg` },
+    xAxis: {
+      type: "category",
+      data: [first?.province_name, comparison?.province_name],
+      axisTick: { show: false },
+      axisLine: { lineStyle: { color: "#dfe6dd" } },
+      axisLabel: { color: "#5a7150", fontSize: 11 },
+    },
+    yAxis: {
+      type: "value",
+      axisLabel: {
+        color: "#7b8973",
+        fontSize: 10,
+        formatter: (v: number) => `${Math.round(v / 1000)}k`,
+      },
+      splitLine: { lineStyle: { color: "#e9eee4", type: "dashed" } },
+    },
+    series: [
+      {
+        name: "Current price",
+        type: "bar",
+        barMaxWidth: 36,
+        itemStyle: { borderRadius: [4, 4, 0, 0] },
+        data: [first?.current_price, comparison?.current_price],
+      },
+      {
+        name: "Forecast",
+        type: "bar",
+        barMaxWidth: 36,
+        itemStyle: { borderRadius: [4, 4, 0, 0] },
+        data: [first?.predicted_price, comparison?.predicted_price],
+      },
+    ],
+  };
+  return (
+    <>
+      <div className="page-heading">
+        <div>
+          <div className="eyebrow">Compare markets</div>
+          <h1>Regional intelligence</h1>
+          <p>
+            Two provinces. The same commodity, market level, and forecast date.
+          </p>
+        </div>
+        <GitCompareArrows
+          size={25}
+          strokeWidth={1.4}
+          className="hidden text-[#718969] sm:block"
+        />
+      </div>
+      <FilterBar metadata={metadata.data} />
+      {forecasts.isError ? (
+        <RequestState error retry={() => void forecasts.refetch()} />
+      ) : !ready || forecasts.isPending ? (
+        <RequestState />
+      ) : !ranked.length ? (
+        <div className="surface empty-state">
+          No forecasts match the selected context.
+        </div>
+      ) : (
+        <>
+          <div className="grid gap-5 md:grid-cols-2">
+            <CompareCard
+              title="Selected province"
+              forecast={first}
+              value={firstCode}
+              onChange={(value) => state.set({ selectedProvince: value })}
+              options={ranked}
+            />
+            <CompareCard
+              title="Compare against"
+              forecast={comparison}
+              value={secondCode}
+              onChange={setSecond}
+              options={ranked.filter((x) => x.province_code !== firstCode)}
+            />
+          </div>
+          {first && comparison && (
+            <section className="surface mt-5">
+              <div className="surface-heading">
+                <div>
+                  <h2>Current and projected prices</h2>
+                  <p>
+                    IDR per kilogram · {state.horizon}-day horizon · As of{" "}
+                    {shortDate(state.origin)}
+                  </p>
+                </div>
+              </div>
+              <div className="p-4">
+                <Chart option={chart} style={{ height: 280 }} />
+              </div>
+            </section>
+          )}
+          <section className="surface mt-5">
+            <div className="surface-heading">
+              <div>
+                <h2>Regional ranking</h2>
+                <p>Highest projected changes in this snapshot</p>
+              </div>
+            </div>
+            <div className="grid gap-3 p-5 md:grid-cols-2 xl:grid-cols-3">
+              {ranked.slice(0, 12).map((row, i) => (
+                <button
+                  key={row.forecast_id}
+                  onClick={() =>
+                    state.set({ selectedProvince: row.province_code })
+                  }
+                  className="flex items-center justify-between gap-3 rounded-md border border-line p-4 text-left transition hover:bg-sage"
+                >
+                  <span className="flex items-center gap-3">
+                    <span className="text-[10px] text-[#94a48b]">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="text-xs font-medium">
+                      {row.province_name}
+                    </span>
+                  </span>
+                  <span
+                    className={`text-xs ${row.projected_change_pct > 0 ? "change-up" : "change-down"}`}
+                  >
+                    {pct(row.projected_change_pct)}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </section>
+        </>
+      )}
+      <div className="notice mt-5">
+        <Info size={15} />
+        <span>
+          Comparisons use forecast-time prices and saved predictions. Later
+          realized prices are excluded from this ranking.
+        </span>
+      </div>
+    </>
+  );
 }
-function ComparisonCard({ label, forecast }: { label: string; forecast?: import("@/lib/types").Forecast }) { if (!forecast) return <Panel title={label}><div className="p-6 text-sm text-slate-500">No replay row for this province.</div></Panel>; return <Panel title={label} eyebrow={forecast.province_name}><div className="grid grid-cols-3 gap-2 p-4"><Value label="Current" value={idr(forecast.current_price)} /><Value label="Forecast" value={idr(forecast.predicted_price)} /><Value label="Move" value={pct(forecast.projected_change_pct)} accent={forecast.projected_change_pct >= 0 ? "text-amberpulse" : "text-cyanpulse"} /></div><div className="border-t border-line/70 px-4 py-3 text-[11px] text-slate-500">{forecast.model} · origin {shortDate(forecast.forecast_origin)}</div></Panel>; }
-function Value({ label, value, accent = "text-white" }: { label: string; value: string; accent?: string }) { return <div><div className="text-[10px] uppercase tracking-[.1em] text-slate-500">{label}</div><div className={`mt-1 text-sm font-semibold ${accent}`}>{value}</div></div>; }
+function CompareCard({
+  title,
+  forecast,
+  value,
+  onChange,
+  options,
+}: {
+  title: string;
+  forecast?: Forecast;
+  value: string;
+  onChange: (value: string) => void;
+  options: Forecast[];
+}) {
+  return (
+    <section className="surface">
+      <div className="border-b border-line p-5">
+        <label className="text-[11px] text-[#71816a]">
+          {title}
+          <select
+            className="mt-2 block w-full rounded-md border border-line bg-white p-2.5 text-sm font-medium text-[#304c36]"
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+          >
+            {!options.some((x) => x.province_code === value) && (
+              <option value={value}>No forecast for selected province</option>
+            )}
+            {[...options]
+              .sort((a, b) => a.province_name.localeCompare(b.province_name))
+              .map((row) => (
+                <option key={row.province_code} value={row.province_code}>
+                  {row.province_name}
+                </option>
+              ))}
+          </select>
+        </label>
+      </div>
+      {forecast ? (
+        <div className="p-5">
+          <div className="mb-5 flex items-center justify-between">
+            <StatusBadge label={forecast.warning_level} />
+            <span
+              className={
+                forecast.projected_change_pct > 0 ? "change-up" : "change-down"
+              }
+            >
+              {pct(forecast.projected_change_pct)}
+            </span>
+          </div>
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <div className="text-[10px] text-[#71816a]">Current / kg</div>
+              <strong className="mt-1 block text-xl font-medium tracking-[-.6px]">
+                {idr(forecast.current_price)}
+              </strong>
+            </div>
+            <ArrowRight size={16} className="text-[#9cae92]" />
+            <div>
+              <div className="text-[10px] text-[#71816a]">Forecast / kg</div>
+              <strong className="mt-1 block text-xl font-semibold tracking-[-.6px]">
+                {idr(forecast.predicted_price)}
+              </strong>
+            </div>
+          </div>
+          <p className="mt-4 text-[10px] text-[#71816a]">
+            As of {shortDate(forecast.forecast_origin)} · Target{" "}
+            {shortDate(forecast.target_date)}
+          </p>
+        </div>
+      ) : (
+        <div className="empty-state text-xs">
+          No forecast is available for this province. Choose another province.
+        </div>
+      )}
+    </section>
+  );
+}

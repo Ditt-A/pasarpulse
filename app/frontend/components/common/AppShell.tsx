@@ -1,46 +1,193 @@
 "use client";
 
 import Link from "next/link";
-import { Activity, Bell, BrainCircuit, LayoutDashboard, MessageCircle, Radio } from "lucide-react";
-import { usePathname } from "next/navigation";
-import { useDashboardStore } from "@/stores/dashboard";
+import {
+  Activity,
+  ArrowUpRight,
+  Bell,
+  ChartNoAxesCombined,
+  ChevronRight,
+  LayoutDashboard,
+  Menu,
+  MessageCircle,
+  ShieldCheck,
+  Sprout,
+  X,
+} from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { api } from "@/lib/api";
+import { StatusBadge } from "./StatusBadge";
 
 const links = [
-  { href: "/", label: "Overview", icon: LayoutDashboard },
-  { href: "/alerts", label: "Alerts", icon: Bell },
-  { href: "/intelligence", label: "Intelligence", icon: Activity },
-  { href: "/model", label: "Model", icon: BrainCircuit },
+  { href: "/", label: "Market overview", icon: LayoutDashboard },
+  { href: "/alerts", label: "Alert queue", icon: Bell },
+  { href: "/intelligence", label: "Regional intelligence", icon: Activity },
+  { href: "/model", label: "Model performance", icon: ChartNoAxesCombined },
 ];
-const proxyBasePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
-const proxiedPath = (path: string) => `${proxyBasePath}${path}`;
-
+function Brand() {
+  return (
+    <Link href="/" className="brand" aria-label="PasarPulse home">
+      <svg
+        className="brand-mark"
+        viewBox="0 0 38 40"
+        fill="none"
+        aria-hidden="true"
+      >
+        <path d="M7 24C4 11 15 4 31 5C32 19 25 29 14 27" fill="currentColor" />
+        <path
+          d="M8 34C10 25 16 18 25 12"
+          stroke="currentColor"
+          strokeWidth="3"
+          strokeLinecap="round"
+        />
+        <path
+          d="M8 23H15L18 16L21 23H28"
+          stroke="#f2f6ec"
+          strokeWidth="1.8"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+      <span>
+        <strong>PasarPulse</strong>
+        <small>Food price intelligence</small>
+      </span>
+    </Link>
+  );
+}
 export function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const setCopilotOpen = useDashboardStore((state) => state.setCopilotOpen);
-
-  if (pathname === "/" || pathname === "/assistant") {
-    return <div className="h-dvh overflow-hidden bg-white text-slate-900">{children}</div>;
-  }
-
-  return (
-    <div className="min-h-screen bg-ink grid-noise">
-      <header className="sticky top-0 z-30 border-b border-line/80 bg-ink/95 backdrop-blur">
-        <div className="mx-auto flex max-w-[1680px] items-center justify-between gap-5 px-5 py-3 lg:px-8">
-          <Link href={proxiedPath("/")} className="flex min-w-fit items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-xl border border-cyanpulse/40 bg-cyanpulse/10 text-cyanpulse"><Radio size={18} /></div>
-            <div>
-              <div className="text-sm font-semibold tracking-[.18em] text-white">PASARPULSE</div>
-              <div className="hidden text-[10px] uppercase tracking-[.16em] text-slate-400 md:block">National Food Price Early-Warning Intelligence</div>
-            </div>
+  const router = useRouter();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const dialog = useRef<HTMLDialogElement>(null);
+  const metadata = useQuery({ queryKey: ["metadata"], queryFn: api.metadata });
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+  useEffect(() => {
+    if (!menuOpen) {
+      dialog.current?.close();
+      return;
+    }
+    dialog.current?.showModal();
+    const previous = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previous;
+    };
+  }, [menuOpen]);
+  const title =
+    links.find((link) => link.href === pathname)?.label || "Research assistant";
+  const sidebar = (mobile = false) => (
+    <aside className="app-sidebar">
+      <div className="flex items-center justify-between">
+        <Brand />
+        {mobile && (
+          <button
+            className="ui-button icon-only"
+            aria-label="Close navigation"
+            onClick={() => setMenuOpen(false)}
+          >
+            <X size={17} />
+          </button>
+        )}
+      </div>
+      <div className="sidebar-label">Workspace</div>
+      <nav
+        className="app-nav"
+        aria-label={mobile ? "Mobile navigation" : "Main navigation"}
+      >
+        {links.map(({ href, label, icon: Icon }) => (
+          <Link
+            href={href}
+            key={href}
+            aria-current={pathname === href ? "page" : undefined}
+            onClick={() => setMenuOpen(false)}
+          >
+            <Icon size={17} strokeWidth={1.65} />
+            {label}
+            {pathname === href && <i className="nav-current" />}
           </Link>
-          <nav className="hidden items-center gap-1 md:flex">
-            {links.map(({ href, label, icon: Icon }) => <Link key={href} href={proxiedPath(href)} className="flex items-center gap-2 rounded-lg px-3 py-2 text-xs font-medium text-slate-400 transition hover:bg-white/5 hover:text-white"><Icon size={14} />{label}</Link>)}
-          </nav>
-          <button onClick={() => setCopilotOpen(true)} className="flex items-center gap-2 rounded-lg border border-cyanpulse/40 bg-cyanpulse/10 px-3 py-2 text-xs font-semibold text-cyanpulse transition hover:bg-cyanpulse/20"><MessageCircle size={15} /> <span className="hidden sm:inline">Ask PasarPulse</span></button>
+        ))}
+      </nav>
+      <div className="sidebar-bottom">
+        <ShieldCheck
+          size={22}
+          strokeWidth={1.4}
+          className="sidebar-note-icon"
+        />
+        <strong className="block text-xs font-semibold text-[#425a40]">
+          Built for informed decisions.
+        </strong>
+        <p className="mt-2">
+          Forecasts support monitoring and verification by your team.
+        </p>
+        <Link href="/model">
+          Explore the methodology <ArrowUpRight size={13} />
+        </Link>
+        <div className="mt-7 flex items-center gap-2 text-[10px]">
+          <Sprout size={12} /> Indonesian food markets
         </div>
-      </header>
-      <main className="mx-auto w-full max-w-[1680px] px-5 py-5 pb-20 lg:px-8">{children}</main>
-      <footer className="border-t border-line/60 px-5 py-5 text-center text-[11px] text-slate-500">PasarPulse is a decision-support prototype. Historical replay keeps later realized prices separate from forecast-time information.</footer>
-    </div>
+      </div>
+    </aside>
+  );
+  return (
+    <>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
+      {sidebar()}
+      <dialog
+        className="mobile-dialog"
+        ref={dialog}
+        onCancel={() => setMenuOpen(false)}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) setMenuOpen(false);
+        }}
+        aria-label="Navigation"
+      >
+        {sidebar(true)}
+      </dialog>
+      <div className="app-body">
+        <header className="app-header">
+          <div className="breadcrumbs">
+            <button
+              className="ui-button icon-only mobile-menu-button"
+              aria-label="Open navigation"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen(true)}
+            >
+              <Menu size={17} />
+            </button>
+            <span>Workspace</span>
+            <ChevronRight size={12} />
+            <strong className="hidden sm:inline">{title}</strong>
+            <strong className="sm:hidden">PasarPulse</strong>
+          </div>
+          <div className="header-actions">
+            {metadata.data && <StatusBadge label={metadata.data.mode_label} />}
+            <button
+              onClick={() => router.push("/assistant")}
+              className="ui-button primary"
+            >
+              <MessageCircle size={15} />
+              <span className="assistant-label">Ask PasarPulse</span>
+            </button>
+          </div>
+        </header>
+        <main id="main-content" className="app-main page-enter" key={pathname}>
+          {children}
+        </main>
+        <footer className="app-footer">
+          <span>
+            Decision support for food-price monitoring. Forecasts are estimates;
+            historical outcomes remain separate from forecast-time information.
+          </span>
+          <span>PasarPulse · Indonesia</span>
+        </footer>
+      </div>
+    </>
   );
 }

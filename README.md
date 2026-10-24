@@ -2,6 +2,30 @@
 
 PasarPulse is an uncertainty-aware early-warning system for high-value horticultural commodity prices.
 
+## Dashboard
+
+A focused workspace for national price monitoring, province-level forecasts,
+source evidence, regional comparisons, and validated model results.
+
+![PasarPulse national market overview](docs/images/dashboard-overview.png)
+
+The preview uses the real **2 February 2026** historical snapshot for
+**Cabai Rawit Merah · retail · 7 days**. The application defaults to the latest
+available forecast origin. All prices and warning levels come from the saved
+replay artifacts; no model is loaded or trained to display the dashboard.
+
+<details>
+<summary>Province detail and mobile preview</summary>
+
+![Province forecast, evidence, and historical evaluation](docs/images/dashboard-province.png)
+
+[View the mobile dashboard](docs/images/dashboard-mobile.png).
+
+</details>
+
+See [local and Docker setup](README_DEPLOYMENT.md) and the
+[dashboard interaction guide](docs/DASHBOARD_UX.md).
+
 ## Main notebook
 
 - `notebooks/PasarPulse_A100_Research_Notebook.ipynb`

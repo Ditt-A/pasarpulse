@@ -2,5 +2,11 @@
   "extends": "next/core-web-vitals",
   "rules": {
     "react-hooks/exhaustive-deps": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["**/*.mts"],
+      "parser": "@typescript-eslint/parser"
+    }
+  ]
 }
